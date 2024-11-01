@@ -1,4 +1,4 @@
-import "@csstools/normalize.css";
+import "@/app/styles/reset.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
