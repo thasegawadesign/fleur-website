@@ -1,3 +1,4 @@
+import { logo } from "@/app/page.css";
 import CvButton from "@/components/cvButton.tsx/cvButton";
 import MoreButton from "@/components/moreButton/moreButton";
 import clsx from "clsx";
@@ -15,7 +16,7 @@ export default function Home() {
     <>
       <header>
         <Link href={"#"}>
-          <h1 className={clsx(sacramento.className)}>Fleur</h1>
+          <h1 className={clsx(sacramento.className, logo)}>Fleur</h1>
         </Link>
         <nav>
           <ul>
