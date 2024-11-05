@@ -1,4 +1,4 @@
-import { logo } from "@/app/page.css";
+import { hamburger, hamburgerBox, logo, logoBox } from "@/app/page.css";
 import CvButton from "@/components/cvButton.tsx/cvButton";
 import MoreButton from "@/components/moreButton/moreButton";
 import clsx from "clsx";
@@ -15,10 +15,15 @@ export default function Home() {
   return (
     <>
       <header>
-        <Link href={"#"}>
+        <Link href={"#"} className={clsx(logoBox)}>
           <h1 className={clsx(sacramento.className, logo)}>Fleur</h1>
         </Link>
         <nav>
+          <button className={clsx(hamburgerBox)}>
+            <span className={clsx(hamburger)}></span>
+            <span className={clsx(hamburger)}></span>
+            <span className={clsx(hamburger)}></span>
+          </button>
           <ul>
             <li>
               <Link href={"#"}>美味しさへのこだわり</Link>
