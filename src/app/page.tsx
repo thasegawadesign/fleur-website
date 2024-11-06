@@ -1,6 +1,6 @@
 "use client";
 
-import { hamburger, hamburgerBox, logo, logoBox } from "@/app/page.css";
+import { hamburger, hamburgerBox, logo, logoBox, toggle } from "@/app/page.css";
 import { hamburgerMenuAtom } from "@/atoms/hamburgerMenuAtom";
 import CvButton from "@/components/cvButton.tsx/cvButton";
 import MoreButton from "@/components/moreButton/moreButton";
@@ -23,8 +23,6 @@ export default function Home() {
     setIsOpen((prev) => !prev);
   }, [setIsOpen]);
 
-  console.log(isOpen);
-
   return (
     <>
       <header>
@@ -33,9 +31,15 @@ export default function Home() {
         </Link>
         <nav>
           <button className={clsx(hamburgerBox)} onClick={handleClick}>
-            <span className={clsx(hamburger)}></span>
-            <span className={clsx(hamburger)}></span>
-            <span className={clsx(hamburger)}></span>
+            <span
+              className={clsx(hamburger, isOpen === true ? toggle : "")}
+            ></span>
+            <span
+              className={clsx(hamburger, isOpen === true ? toggle : "")}
+            ></span>
+            <span
+              className={clsx(hamburger, isOpen === true ? toggle : "")}
+            ></span>
           </button>
           <ul>
             <li>
