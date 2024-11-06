@@ -1,3 +1,4 @@
+import Providers from "@/components/providers/providers";
 import "@/styles/reset.css";
 import clsx from "clsx";
 import type { Metadata } from "next";
@@ -19,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={clsx(notoSansJP.className)}>{children}</body>
+      <body className={clsx(notoSansJP.className)}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

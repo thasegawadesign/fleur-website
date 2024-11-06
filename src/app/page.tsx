@@ -1,10 +1,15 @@
+"use client";
+
 import { hamburger, hamburgerBox, logo, logoBox } from "@/app/page.css";
+import { hamburgerMenuAtom } from "@/atoms/hamburgerMenuAtom";
 import CvButton from "@/components/cvButton.tsx/cvButton";
 import MoreButton from "@/components/moreButton/moreButton";
 import clsx from "clsx";
+import { useAtom } from "jotai";
 import { Sacramento } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import { useCallback } from "react";
 
 const sacramento = Sacramento({
   weight: "400",
@@ -12,6 +17,14 @@ const sacramento = Sacramento({
 });
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useAtom(hamburgerMenuAtom);
+
+  const handleClick = useCallback(() => {
+    setIsOpen((prev) => !prev);
+  }, [setIsOpen]);
+
+  console.log(isOpen);
+
   return (
     <>
       <header>
@@ -19,7 +32,7 @@ export default function Home() {
           <h1 className={clsx(sacramento.className, logo)}>Fleur</h1>
         </Link>
         <nav>
-          <button className={clsx(hamburgerBox)}>
+          <button className={clsx(hamburgerBox)} onClick={handleClick}>
             <span className={clsx(hamburger)}></span>
             <span className={clsx(hamburger)}></span>
             <span className={clsx(hamburger)}></span>
