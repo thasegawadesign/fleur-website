@@ -112,6 +112,7 @@ export default function Home() {
                 height={320}
                 alt="カラフルなマカロン"
                 className={clsx(macarons)}
+                priority
               />
             </div>
             <p className={clsx(heroDescription)}>
@@ -125,6 +126,7 @@ export default function Home() {
               height={1600}
               alt="マカロン専門店フルールの店構え"
               className={clsx(mainVisual)}
+              priority
             />
           </div>
         </section>
