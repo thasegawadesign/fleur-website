@@ -10,7 +10,7 @@ export const mobileHeader = style({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: "6px 28px",
+  padding: "12px 28px",
   background: "#fff",
 });
 
@@ -55,8 +55,8 @@ export const mobileNavLinksVisible = style({
   display: "block",
   position: "absolute",
   left: 0,
-  top: 48,
-  padding: "52px 60px",
+  top: 60,
+  padding: "40px 60px",
   width: "100%",
   height: "calc(100vh - 48px)",
   background: vars.color.bgPrimary,
