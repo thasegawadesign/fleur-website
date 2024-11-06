@@ -1,6 +1,16 @@
 "use client";
 
-import { hamburger, hamburgerBox, logo, logoBox, toggle } from "@/app/page.css";
+import {
+  hamburger,
+  hamburgerBox,
+  header,
+  logo,
+  logoBox,
+  mobileHeader,
+  mobileNavLinksHidden,
+  mobileNavLinksVisible,
+  toggle,
+} from "@/app/page.css";
 import { hamburgerMenuAtom } from "@/atoms/hamburgerMenuAtom";
 import CvButton from "@/components/cvButton.tsx/cvButton";
 import MoreButton from "@/components/moreButton/moreButton";
@@ -25,23 +35,23 @@ export default function Home() {
 
   return (
     <>
-      <header>
-        <Link href={"#"} className={clsx(logoBox)}>
-          <h1 className={clsx(sacramento.className, logo)}>Fleur</h1>
-        </Link>
-        <nav>
+      <header className={clsx(header)}>
+        <div className={clsx(mobileHeader)}>
+          <Link href={"#"} className={clsx(logoBox)}>
+            <h1 className={clsx(sacramento.className, logo)}>Fleur</h1>
+          </Link>
           <button className={clsx(hamburgerBox)} onClick={handleClick}>
-            <span
-              className={clsx(hamburger, isOpen === true ? toggle : "")}
-            ></span>
-            <span
-              className={clsx(hamburger, isOpen === true ? toggle : "")}
-            ></span>
-            <span
-              className={clsx(hamburger, isOpen === true ? toggle : "")}
-            ></span>
+            <span className={clsx(hamburger, isOpen && toggle)}></span>
+            <span className={clsx(hamburger, isOpen && toggle)}></span>
+            <span className={clsx(hamburger, isOpen && toggle)}></span>
           </button>
-          <ul>
+        </div>
+        <nav>
+          <ul
+            className={clsx(
+              isOpen ? mobileNavLinksVisible : mobileNavLinksHidden
+            )}
+          >
             <li>
               <Link href={"#"}>美味しさへのこだわり</Link>
             </li>
@@ -60,8 +70,10 @@ export default function Home() {
             <li>
               <Link href={"#"}>店舗情報</Link>
             </li>
+            <li>
+              <CvButton />
+            </li>
           </ul>
-          <CvButton />
         </nav>
       </header>
       <main>

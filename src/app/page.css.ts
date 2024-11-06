@@ -1,6 +1,19 @@
 import { vars } from "@/styles/styles.css";
 import { style } from "@vanilla-extract/css";
 
+export const header = style({
+  position: "sticky",
+  top: 0,
+  zIndex: 100,
+});
+export const mobileHeader = style({
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  padding: "6px 28px",
+  background: "#fff",
+});
+
 export const logoBox = style({
   textDecoration: "none",
 });
@@ -33,4 +46,18 @@ export const hamburger = style({
   height: 2,
   backgroundColor: vars.color.textPrimary,
   transition: "transform 0.2s ease",
+});
+
+export const mobileNavLinksHidden = style({
+  display: "none",
+});
+export const mobileNavLinksVisible = style({
+  display: "block",
+  position: "absolute",
+  left: 0,
+  top: 48,
+  padding: "52px 60px",
+  width: "100%",
+  height: "calc(100vh - 48px)",
+  background: vars.color.bgPrimary,
 });
