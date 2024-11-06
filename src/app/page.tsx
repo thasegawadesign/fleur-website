@@ -1,12 +1,14 @@
 "use client";
 
 import {
+  cvButtonBox,
   hamburger,
   hamburgerBox,
   header,
   logo,
   logoBox,
   mobileHeader,
+  mobileNavLink,
   mobileNavLinksHidden,
   mobileNavLinksVisible,
   toggle,
@@ -53,24 +55,36 @@ export default function Home() {
             )}
           >
             <li>
-              <Link href={"#"}>美味しさへのこだわり</Link>
+              <Link href={"#"} className={clsx(mobileNavLink)}>
+                美味しさへのこだわり
+              </Link>
             </li>
             <li>
-              <Link href={"#"}>ブランド</Link>
+              <Link href={"#"} className={clsx(mobileNavLink)}>
+                ブランド
+              </Link>
             </li>
             <li>
-              <Link href={"#"}>ギフト</Link>
+              <Link href={"#"} className={clsx(mobileNavLink)}>
+                ギフト
+              </Link>
             </li>
             <li>
-              <Link href={"#"}>ニュース</Link>
+              <Link href={"#"} className={clsx(mobileNavLink)}>
+                ニュース
+              </Link>
             </li>
             <li>
-              <Link href={"#"}>ラインナップ</Link>
+              <Link href={"#"} className={clsx(mobileNavLink)}>
+                ラインナップ
+              </Link>
             </li>
             <li>
-              <Link href={"#"}>店舗情報</Link>
+              <Link href={"#"} className={clsx(mobileNavLink)}>
+                店舗情報
+              </Link>
             </li>
-            <li>
+            <li className={clsx(cvButtonBox)}>
               <CvButton />
             </li>
           </ul>

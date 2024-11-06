@@ -52,12 +52,24 @@ export const mobileNavLinksHidden = style({
   display: "none",
 });
 export const mobileNavLinksVisible = style({
-  display: "block",
   position: "absolute",
   left: 0,
   top: 60,
-  padding: "40px 60px",
+  display: "flex",
+  flexDirection: "column",
+  gap: 20,
+  padding: "48px 0px 0px",
   width: "100%",
   height: "calc(100vh - 48px)",
   background: vars.color.bgPrimary,
+});
+export const mobileNavLink = style({
+  textDecoration: "none",
+  margin: "0 60px",
+  fontSize: "1.6rem",
+  color: vars.color.textPrimary,
+});
+
+export const cvButtonBox = style({
+  margin: "12px 48px",
 });
