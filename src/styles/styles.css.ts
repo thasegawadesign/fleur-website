@@ -1,4 +1,4 @@
-import { createGlobalTheme } from "@vanilla-extract/css";
+import { createGlobalTheme, style } from "@vanilla-extract/css";
 
 export const breakpoints = {
   sm: "screen and (width < 640px)",
@@ -15,4 +15,12 @@ export const vars = createGlobalTheme(":root", {
     linePrimary: "#beb599",
     accent: "#ff6d15",
   },
+});
+
+export const sectionTitle = style({
+  fontSize: "3.2rem",
+  fontWeight: 400,
+  letterSpacing: "0.04em",
+  color: vars.color.textPrimary,
+  textAlign: "center",
 });

@@ -23,14 +23,20 @@ import {
 import { hamburgerMenuAtom } from "@/atoms/hamburgerMenuAtom";
 import CvButton from "@/components/cvButton.tsx/cvButton";
 import MoreButton from "@/components/moreButton/moreButton";
+import { sectionTitle } from "@/styles/styles.css";
 import clsx from "clsx";
 import { useAtom } from "jotai";
-import { Sacramento } from "next/font/google";
+import { Marcellus, Sacramento } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback } from "react";
 
 const sacramento = Sacramento({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const marcellus = Marcellus({
   weight: "400",
   subsets: ["latin"],
 });
@@ -131,7 +137,7 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <h2>Pick up</h2>
+          <h2 className={clsx(marcellus.className, sectionTitle)}>Pick up</h2>
           <p>おすすめ商品</p>
           <h3>低糖質・グルテンフリーマカロン</h3>
           <p>
@@ -152,7 +158,7 @@ export default function Home() {
           <CvButton />
         </section>
         <section>
-          <h2>Topic</h2>
+          <h2 className={clsx(marcellus.className, sectionTitle)}>Topic</h2>
           <p>美味しさへのこだわり</p>
           <section>
             <h3>素材へのこだわり</h3>
@@ -197,7 +203,7 @@ export default function Home() {
           </section>
         </section>
         <section>
-          <h2>News</h2>
+          <h2 className={clsx(marcellus.className)}>News</h2>
           <p>お知らせ</p>
           <ul>
             <li>
@@ -217,7 +223,7 @@ export default function Home() {
           </ul>
         </section>
         <section>
-          <h2>Access</h2>
+          <h2 className={clsx(marcellus.className)}>Access</h2>
           <p>店舗情報</p>
           <h3>フルール大阪店</h3>
           <dl>
@@ -234,7 +240,7 @@ export default function Home() {
           />
         </section>
         <section>
-          <h2>Online Shop</h2>
+          <h2 className={clsx(marcellus.className)}>Online Shop</h2>
           <p>豊富なギフトをご用意しております。</p>
           <CvButton />
           <Image
