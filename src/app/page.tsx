@@ -1,9 +1,27 @@
+"use client";
+
+import {
+  cvButtonBox,
+  hamburger,
+  hamburgerBox,
+  header,
+  logo,
+  logoBox,
+  mobileHeader,
+  mobileNavLink,
+  mobileNavLinksHidden,
+  mobileNavLinksVisible,
+  toggle,
+} from "@/app/page.css";
+import { hamburgerMenuAtom } from "@/atoms/hamburgerMenuAtom";
 import CvButton from "@/components/cvButton.tsx/cvButton";
 import MoreButton from "@/components/moreButton/moreButton";
 import clsx from "clsx";
+import { useAtom } from "jotai";
 import { Sacramento } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import { useCallback } from "react";
 
 const sacramento = Sacramento({
   weight: "400",
@@ -11,34 +29,65 @@ const sacramento = Sacramento({
 });
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useAtom(hamburgerMenuAtom);
+
+  const handleClick = useCallback(() => {
+    setIsOpen((prev) => !prev);
+  }, [setIsOpen]);
+
   return (
     <>
-      <header>
-        <Link href={"#"}>
-          <h1 className={clsx(sacramento.className)}>Fleur</h1>
-        </Link>
+      <header className={clsx(header)}>
+        <div className={clsx(mobileHeader)}>
+          <Link href={"#"} className={clsx(logoBox)}>
+            <h1 className={clsx(sacramento.className, logo)}>Fleur</h1>
+          </Link>
+          <button className={clsx(hamburgerBox)} onClick={handleClick}>
+            <span className={clsx(hamburger, isOpen && toggle)}></span>
+            <span className={clsx(hamburger, isOpen && toggle)}></span>
+            <span className={clsx(hamburger, isOpen && toggle)}></span>
+          </button>
+        </div>
         <nav>
-          <ul>
+          <ul
+            className={clsx(
+              isOpen ? mobileNavLinksVisible : mobileNavLinksHidden
+            )}
+          >
             <li>
-              <Link href={"#"}>美味しさへのこだわり</Link>
+              <Link href={"#"} className={clsx(mobileNavLink)}>
+                美味しさへのこだわり
+              </Link>
             </li>
             <li>
-              <Link href={"#"}>ブランド</Link>
+              <Link href={"#"} className={clsx(mobileNavLink)}>
+                ブランド
+              </Link>
             </li>
             <li>
-              <Link href={"#"}>ギフト</Link>
+              <Link href={"#"} className={clsx(mobileNavLink)}>
+                ギフト
+              </Link>
             </li>
             <li>
-              <Link href={"#"}>ニュース</Link>
+              <Link href={"#"} className={clsx(mobileNavLink)}>
+                ニュース
+              </Link>
             </li>
             <li>
-              <Link href={"#"}>ラインナップ</Link>
+              <Link href={"#"} className={clsx(mobileNavLink)}>
+                ラインナップ
+              </Link>
             </li>
             <li>
-              <Link href={"#"}>店舗情報</Link>
+              <Link href={"#"} className={clsx(mobileNavLink)}>
+                店舗情報
+              </Link>
+            </li>
+            <li className={clsx(cvButtonBox)}>
+              <CvButton />
             </li>
           </ul>
-          <CvButton />
         </nav>
       </header>
       <main>
