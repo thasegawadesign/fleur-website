@@ -1,12 +1,19 @@
 "use client";
 
 import {
+  catchCopy,
   cvButtonBox,
   hamburger,
   hamburgerBox,
   header,
+  heroDescription,
+  heroSection,
   logo,
   logoBox,
+  macarons,
+  macaronsBox,
+  mainVisual,
+  mainVisualBox,
   mobileHeader,
   mobileNavLink,
   mobileNavLinksHidden,
@@ -91,23 +98,35 @@ export default function Home() {
         </nav>
       </header>
       <main>
-        <section>
-          <h2>一口で広がる、贅沢な味わい。</h2>
-          <Image
-            src={"/macarons.webp"}
-            width={640}
-            height={320}
-            alt="カラフルなマカロン"
-          />
-          <p>
-            厳選された素材と職人の技が奏でる、特別な一口。毎日を彩る、贅沢なひとときをお楽しみください。
-          </p>
-          <Image
-            src={"/main-visual.webp"}
-            width={1600}
-            height={1600}
-            alt="マカロン専門店フルールの店構え"
-          />
+        <section className={clsx(heroSection)}>
+          <div>
+            <h2 className={clsx(catchCopy)}>
+              一口で広がる、
+              <br />
+              贅沢な味わい。
+            </h2>
+            <div className={clsx(macaronsBox)}>
+              <Image
+                src={"/macarons.webp"}
+                width={640}
+                height={320}
+                alt="カラフルなマカロン"
+                className={clsx(macarons)}
+              />
+            </div>
+            <p className={clsx(heroDescription)}>
+              厳選された素材と職人の技が奏でる、特別な一口。毎日を彩る、贅沢なひとときをお楽しみください。
+            </p>
+          </div>
+          <div className={clsx(mainVisualBox)}>
+            <Image
+              src={"/main-visual.webp"}
+              width={1600}
+              height={1600}
+              alt="マカロン専門店フルールの店構え"
+              className={clsx(mainVisual)}
+            />
+          </div>
         </section>
         <section>
           <h2>Pick up</h2>

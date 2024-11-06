@@ -73,3 +73,40 @@ export const mobileNavLink = style({
 export const cvButtonBox = style({
   margin: "12px 48px",
 });
+
+export const heroSection = style({
+  display: "flex",
+  flexDirection: "column-reverse",
+});
+export const catchCopy = style({
+  fontSize: "2.0rem",
+  fontWeight: 400,
+  letterSpacing: "0.2em",
+  lineHeight: "1.28em",
+  color: vars.color.textPrimary,
+  margin: "24px 20px 0",
+});
+export const macaronsBox = style({
+  textAlign: "center",
+  margin: "24px 0 20px",
+});
+export const macarons = style({
+  width: "75%",
+  height: "100%",
+});
+export const heroDescription = style({
+  width: "75%",
+  margin: "0 20px 0 auto",
+  fontSize: "1.4rem",
+  color: vars.color.textPrimary,
+  letterSpacing: "0.2em",
+  lineHeight: "1.28em",
+});
+export const mainVisualBox = style({
+  paddingLeft: 20,
+});
+export const mainVisual = style({
+  width: "100%",
+  height: "100%",
+  borderRadius: "0 0 0 28px",
+});
