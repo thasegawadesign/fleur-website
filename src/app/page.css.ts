@@ -57,7 +57,7 @@ export const mobileNavLinksVisible = style({
   top: 60,
   display: "flex",
   flexDirection: "column",
-  gap: 20,
+  gap: 24,
   padding: "48px 0px 0px",
   width: "100%",
   height: "calc(100vh - 48px)",
