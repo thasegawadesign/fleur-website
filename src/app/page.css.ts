@@ -227,3 +227,34 @@ export const topicImage = style({
   width: "100%",
   height: "100%",
 });
+
+export const newsSection = style({
+  backgroundColor: vars.color.bgPrimary,
+  marginBlock: 60,
+  padding: "28px 0 60px",
+});
+export const newsItemBox = style({
+  marginTop: 20,
+});
+export const newsItem = style({
+  width: "85%",
+  margin: "0 auto",
+  borderBottom: `solid 1px ${vars.color.textPrimary}`,
+});
+export const newsLink = style({
+  display: "flex",
+  alignItems: "flex-start",
+  gap: 28,
+  padding: "20px 24px 20px 16px",
+  textDecoration: "none",
+});
+export const time = style({
+  fontSize: "1.0rem",
+  color: vars.color.textPrimary,
+  marginTop: 4,
+});
+export const newsText = style({
+  fontSize: "1.2rem",
+  color: vars.color.textPrimary,
+  lineHeight: "1.28em",
+});
