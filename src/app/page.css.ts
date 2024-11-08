@@ -70,6 +70,10 @@ export const mobileNavLink = style({
   color: vars.color.textPrimary,
 });
 
+export const cvButtonWrap = style({
+  width: "75%",
+  margin: "0 auto",
+});
 export const cvButtonBox = style({
   margin: "12px 48px",
 });
@@ -89,7 +93,7 @@ export const catchCopy = style({
 });
 export const macaronsBox = style({
   textAlign: "center",
-  margin: "24px 0 20px",
+  margin: "24px 0 28px",
 });
 export const macarons = style({
   width: "75%",
@@ -112,6 +116,11 @@ export const mainVisual = style({
   borderRadius: "0 0 0 28px",
 });
 
+export const pickUpSection = style({
+  position: "relative",
+  marginBottom: 80,
+  zIndex: 0,
+});
 export const pickUpSectionBg = style({
   position: "relative",
   backgroundColor: vars.color.bgPrimary,
@@ -182,7 +191,39 @@ export const pickupDecoration = style({
   marginTop: -20,
   marginLeft: -30,
 });
-export const cvButtonWrap = style({
-  width: "75%",
+
+export const topicSection = style({
+  marginBottom: 80,
+});
+export const topicSectionItemBox = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: 28,
+  marginTop: 40,
+});
+export const topicSectionItem = style({
+  display: "flex",
+  flexDirection: "column-reverse",
+  gap: 24,
+  width: "85%",
   margin: "0 auto",
+});
+export const topicTitle = style({
+  fontSize: "1.6rem",
+  fontWeight: 400,
+  color: vars.color.textPrimary,
+  letterSpacing: "0.06em",
+  marginBottom: 12,
+});
+export const topicDescription = style({
+  fontSize: "1.2rem",
+  fontWeight: 400,
+  color: vars.color.textPrimary,
+  letterSpacing: "0.06em",
+  lineHeight: "1.28em",
+  marginBottom: 8,
+});
+export const topicImage = style({
+  width: "100%",
+  height: "100%",
 });
