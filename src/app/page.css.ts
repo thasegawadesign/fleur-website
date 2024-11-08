@@ -70,6 +70,10 @@ export const mobileNavLink = style({
   color: vars.color.textPrimary,
 });
 
+export const cvButtonWrap = style({
+  width: "75%",
+  margin: "0 auto",
+});
 export const cvButtonBox = style({
   margin: "12px 48px",
 });
@@ -185,8 +189,4 @@ export const pickupDecoration = style({
   height: 90,
   marginTop: -20,
   marginLeft: -30,
-});
-export const cvButtonWrap = style({
-  width: "75%",
-  margin: "0 auto",
 });
