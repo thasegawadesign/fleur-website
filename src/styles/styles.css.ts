@@ -17,10 +17,33 @@ export const vars = createGlobalTheme(":root", {
   },
 });
 
+export const sectionTitleBox = style({
+  marginBottom: 4,
+});
 export const sectionTitle = style({
   fontSize: "3.2rem",
   fontWeight: 400,
   letterSpacing: "0.04em",
   color: vars.color.textPrimary,
   textAlign: "center",
+});
+export const subTitleBox = style({
+  textAlign: "center",
+});
+export const subTitle = style({
+  position: "relative",
+  display: "inline-block",
+  fontSize: "1.2rem",
+  letterSpacing: "0.06em",
+  color: vars.color.textPrimary,
+  ":before": {
+    content: "",
+    position: "absolute",
+    top: 3,
+    left: -12,
+    width: 6,
+    height: 6,
+    backgroundColor: vars.color.accent,
+    borderRadius: "50%",
+  },
 });

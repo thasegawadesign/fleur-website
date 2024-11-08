@@ -3,6 +3,7 @@
 import {
   catchCopy,
   cvButtonBox,
+  cvButtonWrap,
   hamburger,
   hamburgerBox,
   header,
@@ -18,12 +19,25 @@ import {
   mobileNavLink,
   mobileNavLinksHidden,
   mobileNavLinksVisible,
+  pickupDecoration,
+  pickUpSectionBg,
+  recommendedProductBox,
+  recommendedProductDescription,
+  recommendedProductImage,
+  recommendedProductImageBox,
+  recommendedProductName,
+  recommendedProductNameBox,
   toggle,
 } from "@/app/page.css";
 import { hamburgerMenuAtom } from "@/atoms/hamburgerMenuAtom";
 import CvButton from "@/components/cvButton.tsx/cvButton";
 import MoreButton from "@/components/moreButton/moreButton";
-import { sectionTitle } from "@/styles/styles.css";
+import {
+  sectionTitle,
+  sectionTitleBox,
+  subTitle,
+  subTitleBox,
+} from "@/styles/styles.css";
 import clsx from "clsx";
 import { useAtom } from "jotai";
 import { Marcellus, Sacramento } from "next/font/google";
@@ -137,25 +151,43 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <h2 className={clsx(marcellus.className, sectionTitle)}>Pick up</h2>
-          <p>おすすめ商品</p>
-          <h3>低糖質・グルテンフリーマカロン</h3>
-          <p>
-            植物由来の素材を使用し、グルテンを一切含まない配合で焼き上げました。からだにやさしいグルテンフリーマカロンです。
-          </p>
-          <Image
-            src={"/recommended-product.webp"}
-            width={540}
-            height={300}
-            alt="低糖質・グルテンフリーマカロン"
-          />
-          <Image
-            src={"/pickup-decoration.png"}
-            width={100}
-            height={150}
-            alt="フルールの由来の花"
-          />
-          <CvButton />
+          <div className={clsx(sectionTitleBox)}>
+            <h2 className={clsx(marcellus.className, sectionTitle)}>Pick up</h2>
+          </div>
+          <div className={clsx(subTitleBox)}>
+            <p className={clsx(subTitle)}>おすすめ商品</p>
+          </div>
+          <div className={clsx(pickUpSectionBg)}>
+            <div className={clsx(recommendedProductBox)}>
+              <div className={clsx(recommendedProductNameBox)}>
+                <h3 className={clsx(recommendedProductName)}>
+                  低糖質・グルテンフリーマカロン
+                </h3>
+                <p className={clsx(recommendedProductDescription)}>
+                  植物由来の素材を使用し、グルテンを一切含まない配合で焼き上げました。からだにやさしいグルテンフリーマカロンです。
+                </p>
+              </div>
+              <div className={clsx(recommendedProductImageBox)}>
+                <Image
+                  src={"/recommended-product.webp"}
+                  width={540}
+                  height={300}
+                  alt="低糖質・グルテンフリーマカロン"
+                  className={clsx(recommendedProductImage)}
+                />
+                <Image
+                  src={"/pickup-decoration.png"}
+                  width={100}
+                  height={150}
+                  alt="フルールの由来の花"
+                  className={clsx(pickupDecoration)}
+                />
+              </div>
+            </div>
+            <div className={clsx(cvButtonWrap)}>
+              <CvButton />
+            </div>
+          </div>
         </section>
         <section>
           <h2 className={clsx(marcellus.className, sectionTitle)}>Topic</h2>
