@@ -8,6 +8,7 @@ export const cvButton = style({
   alignItems: "center",
   textDecoration: "none",
   padding: "10px 20px",
+  backgroundColor: vars.color.bgPrimary,
   border: `solid 1px ${vars.color.textPrimary}`,
   borderRadius: 40,
 });
