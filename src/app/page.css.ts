@@ -118,6 +118,7 @@ export const mainVisual = style({
 
 export const pickUpSection = style({
   position: "relative",
+  marginBottom: 80,
   zIndex: 0,
 });
 export const pickUpSectionBg = style({
@@ -189,4 +190,40 @@ export const pickupDecoration = style({
   height: 90,
   marginTop: -20,
   marginLeft: -30,
+});
+
+export const topicSection = style({
+  marginBottom: 80,
+});
+export const topicSectionItemBox = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: 28,
+  marginTop: 40,
+});
+export const topicSectionItem = style({
+  display: "flex",
+  flexDirection: "column-reverse",
+  gap: 24,
+  width: "85%",
+  margin: "0 auto",
+});
+export const topicTitle = style({
+  fontSize: "1.6rem",
+  fontWeight: 400,
+  color: vars.color.textPrimary,
+  letterSpacing: "0.06em",
+  marginBottom: 12,
+});
+export const topicDescription = style({
+  fontSize: "1.2rem",
+  fontWeight: 400,
+  color: vars.color.textPrimary,
+  letterSpacing: "0.06em",
+  lineHeight: "1.28em",
+  marginBottom: 8,
+});
+export const topicImage = style({
+  width: "100%",
+  height: "100%",
 });

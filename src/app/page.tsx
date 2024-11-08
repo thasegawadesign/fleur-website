@@ -29,6 +29,12 @@ import {
   recommendedProductName,
   recommendedProductNameBox,
   toggle,
+  topicDescription,
+  topicImage,
+  topicSection,
+  topicSectionItem,
+  topicSectionItemBox,
+  topicTitle,
 } from "@/app/page.css";
 import { hamburgerMenuAtom } from "@/atoms/hamburgerMenuAtom";
 import CvButton from "@/components/cvButton.tsx/cvButton";
@@ -190,50 +196,67 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section>
-          <h2 className={clsx(marcellus.className, sectionTitle)}>Topic</h2>
-          <p>美味しさへのこだわり</p>
-          <section>
-            <h3>素材へのこだわり</h3>
-            <p>
-              安心してお召し上がりいただけるよう、素材選びから製造過程まで細心の注意を払っています。
-              自然由来の色素で美しく仕上げた、からだに優しい逸品です。
-            </p>
-            <MoreButton />
-            <Image
-              src={"/ingredient.webp"}
-              width={560}
-              height={346}
-              alt="素材へのこだわり"
-            />
-          </section>
-          <section>
-            <h3>ブランドストーリー</h3>
-            <p>
-              創業以来、最高品質の素材を用い、職人の技術と情熱を注ぎ込んだマカロンをお届けしています。
-              美味しさと美しさを追求し続けることで、これからも皆様の特別なひとときを彩り続けます。
-            </p>
-            <MoreButton />
-            <Image
-              src={"/brand.webp"}
-              width={560}
-              height={346}
-              alt="ブランドストーリー"
-            />
-          </section>
-          <section>
-            <h3>さまざまなギフトシーンにぴったり</h3>
-            <p>
-              バレンタインやホワイトデー、季節の贈り物やプチギフトまで様々なシーンにぴったりなギフト。
-            </p>
-            <MoreButton />
-            <Image
-              src={"/gift.webp"}
-              width={560}
-              height={346}
-              alt="さまざまなギフトシーンにぴったり"
-            />
-          </section>
+        <section className={clsx(topicSection)}>
+          <div className={clsx(sectionTitleBox)}>
+            <h2 className={clsx(marcellus.className, sectionTitle)}>Topic</h2>
+          </div>
+          <div className={clsx(subTitleBox)}>
+            <p className={clsx(subTitle)}>美味しさへのこだわり</p>
+          </div>
+          <div className={clsx(topicSectionItemBox)}>
+            <section className={clsx(topicSectionItem)}>
+              <div>
+                <h3 className={clsx(topicTitle)}>素材へのこだわり</h3>
+                <p className={clsx(topicDescription)}>
+                  安心してお召し上がりいただけるよう、素材選びから製造過程まで細心の注意を払っています。
+                  自然由来の色素で美しく仕上げた、からだに優しい逸品です。
+                </p>
+                <MoreButton />
+              </div>
+              <Image
+                src={"/ingredient.webp"}
+                width={560}
+                height={346}
+                alt="素材へのこだわり"
+                className={clsx(topicImage)}
+              />
+            </section>
+            <section className={clsx(topicSectionItem)}>
+              <div>
+                <h3 className={clsx(topicTitle)}>ブランドストーリー</h3>
+                <p className={clsx(topicDescription)}>
+                  創業以来、最高品質の素材を用い、職人の技術と情熱を注ぎ込んだマカロンをお届けしています。
+                  美味しさと美しさを追求し続けることで、これからも皆様の特別なひとときを彩り続けます。
+                </p>
+                <MoreButton />
+              </div>
+              <Image
+                src={"/brand.webp"}
+                width={560}
+                height={346}
+                alt="ブランドストーリー"
+                className={clsx(topicImage)}
+              />
+            </section>
+            <section className={clsx(topicSectionItem)}>
+              <div>
+                <h3 className={clsx(topicTitle)}>
+                  さまざまなギフトシーンにぴったり
+                </h3>
+                <p className={clsx(topicDescription)}>
+                  バレンタインやホワイトデー、季節の贈り物やプチギフトまで様々なシーンにぴったりなギフト。
+                </p>
+                <MoreButton />
+              </div>
+              <Image
+                src={"/gift.webp"}
+                width={560}
+                height={346}
+                alt="さまざまなギフトシーンにぴったり"
+                className={clsx(topicImage)}
+              />
+            </section>
+          </div>
         </section>
         <section>
           <h2 className={clsx(marcellus.className)}>News</h2>
