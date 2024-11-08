@@ -4,6 +4,7 @@ import { style } from "@vanilla-extract/css";
 export const cvButton = style({
   display: "flex",
   gap: 20,
+  justifyContent: "center",
   alignItems: "center",
   textDecoration: "none",
   padding: "10px 20px",
