@@ -20,6 +20,7 @@ import {
   mobileNavLinksHidden,
   mobileNavLinksVisible,
   pickupDecoration,
+  pickUpSection,
   pickUpSectionBg,
   recommendedProductBox,
   recommendedProductDescription,
@@ -150,7 +151,7 @@ export default function Home() {
             />
           </div>
         </section>
-        <section>
+        <section className={clsx(pickUpSection)}>
           <div className={clsx(sectionTitleBox)}>
             <h2 className={clsx(marcellus.className, sectionTitle)}>Pick up</h2>
           </div>

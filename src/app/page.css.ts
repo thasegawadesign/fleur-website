@@ -89,7 +89,7 @@ export const catchCopy = style({
 });
 export const macaronsBox = style({
   textAlign: "center",
-  margin: "24px 0 20px",
+  margin: "24px 0 28px",
 });
 export const macarons = style({
   width: "75%",
@@ -112,6 +112,10 @@ export const mainVisual = style({
   borderRadius: "0 0 0 28px",
 });
 
+export const pickUpSection = style({
+  position: "relative",
+  zIndex: 0,
+});
 export const pickUpSectionBg = style({
   position: "relative",
   backgroundColor: vars.color.bgPrimary,
