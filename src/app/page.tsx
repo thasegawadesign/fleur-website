@@ -19,6 +19,11 @@ import {
   mobileNavLink,
   mobileNavLinksHidden,
   mobileNavLinksVisible,
+  newsItem,
+  newsItemBox,
+  newsLink,
+  newsSection,
+  newsText,
   pickupDecoration,
   pickUpSection,
   pickUpSectionBg,
@@ -28,6 +33,7 @@ import {
   recommendedProductImageBox,
   recommendedProductName,
   recommendedProductNameBox,
+  time,
   toggle,
   topicDescription,
   topicImage,
@@ -258,23 +264,33 @@ export default function Home() {
             </section>
           </div>
         </section>
-        <section>
-          <h2 className={clsx(marcellus.className)}>News</h2>
-          <p>お知らせ</p>
-          <ul>
-            <li>
-              <p>
-                <time dateTime="2024-07-25">2024.07.25</time>
-                <span>お盆期間中の配送休業日について</span>
-              </p>
+        <section className={clsx(newsSection)}>
+          <div className={clsx(sectionTitleBox)}>
+            <h2 className={clsx(marcellus.className, sectionTitle)}>News</h2>
+          </div>
+          <div className={clsx(subTitleBox)}>
+            <p className={clsx(subTitle)}>お知らせ</p>
+          </div>
+          <ul className={clsx(newsItemBox)}>
+            <li className={clsx(newsItem)}>
+              <Link href={"/#"} className={clsx(newsLink)}>
+                <time dateTime="2024-07-25" className={clsx(time)}>
+                  2024.07.25
+                </time>
+                <span className={clsx(newsText)}>
+                  お盆期間中の配送休業日について
+                </span>
+              </Link>
             </li>
-            <li>
-              <p>
-                <time dateTime="2024-09-13">2024.09.13</time>
-                <span>
+            <li className={clsx(newsItem)}>
+              <Link href={"/#"} className={clsx(newsLink)}>
+                <time dateTime="2024-09-13" className={clsx(time)}>
+                  2024.09.13
+                </time>
+                <span className={clsx(newsText)}>
                   【お知らせ】季節限定フレーバーや新作の試食会について
                 </span>
-              </p>
+              </Link>
             </li>
           </ul>
         </section>
