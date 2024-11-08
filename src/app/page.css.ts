@@ -57,7 +57,7 @@ export const mobileNavLinksVisible = style({
   top: 60,
   display: "flex",
   flexDirection: "column",
-  gap: 20,
+  gap: 24,
   padding: "48px 0px 0px",
   width: "100%",
   height: "calc(100vh - 48px)",
@@ -77,6 +77,7 @@ export const cvButtonBox = style({
 export const heroSection = style({
   display: "flex",
   flexDirection: "column-reverse",
+  marginBottom: 80,
 });
 export const catchCopy = style({
   fontSize: "2.0rem",
@@ -109,4 +110,79 @@ export const mainVisual = style({
   width: "100%",
   height: "100%",
   borderRadius: "0 0 0 28px",
+});
+
+export const pickUpSectionBg = style({
+  position: "relative",
+  backgroundColor: vars.color.bgPrimary,
+  marginTop: -20,
+  padding: "60px 0 40px",
+  zIndex: -100,
+  ":before": {
+    content: "",
+    position: "absolute",
+    top: -20,
+    width: "100%",
+    height: 20,
+    background: "no-repeat url('/pickup-bg-top.png')",
+    backgroundSize: "contain",
+    backgroundPosition: "bottom",
+    zIndex: -100,
+  },
+  ":after": {
+    content: "",
+    position: "absolute",
+    bottom: -20,
+    width: "100%",
+    height: 20,
+    background: "no-repeat url('/pickup-bg-bottom.png')",
+    backgroundSize: "contain",
+    backgroundPosition: "top",
+    zIndex: -100,
+  },
+});
+export const recommendedProductBox = style({
+  display: "flex",
+  flexDirection: "column-reverse",
+  gap: 28,
+  marginBottom: 40,
+});
+export const recommendedProductNameBox = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: 16,
+  alignItems: "center",
+});
+export const recommendedProductName = style({
+  fontSize: "1.6rem",
+  fontWeight: 400,
+  color: vars.color.textPrimary,
+  letterSpacing: "0.06em",
+});
+export const recommendedProductDescription = style({
+  fontSize: "1.2rem",
+  fontWeight: 400,
+  color: vars.color.textPrimary,
+  letterSpacing: "0.06em",
+  lineHeight: "1.28em",
+  width: "69%",
+  textAlign: "center",
+});
+export const recommendedProductImageBox = style({
+  display: "flex",
+  justifyContent: "center",
+});
+export const recommendedProductImage = style({
+  width: "72%",
+  height: "100%",
+});
+export const pickupDecoration = style({
+  width: 60,
+  height: 90,
+  marginTop: -20,
+  marginLeft: -30,
+});
+export const cvButtonWrap = style({
+  width: "75%",
+  margin: "0 auto",
 });

@@ -3,6 +3,7 @@
 import {
   catchCopy,
   cvButtonBox,
+  cvButtonWrap,
   hamburger,
   hamburgerBox,
   header,
@@ -18,19 +19,38 @@ import {
   mobileNavLink,
   mobileNavLinksHidden,
   mobileNavLinksVisible,
+  pickupDecoration,
+  pickUpSectionBg,
+  recommendedProductBox,
+  recommendedProductDescription,
+  recommendedProductImage,
+  recommendedProductImageBox,
+  recommendedProductName,
+  recommendedProductNameBox,
   toggle,
 } from "@/app/page.css";
 import { hamburgerMenuAtom } from "@/atoms/hamburgerMenuAtom";
 import CvButton from "@/components/cvButton.tsx/cvButton";
 import MoreButton from "@/components/moreButton/moreButton";
+import {
+  sectionTitle,
+  sectionTitleBox,
+  subTitle,
+  subTitleBox,
+} from "@/styles/styles.css";
 import clsx from "clsx";
 import { useAtom } from "jotai";
-import { Sacramento } from "next/font/google";
+import { Marcellus, Sacramento } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback } from "react";
 
 const sacramento = Sacramento({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const marcellus = Marcellus({
   weight: "400",
   subsets: ["latin"],
 });
@@ -112,6 +132,7 @@ export default function Home() {
                 height={320}
                 alt="カラフルなマカロン"
                 className={clsx(macarons)}
+                priority
               />
             </div>
             <p className={clsx(heroDescription)}>
@@ -125,32 +146,51 @@ export default function Home() {
               height={1600}
               alt="マカロン専門店フルールの店構え"
               className={clsx(mainVisual)}
+              priority
             />
           </div>
         </section>
         <section>
-          <h2>Pick up</h2>
-          <p>おすすめ商品</p>
-          <h3>低糖質・グルテンフリーマカロン</h3>
-          <p>
-            植物由来の素材を使用し、グルテンを一切含まない配合で焼き上げました。からだにやさしいグルテンフリーマカロンです。
-          </p>
-          <Image
-            src={"/recommended-product.webp"}
-            width={540}
-            height={300}
-            alt="低糖質・グルテンフリーマカロン"
-          />
-          <Image
-            src={"/pickup-decoration.png"}
-            width={100}
-            height={150}
-            alt="フルールの由来の花"
-          />
-          <CvButton />
+          <div className={clsx(sectionTitleBox)}>
+            <h2 className={clsx(marcellus.className, sectionTitle)}>Pick up</h2>
+          </div>
+          <div className={clsx(subTitleBox)}>
+            <p className={clsx(subTitle)}>おすすめ商品</p>
+          </div>
+          <div className={clsx(pickUpSectionBg)}>
+            <div className={clsx(recommendedProductBox)}>
+              <div className={clsx(recommendedProductNameBox)}>
+                <h3 className={clsx(recommendedProductName)}>
+                  低糖質・グルテンフリーマカロン
+                </h3>
+                <p className={clsx(recommendedProductDescription)}>
+                  植物由来の素材を使用し、グルテンを一切含まない配合で焼き上げました。からだにやさしいグルテンフリーマカロンです。
+                </p>
+              </div>
+              <div className={clsx(recommendedProductImageBox)}>
+                <Image
+                  src={"/recommended-product.webp"}
+                  width={540}
+                  height={300}
+                  alt="低糖質・グルテンフリーマカロン"
+                  className={clsx(recommendedProductImage)}
+                />
+                <Image
+                  src={"/pickup-decoration.png"}
+                  width={100}
+                  height={150}
+                  alt="フルールの由来の花"
+                  className={clsx(pickupDecoration)}
+                />
+              </div>
+            </div>
+            <div className={clsx(cvButtonWrap)}>
+              <CvButton />
+            </div>
+          </div>
         </section>
         <section>
-          <h2>Topic</h2>
+          <h2 className={clsx(marcellus.className, sectionTitle)}>Topic</h2>
           <p>美味しさへのこだわり</p>
           <section>
             <h3>素材へのこだわり</h3>
@@ -195,7 +235,7 @@ export default function Home() {
           </section>
         </section>
         <section>
-          <h2>News</h2>
+          <h2 className={clsx(marcellus.className)}>News</h2>
           <p>お知らせ</p>
           <ul>
             <li>
@@ -215,7 +255,7 @@ export default function Home() {
           </ul>
         </section>
         <section>
-          <h2>Access</h2>
+          <h2 className={clsx(marcellus.className)}>Access</h2>
           <p>店舗情報</p>
           <h3>フルール大阪店</h3>
           <dl>
@@ -232,7 +272,7 @@ export default function Home() {
           />
         </section>
         <section>
-          <h2>Online Shop</h2>
+          <h2 className={clsx(marcellus.className)}>Online Shop</h2>
           <p>豊富なギフトをご用意しております。</p>
           <CvButton />
           <Image
