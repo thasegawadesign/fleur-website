@@ -352,8 +352,7 @@ export default function Home() {
             <Image
               src={"/online-shop-bg.webp"}
               alt="ギフト用マカロン"
-              layout="fill"
-              objectFit="cover"
+              fill
               className={clsx(onlineShopImage)}
             />
           </div>

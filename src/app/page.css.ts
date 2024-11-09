@@ -333,5 +333,6 @@ export const onlineShopImageBox = style({
 export const onlineShopImage = style({
   position: "absolute",
   top: 0,
+  objectFit: "cover",
   zIndex: -100,
 });
