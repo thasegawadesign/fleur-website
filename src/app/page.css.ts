@@ -258,3 +258,40 @@ export const newsText = style({
   color: vars.color.textPrimary,
   lineHeight: "1.28em",
 });
+
+export const accessSection = style({
+  display: "flex",
+  flexDirection: "column-reverse",
+});
+export const accessItemBox = style({
+  margin: "-120px 20px 0",
+  padding: "40px 40px 60px",
+  backgroundColor: vars.color.bgPrimary,
+});
+export const shopName = style({
+  fontSize: "1.6rem",
+  fontWeight: 400,
+  color: vars.color.textPrimary,
+  letterSpacing: "0.06em",
+  marginTop: 40,
+  marginBottom: 24,
+});
+export const accessDl = style({});
+export const accessDt = style({
+  fontSize: "1.4rem",
+  fontWeight: 400,
+  color: vars.color.textPrimary,
+  marginBottom: 8,
+});
+export const accessDd = style({
+  fontSize: "1.2rem",
+  fontWeight: 400,
+  color: vars.color.textPrimary,
+});
+export const accessGap = style({
+  marginBottom: 20,
+});
+export const shopImage = style({
+  width: "100%",
+  height: "100%",
+});

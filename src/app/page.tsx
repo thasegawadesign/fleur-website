@@ -1,6 +1,12 @@
 "use client";
 
 import {
+  accessDd,
+  accessDl,
+  accessDt,
+  accessGap,
+  accessItemBox,
+  accessSection,
   catchCopy,
   cvButtonBox,
   cvButtonWrap,
@@ -33,6 +39,8 @@ import {
   recommendedProductImageBox,
   recommendedProductName,
   recommendedProductNameBox,
+  shopImage,
+  shopName,
   time,
   toggle,
   topicDescription,
@@ -294,21 +302,32 @@ export default function Home() {
             </li>
           </ul>
         </section>
-        <section>
-          <h2 className={clsx(marcellus.className)}>Access</h2>
-          <p>店舗情報</p>
-          <h3>フルール大阪店</h3>
-          <dl>
-            <dt>営業時間</dt>
-            <dd>月~日（水曜除く） 11:00~17:00</dd>
-            <dt>店舗所在地</dt>
-            <dd>大阪府〇〇市△△区□□丁目</dd>
-          </dl>
+        <section className={clsx(accessSection)}>
+          <div className={clsx(accessItemBox)}>
+            <div className={clsx(sectionTitleBox)}>
+              <h2 className={clsx(marcellus.className, sectionTitle)}>
+                Access
+              </h2>
+            </div>
+            <div className={clsx(subTitleBox)}>
+              <p className={clsx(subTitle)}>店舗情報</p>
+            </div>
+            <h3 className={clsx(shopName)}>フルール大阪店</h3>
+            <dl className={clsx(accessDl)}>
+              <dt className={clsx(accessDt)}>営業時間</dt>
+              <dd className={clsx(accessDd, accessGap)}>
+                月~日（水曜除く） 11:00~17:00
+              </dd>
+              <dt className={clsx(accessDt)}>店舗所在地</dt>
+              <dd className={clsx(accessDd)}>大阪府〇〇市△△区□□丁目</dd>
+            </dl>
+          </div>
           <Image
             src={"/shop-small.webp"}
             width={600}
             height={370}
             alt="マカロン専門店フルールの店構え"
+            className={clsx(shopImage)}
           />
         </section>
         <section>
