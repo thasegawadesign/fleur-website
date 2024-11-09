@@ -351,9 +351,9 @@ export default function Home() {
           <div className={clsx(onlineShopImageBox)}>
             <Image
               src={"/online-shop-bg.webp"}
-              width={2880}
-              height={720}
               alt="ギフト用マカロン"
+              layout="fill"
+              objectFit="cover"
               className={clsx(onlineShopImage)}
             />
           </div>
