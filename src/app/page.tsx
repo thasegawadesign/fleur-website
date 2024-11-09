@@ -30,6 +30,12 @@ import {
   newsLink,
   newsSection,
   newsText,
+  onlineShop,
+  onlineShopDescription,
+  onlineShopImage,
+  onlineShopImageBox,
+  onlineShopItemBox,
+  onlineShopSection,
   pickupDecoration,
   pickUpSection,
   pickUpSectionBg,
@@ -330,16 +336,27 @@ export default function Home() {
             className={clsx(shopImage)}
           />
         </section>
-        <section>
-          <h2 className={clsx(marcellus.className)}>Online Shop</h2>
-          <p>豊富なギフトをご用意しております。</p>
-          <CvButton />
-          <Image
-            src={"/online-shop-bg.webp"}
-            width={2880}
-            height={720}
-            alt="ギフト用マカロン"
-          />
+        <section className={clsx(onlineShopSection)}>
+          <div className={clsx(onlineShopItemBox)}>
+            <h2 className={clsx(marcellus.className, onlineShop)}>
+              Online Shop
+            </h2>
+            <p className={clsx(onlineShopDescription)}>
+              豊富なギフトをご用意しております。
+            </p>
+            <div className={clsx(cvButtonWrap)}>
+              <CvButton />
+            </div>
+          </div>
+          <div className={clsx(onlineShopImageBox)}>
+            <Image
+              src={"/online-shop-bg.webp"}
+              width={2880}
+              height={720}
+              alt="ギフト用マカロン"
+              className={clsx(onlineShopImage)}
+            />
+          </div>
         </section>
       </main>
       <footer>

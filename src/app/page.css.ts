@@ -262,6 +262,7 @@ export const newsText = style({
 export const accessSection = style({
   display: "flex",
   flexDirection: "column-reverse",
+  marginBottom: 60,
 });
 export const accessItemBox = style({
   margin: "-120px 20px 0",
@@ -294,4 +295,45 @@ export const accessGap = style({
 export const shopImage = style({
   width: "100%",
   height: "100%",
+});
+
+export const onlineShopSection = style({
+  position: "relative",
+});
+export const onlineShopItemBox = style({
+  padding: "40px 0 60px",
+});
+export const onlineShop = style({
+  fontSize: "3.2rem",
+  fontWeight: 400,
+  color: vars.color.bgPrimary,
+  letterSpacing: "0.06em",
+  textAlign: "center",
+  marginBottom: 28,
+});
+export const onlineShopDescription = style({
+  fontSize: "1.4rem",
+  fontWeight: 400,
+  color: vars.color.bgPrimary,
+  letterSpacing: "0.06em",
+  textAlign: "center",
+  marginBottom: 12,
+});
+export const onlineShopImageBox = style({
+  ":before": {
+    content: "",
+    position: "absolute",
+    top: 0,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "rgba(37, 32, 18, 0.7)",
+    zIndex: -50,
+  },
+});
+export const onlineShopImage = style({
+  position: "absolute",
+  top: 0,
+  width: "100%",
+  height: "100%",
+  zIndex: -100,
 });
