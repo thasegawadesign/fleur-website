@@ -202,6 +202,11 @@ export const pickUpSection = style({
   position: "relative",
   marginBottom: 80,
   zIndex: 0,
+  "@media": {
+    [breakpoints["md"]]: {
+      marginBottom: 100,
+    },
+  },
 });
 export const pickUpSectionBg = style({
   position: "relative",
@@ -305,6 +310,12 @@ export const topicSectionItemBox = style({
   flexDirection: "column",
   gap: 28,
   marginTop: 40,
+  "@media": {
+    [breakpoints["md"]]: {
+      gap: 40,
+      marginTop: 60,
+    },
+  },
 });
 export const topicSectionItem = style({
   display: "flex",
@@ -319,6 +330,12 @@ export const topicTitle = style({
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
   marginBottom: 12,
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "2.4rem",
+      marginBottom: 16,
+    },
+  },
 });
 export const topicDescription = style({
   fontSize: "1.2rem",
@@ -327,6 +344,12 @@ export const topicDescription = style({
   letterSpacing: "0.06em",
   lineHeight: "1.28em",
   marginBottom: 8,
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "1.6rem",
+      marginBottom: 12,
+    },
+  },
 });
 export const topicImage = style({
   width: "100%",
