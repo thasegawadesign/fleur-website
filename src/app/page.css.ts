@@ -358,11 +358,22 @@ export const topicImage = style({
 
 export const newsSection = style({
   backgroundColor: vars.color.bgPrimary,
-  marginBlock: 60,
+  marginBottom: 60,
   padding: "28px 0 60px",
+  "@media": {
+    [breakpoints["md"]]: {
+      marginBottom: 100,
+      padding: "80px 0 92px",
+    },
+  },
 });
 export const newsItemBox = style({
   marginTop: 20,
+  "@media": {
+    [breakpoints["md"]]: {
+      marginTop: 28,
+    },
+  },
 });
 export const newsItem = style({
   width: "85%",
@@ -375,16 +386,31 @@ export const newsLink = style({
   gap: 28,
   padding: "20px 24px 20px 16px",
   textDecoration: "none",
+  "@media": {
+    [breakpoints["md"]]: {
+      padding: "32px 28px",
+    },
+  },
 });
 export const time = style({
   fontSize: "1.0rem",
   color: vars.color.textPrimary,
   marginTop: 4,
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "1.4rem",
+    },
+  },
 });
 export const newsText = style({
   fontSize: "1.2rem",
   color: vars.color.textPrimary,
   lineHeight: "1.28em",
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "1.6rem",
+    },
+  },
 });
 
 export const accessSection = style({
