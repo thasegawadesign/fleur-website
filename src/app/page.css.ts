@@ -118,6 +118,11 @@ export const mobileNavLink = style({
 export const cvButtonWrap = style({
   width: "75%",
   margin: "0 auto",
+  "@media": {
+    [breakpoints["md"]]: {
+      maxWidth: 360,
+    },
+  },
 });
 export const cvButtonBox = style({
   margin: "12px 48px",
@@ -174,7 +179,7 @@ export const heroDescription = style({
   lineHeight: "1.28em",
   "@media": {
     [breakpoints["md"]]: {
-      fontSize: "2.0rem",
+      fontSize: "2.2rem",
       margin: "0 28px 0 auto",
     },
   },
@@ -226,6 +231,11 @@ export const pickUpSectionBg = style({
     backgroundPosition: "top",
     zIndex: -100,
   },
+  "@media": {
+    [breakpoints["md"]]: {
+      padding: "80px 0 60px",
+    },
+  },
 });
 export const recommendedProductBox = style({
   display: "flex",
@@ -244,6 +254,11 @@ export const recommendedProductName = style({
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "2.4rem",
+    },
+  },
 });
 export const recommendedProductDescription = style({
   fontSize: "1.2rem",
@@ -253,6 +268,11 @@ export const recommendedProductDescription = style({
   lineHeight: "1.28em",
   width: "69%",
   textAlign: "center",
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "1.6rem",
+    },
+  },
 });
 export const recommendedProductImageBox = style({
   display: "flex",
@@ -267,6 +287,14 @@ export const pickupDecoration = style({
   height: 90,
   marginTop: -20,
   marginLeft: -30,
+  "@media": {
+    [breakpoints["md"]]: {
+      width: 90,
+      height: 135,
+      marginTop: -40,
+      marginLeft: -60,
+    },
+  },
 });
 
 export const topicSection = style({
