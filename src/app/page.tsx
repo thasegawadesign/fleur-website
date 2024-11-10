@@ -8,8 +8,14 @@ import {
   accessItemBox,
   accessSection,
   catchCopy,
+  copyRight,
+  copyRightBox,
   cvButtonBox,
   cvButtonWrap,
+  footer,
+  footerLink,
+  footerLogo,
+  footerUl,
   hamburger,
   hamburgerBox,
   header,
@@ -351,37 +357,48 @@ export default function Home() {
           <div className={clsx(onlineShopImageBox)}>
             <Image
               src={"/online-shop-bg.webp"}
-              width={2880}
-              height={720}
               alt="ギフト用マカロン"
+              fill
               className={clsx(onlineShopImage)}
             />
           </div>
         </section>
       </main>
-      <footer>
-        <Link href={"#"}>Fleur</Link>
+      <footer className={clsx(footer)}>
+        <Link href={"#"} className={clsx(sacramento.className, footerLogo)}>
+          Fleur
+        </Link>
         <nav>
-          <ul>
+          <ul className={clsx(footerUl)}>
             <li>
-              <Link href={"#"}>よくある質問</Link>
+              <Link href={"#"} className={clsx(footerLink)}>
+                よくある質問
+              </Link>
             </li>
             <li>
-              <Link href={"#"}>お問い合わせ</Link>
+              <Link href={"#"} className={clsx(footerLink)}>
+                お問い合わせ
+              </Link>
             </li>
             <li>
-              <Link href={"#"}>利用規約</Link>
+              <Link href={"#"} className={clsx(footerLink)}>
+                利用規約
+              </Link>
             </li>
             <li>
-              <Link href={"#"}>プライバシーポリシー</Link>
+              <Link href={"#"} className={clsx(footerLink)}>
+                プライバシーポリシー
+              </Link>
             </li>
             <li>
-              <Link href={"#"}>特定商取引法に基づく表記</Link>
+              <Link href={"#"} className={clsx(footerLink)}>
+                特定商取引法に基づく表記
+              </Link>
             </li>
           </ul>
         </nav>
-        <p>
-          <small>©2024 Fleur</small>
+        <p className={clsx(copyRightBox)}>
+          <small className={clsx(copyRight)}>©2024 Fleur</small>
         </p>
       </footer>
     </>

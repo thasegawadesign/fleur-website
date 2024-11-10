@@ -333,7 +333,40 @@ export const onlineShopImageBox = style({
 export const onlineShopImage = style({
   position: "absolute",
   top: 0,
-  width: "100%",
-  height: "100%",
+  objectFit: "cover",
   zIndex: -100,
+});
+
+export const footer = style({
+  padding: "0 28px",
+  backgroundColor: vars.color.bgPrimary,
+});
+export const footerLogo = style({
+  display: "inline-block",
+  fontSize: "4.0rem",
+  color: vars.color.textPrimary,
+  textDecoration: "none",
+  marginTop: 60,
+  marginBottom: 20,
+});
+export const footerUl = style({
+  display: "flex",
+  flexDirection: "column",
+  gap: 8,
+  paddingBottom: 40,
+  borderBottom: `solid 1px ${vars.color.textPrimary}`,
+});
+export const footerLink = style({
+  fontSize: "1.2rem",
+  color: vars.color.textPrimary,
+  textDecoration: "none",
+});
+export const copyRightBox = style({
+  padding: "12px 0 20px",
+  textAlign: "center",
+});
+export const copyRight = style({
+  fontSize: "1.0rem",
+  color: vars.color.textPrimary,
+  letterSpacing: "0.06em",
 });
