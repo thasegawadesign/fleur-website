@@ -486,9 +486,28 @@ export const shopImage = style({
 
 export const onlineShopSection = style({
   position: "relative",
+  "@media": {
+    [breakpoints["md"]]: {
+      ":before": {
+        content: "",
+        position: "absolute",
+        top: 20,
+        left: 20,
+        width: "calc(100% - 40px)",
+        height: "calc(100% - 40px)",
+        border: `solid 1px ${vars.color.bgPrimary}`,
+        zIndex: -20,
+      },
+    },
+  },
 });
 export const onlineShopItemBox = style({
   padding: "40px 0 60px",
+  "@media": {
+    [breakpoints["md"]]: {
+      padding: "80px 0 100px",
+    },
+  },
 });
 export const onlineShop = style({
   fontSize: "3.2rem",
@@ -497,6 +516,11 @@ export const onlineShop = style({
   letterSpacing: "0.06em",
   textAlign: "center",
   marginBottom: 28,
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "4.0rem",
+    },
+  },
 });
 export const onlineShopDescription = style({
   fontSize: "1.4rem",
@@ -505,6 +529,12 @@ export const onlineShopDescription = style({
   letterSpacing: "0.06em",
   textAlign: "center",
   marginBottom: 12,
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "1.8rem",
+      marginBottom: 20,
+    },
+  },
 });
 export const onlineShopImageBox = style({
   ":before": {
