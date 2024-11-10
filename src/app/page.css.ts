@@ -1,4 +1,4 @@
-import { vars } from "@/styles/styles.css";
+import { breakpoints, vars } from "@/styles/styles.css";
 import { style } from "@vanilla-extract/css";
 
 export const header = style({
@@ -12,6 +12,11 @@ export const mobileHeader = style({
   alignItems: "center",
   padding: "12px 28px",
   background: "#fff",
+  "@media": {
+    [breakpoints["md"]]: {
+      padding: "20px 32px",
+    },
+  },
 });
 
 export const logoBox = style({
@@ -20,6 +25,11 @@ export const logoBox = style({
 export const logo = style({
   fontSize: "3.6rem",
   color: vars.color.textPrimary,
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "4.8rem",
+    },
+  },
 });
 
 export const hamburgerBox = style({
@@ -29,6 +39,11 @@ export const hamburgerBox = style({
   backgroundColor: "transparent",
   border: "transparent",
   cursor: "pointer",
+  "@media": {
+    [breakpoints["md"]]: {
+      gap: 8,
+    },
+  },
 });
 export const toggle = style({
   selectors: {
@@ -40,12 +55,30 @@ export const toggle = style({
       transform: "rotate(-45deg) translate(5px, -5px)",
     },
   },
+  "@media": {
+    [breakpoints["md"]]: {
+      selectors: {
+        [`${hamburgerBox} > &:nth-child(1)`]: {
+          transform: "rotate(45deg) translate(8px, 8px)",
+        },
+        [`${hamburgerBox} > &:nth-child(2)`]: { opacity: 0 },
+        [`${hamburgerBox} > &:nth-child(3)`]: {
+          transform: "rotate(-45deg) translate(6px, -6px)",
+        },
+      },
+    },
+  },
 });
 export const hamburger = style({
   width: 24,
   height: 2,
   backgroundColor: vars.color.textPrimary,
   transition: "transform 0.2s ease",
+  "@media": {
+    [breakpoints["md"]]: {
+      width: 32,
+    },
+  },
 });
 
 export const mobileNavLinksHidden = style({
@@ -62,12 +95,24 @@ export const mobileNavLinksVisible = style({
   width: "100%",
   height: "calc(100vh - 48px)",
   background: vars.color.bgPrimary,
+  "@media": {
+    [breakpoints["md"]]: {
+      top: 88,
+      gap: 28,
+    },
+  },
 });
 export const mobileNavLink = style({
   textDecoration: "none",
   margin: "0 60px",
   fontSize: "1.6rem",
   color: vars.color.textPrimary,
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "1.8rem",
+      margin: "0 80px",
+    },
+  },
 });
 
 export const cvButtonWrap = style({
@@ -76,12 +121,22 @@ export const cvButtonWrap = style({
 });
 export const cvButtonBox = style({
   margin: "12px 48px",
+  "@media": {
+    [breakpoints["md"]]: {
+      margin: "12px 72px",
+    },
+  },
 });
 
 export const heroSection = style({
   display: "flex",
   flexDirection: "column-reverse",
   marginBottom: 80,
+  "@media": {
+    [breakpoints["md"]]: {
+      marginBottom: 120,
+    },
+  },
 });
 export const catchCopy = style({
   fontSize: "2.0rem",
@@ -90,10 +145,21 @@ export const catchCopy = style({
   lineHeight: "1.28em",
   color: vars.color.textPrimary,
   margin: "24px 20px 0",
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "3.0rem",
+      margin: "32px 28px 0",
+    },
+  },
 });
 export const macaronsBox = style({
   textAlign: "center",
   margin: "24px 0 28px",
+  "@media": {
+    [breakpoints["md"]]: {
+      margin: "28px 0 48px",
+    },
+  },
 });
 export const macarons = style({
   width: "75%",
@@ -106,9 +172,20 @@ export const heroDescription = style({
   color: vars.color.textPrimary,
   letterSpacing: "0.2em",
   lineHeight: "1.28em",
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "2.0rem",
+      margin: "0 28px 0 auto",
+    },
+  },
 });
 export const mainVisualBox = style({
   paddingLeft: 20,
+  "@media": {
+    [breakpoints["md"]]: {
+      paddingLeft: 28,
+    },
+  },
 });
 export const mainVisual = style({
   width: "100%",
