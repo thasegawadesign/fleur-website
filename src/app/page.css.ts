@@ -417,11 +417,22 @@ export const accessSection = style({
   display: "flex",
   flexDirection: "column-reverse",
   marginBottom: 60,
+  "@media": {
+    [breakpoints["md"]]: {
+      marginBottom: 100,
+    },
+  },
 });
 export const accessItemBox = style({
   margin: "-120px 20px 0",
   padding: "40px 40px 60px",
   backgroundColor: vars.color.bgPrimary,
+  "@media": {
+    [breakpoints["md"]]: {
+      margin: "-160px 28px 0",
+      padding: "80px 100px 100px",
+    },
+  },
 });
 export const shopName = style({
   fontSize: "1.6rem",
@@ -430,6 +441,12 @@ export const shopName = style({
   letterSpacing: "0.06em",
   marginTop: 40,
   marginBottom: 24,
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "2.2rem",
+      marginBottom: 40,
+    },
+  },
 });
 export const accessDl = style({});
 export const accessDt = style({
@@ -437,14 +454,30 @@ export const accessDt = style({
   fontWeight: 400,
   color: vars.color.textPrimary,
   marginBottom: 8,
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "2.0rem",
+      marginBottom: 12,
+    },
+  },
 });
 export const accessDd = style({
   fontSize: "1.2rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "1.6rem",
+    },
+  },
 });
 export const accessGap = style({
   marginBottom: 20,
+  "@media": {
+    [breakpoints["md"]]: {
+      marginBottom: 28,
+    },
+  },
 });
 export const shopImage = style({
   width: "100%",
