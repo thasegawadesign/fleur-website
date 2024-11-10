@@ -312,7 +312,7 @@ export const topicSectionItemBox = style({
   marginTop: 40,
   "@media": {
     [breakpoints["md"]]: {
-      gap: 40,
+      gap: 48,
       marginTop: 60,
     },
   },
@@ -347,7 +347,7 @@ export const topicDescription = style({
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.6rem",
-      marginBottom: 12,
+      marginBottom: 16,
     },
   },
 });
