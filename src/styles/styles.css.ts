@@ -19,6 +19,11 @@ export const vars = createGlobalTheme(":root", {
 
 export const sectionTitleBox = style({
   marginBottom: 4,
+  "@media": {
+    [breakpoints["md"]]: {
+      marginBottom: 8,
+    },
+  },
 });
 export const sectionTitle = style({
   fontSize: "3.2rem",
@@ -26,6 +31,11 @@ export const sectionTitle = style({
   letterSpacing: "0.04em",
   color: vars.color.textPrimary,
   textAlign: "center",
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "4.0rem",
+    },
+  },
 });
 export const subTitleBox = style({
   textAlign: "center",
@@ -45,5 +55,10 @@ export const subTitle = style({
     height: 6,
     backgroundColor: vars.color.accent,
     borderRadius: "50%",
+  },
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "1.4rem",
+    },
   },
 });
