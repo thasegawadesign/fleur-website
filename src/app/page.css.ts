@@ -141,6 +141,26 @@ export const heroSection = style({
     [breakpoints["md"]]: {
       marginBottom: 120,
     },
+    [breakpoints["lg"]]: {
+      flexDirection: "row",
+    },
+  },
+});
+export const heroSectionInnerLeft = style({
+  "@media": {
+    [breakpoints["lg"]]: {
+      display: "flex",
+      flexDirection: "column",
+      gap: 12,
+    },
+  },
+});
+export const catchMacaronsBox = style({
+  "@media": {
+    [breakpoints["lg"]]: {
+      display: "flex",
+      flexDirection: "column-reverse",
+    },
   },
 });
 export const catchCopy = style({
@@ -155,6 +175,17 @@ export const catchCopy = style({
       fontSize: "3.0rem",
       margin: "32px 28px 0",
     },
+    [breakpoints["lg"]]: {
+      fontSize: "2.0rem",
+      margin: "0 0 0 28px",
+    },
+  },
+});
+export const catchCopyBr = style({
+  "@media": {
+    [breakpoints["lg"]]: {
+      display: "none",
+    },
   },
 });
 export const macaronsBox = style({
@@ -164,11 +195,19 @@ export const macaronsBox = style({
     [breakpoints["md"]]: {
       margin: "28px 0 48px",
     },
+    [breakpoints["lg"]]: {
+      margin: "180px 0 20px",
+    },
   },
 });
 export const macarons = style({
   width: "75%",
   height: "100%",
+  "@media": {
+    [breakpoints["lg"]]: {
+      width: "100%",
+    },
+  },
 });
 export const heroDescription = style({
   width: "75%",
@@ -181,6 +220,11 @@ export const heroDescription = style({
     [breakpoints["md"]]: {
       fontSize: "2.2rem",
       margin: "0 28px 0 auto",
+    },
+    [breakpoints["lg"]]: {
+      fontSize: "1.6rem",
+      margin: "0 0 0 28px",
+      width: "auto",
     },
   },
 });
