@@ -624,6 +624,9 @@ export const onlineShop = style({
     [breakpoints["md"]]: {
       fontSize: "4.0rem",
     },
+    [breakpoints["lg"]]: {
+      fontSize: "4.8rem",
+    },
   },
 });
 export const onlineShopDescription = style({
