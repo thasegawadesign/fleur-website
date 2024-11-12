@@ -8,6 +8,8 @@ import {
   accessItemBox,
   accessSection,
   catchCopy,
+  catchCopyBr,
+  catchMacaronsBox,
   copyRight,
   copyRightBox,
   cvButtonBox,
@@ -21,6 +23,7 @@ import {
   header,
   heroDescription,
   heroSection,
+  heroSectionInnerLeft,
   logo,
   logoBox,
   macarons,
@@ -152,21 +155,23 @@ export default function Home() {
       </header>
       <main>
         <section className={clsx(heroSection)}>
-          <div>
-            <h2 className={clsx(catchCopy)}>
-              一口で広がる、
-              <br />
-              贅沢な味わい。
-            </h2>
-            <div className={clsx(macaronsBox)}>
-              <Image
-                src={"/macarons.webp"}
-                width={640}
-                height={320}
-                alt="カラフルなマカロン"
-                className={clsx(macarons)}
-                priority
-              />
+          <div className={clsx(heroSectionInnerLeft)}>
+            <div className={clsx(catchMacaronsBox)}>
+              <h2 className={clsx(catchCopy)}>
+                一口で広がる、
+                <br className={clsx(catchCopyBr)} />
+                贅沢な味わい。
+              </h2>
+              <div className={clsx(macaronsBox)}>
+                <Image
+                  src={"/macarons.webp"}
+                  width={640}
+                  height={320}
+                  alt="カラフルなマカロン"
+                  className={clsx(macarons)}
+                  priority
+                />
+              </div>
             </div>
             <p className={clsx(heroDescription)}>
               厳選された素材と職人の技が奏でる、特別な一口。毎日を彩る、贅沢なひとときをお楽しみください。
