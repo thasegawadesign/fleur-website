@@ -14,6 +14,10 @@ import {
   copyRightBox,
   cvButtonBox,
   cvButtonWrap,
+  desktopNav,
+  desktopNavLink,
+  desktopNavOnlineShop,
+  desktopNavUl,
   footer,
   footerLink,
   footerLogo,
@@ -22,6 +26,7 @@ import {
   hamburgerBox,
   header,
   heroDescription,
+  heroDescriptionDesktopBr,
   heroSection,
   heroSectionInnerLeft,
   logo,
@@ -110,6 +115,45 @@ export default function Home() {
             <span className={clsx(hamburger, isOpen && toggle)}></span>
             <span className={clsx(hamburger, isOpen && toggle)}></span>
           </button>
+          <nav className={clsx(desktopNav)}>
+            <ul className={clsx(desktopNavUl)}>
+              <li>
+                <Link href={"#"} className={clsx(desktopNavLink)}>
+                  美味しさへのこだわり
+                </Link>
+              </li>
+              <li>
+                <Link href={"#"} className={clsx(desktopNavLink)}>
+                  ブランド
+                </Link>
+              </li>
+              <li>
+                <Link href={"#"} className={clsx(desktopNavLink)}>
+                  ギフト
+                </Link>
+              </li>
+              <li>
+                <Link href={"#"} className={clsx(desktopNavLink)}>
+                  ニュース
+                </Link>
+              </li>
+              <li>
+                <Link href={"#"} className={clsx(desktopNavLink)}>
+                  ラインナップ
+                </Link>
+              </li>
+              <li>
+                <Link href={"#"} className={clsx(desktopNavLink)}>
+                  店舗情報
+                </Link>
+              </li>
+              <li>
+                <Link href={"#"} className={clsx(desktopNavOnlineShop)}>
+                  オンラインショップ
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </div>
         <nav>
           <ul
@@ -174,7 +218,9 @@ export default function Home() {
               </div>
             </div>
             <p className={clsx(heroDescription)}>
-              厳選された素材と職人の技が奏でる、特別な一口。毎日を彩る、贅沢なひとときをお楽しみください。
+              厳選された素材と職人の技が奏でる、特別な一口。
+              <br className={clsx(heroDescriptionDesktopBr)} />
+              毎日を彩る、贅沢なひとときをお楽しみください。
             </p>
           </div>
           <div className={clsx(mainVisualBox)}>

@@ -6,6 +6,7 @@ export const breakpoints = {
   lg: "screen and (768px <= width)",
   xl: "screen and (1024px <= width)",
   "2xl": "screen and (1280px <= width)",
+  "3xl": "screen and (1560px <= width)",
 } as const;
 
 export const vars = createGlobalTheme(":root", {
