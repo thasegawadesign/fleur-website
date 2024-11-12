@@ -460,6 +460,9 @@ export const newsSection = style({
       marginBottom: 100,
       padding: "80px 0 92px",
     },
+    [breakpoints["lg"]]: {
+      marginBottom: 120,
+    },
   },
 });
 export const newsItemBox = style({
@@ -516,6 +519,9 @@ export const accessSection = style({
     [breakpoints["md"]]: {
       marginBottom: 100,
     },
+    [breakpoints["lg"]]: {
+      marginBottom: 120,
+    },
   },
 });
 export const accessItemBox = style({
@@ -526,6 +532,9 @@ export const accessItemBox = style({
     [breakpoints["md"]]: {
       margin: "-160px 28px 0",
       padding: "80px 100px 100px",
+    },
+    [breakpoints["lg"]]: {
+      margin: "-360px 40px 0",
     },
   },
 });
