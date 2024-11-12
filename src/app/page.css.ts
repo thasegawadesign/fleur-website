@@ -557,6 +557,11 @@ export const onlineShopImage = style({
 export const footer = style({
   padding: "0 28px",
   backgroundColor: vars.color.bgPrimary,
+  "@media": {
+    [breakpoints["md"]]: {
+      padding: "0 40px",
+    },
+  },
 });
 export const footerLogo = style({
   display: "inline-block",
@@ -565,6 +570,13 @@ export const footerLogo = style({
   textDecoration: "none",
   marginTop: 60,
   marginBottom: 20,
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "5.2rem",
+      marginTop: 80,
+      marginBottom: 28,
+    },
+  },
 });
 export const footerUl = style({
   display: "flex",
@@ -572,11 +584,22 @@ export const footerUl = style({
   gap: 8,
   paddingBottom: 40,
   borderBottom: `solid 1px ${vars.color.textPrimary}`,
+  "@media": {
+    [breakpoints["md"]]: {
+      gap: 16,
+      paddingBottom: 60,
+    },
+  },
 });
 export const footerLink = style({
   fontSize: "1.2rem",
   color: vars.color.textPrimary,
   textDecoration: "none",
+  "@media": {
+    [breakpoints["md"]]: {
+      fontSize: "1.6rem",
+    },
+  },
 });
 export const copyRightBox = style({
   padding: "12px 0 20px",
