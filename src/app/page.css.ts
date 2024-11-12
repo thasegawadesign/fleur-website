@@ -250,6 +250,9 @@ export const pickUpSection = style({
     [breakpoints["md"]]: {
       marginBottom: 100,
     },
+    [breakpoints["lg"]]: {
+      marginBottom: 160,
+    },
   },
 });
 export const pickUpSectionBg = style({
@@ -366,16 +369,27 @@ export const pickupDecoration = style({
 
 export const topicSection = style({
   marginBottom: 80,
+  "@media": {
+    [breakpoints["lg"]]: {
+      marginBottom: 160,
+    },
+  },
 });
 export const topicSectionItemBox = style({
   display: "flex",
   flexDirection: "column",
   gap: 28,
-  marginTop: 40,
+  margin: "40px auto 0",
   "@media": {
     [breakpoints["md"]]: {
       gap: 48,
       marginTop: 60,
+    },
+    [breakpoints["lg"]]: {
+      maxWidth: 1100,
+      gap: 60,
+      marginTop: 80,
+      padding: "0 40px",
     },
   },
 });
@@ -385,6 +399,13 @@ export const topicSectionItem = style({
   gap: 24,
   width: "85%",
   margin: "0 auto",
+  "@media": {
+    [breakpoints["lg"]]: {
+      flexDirection: "row-reverse",
+      alignItems: "flex-end",
+      width: "auto",
+    },
+  },
 });
 export const topicTitle = style({
   fontSize: "1.6rem",
@@ -396,6 +417,9 @@ export const topicTitle = style({
     [breakpoints["md"]]: {
       fontSize: "2.4rem",
       marginBottom: 16,
+    },
+    [breakpoints["lg"]]: {
+      marginBottom: 20,
     },
   },
 });
@@ -411,11 +435,20 @@ export const topicDescription = style({
       fontSize: "1.6rem",
       marginBottom: 16,
     },
+    [breakpoints["lg"]]: {
+      marginBottom: 20,
+    },
   },
 });
 export const topicImage = style({
   width: "100%",
   height: "100%",
+  "@media": {
+    [breakpoints["lg"]]: {
+      width: "48%",
+      maxWidth: 560,
+    },
+  },
 });
 
 export const newsSection = style({
