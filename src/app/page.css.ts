@@ -152,6 +152,7 @@ export const heroSectionInnerLeft = style({
       display: "flex",
       flexDirection: "column",
       gap: 12,
+      justifyContent: "flex-end",
     },
   },
 });
@@ -179,6 +180,11 @@ export const catchCopy = style({
       fontSize: "2.4rem",
       margin: "0 0 0 28px",
     },
+    [breakpoints["xl"]]: {
+      fontSize: "3.2rem",
+      maxWidth: 840,
+      margin: "0 0 0 60px",
+    },
   },
 });
 export const catchCopyBr = style({
@@ -198,6 +204,10 @@ export const macaronsBox = style({
     [breakpoints["lg"]]: {
       margin: "160px 0 20px",
     },
+    [breakpoints["xl"]]: {
+      display: "flex",
+      justifyContent: "flex-end",
+    },
   },
 });
 export const macarons = style({
@@ -206,6 +216,9 @@ export const macarons = style({
   "@media": {
     [breakpoints["lg"]]: {
       width: "100%",
+    },
+    [breakpoints["xl"]]: {
+      maxWidth: 840,
     },
   },
 });
@@ -226,6 +239,10 @@ export const heroDescription = style({
       margin: "0 0 0 28px",
       width: "auto",
     },
+    [breakpoints["xl"]]: {
+      maxWidth: 840,
+      margin: "0 0 56px 60px",
+    },
   },
 });
 export const mainVisualBox = style({
@@ -234,12 +251,20 @@ export const mainVisualBox = style({
     [breakpoints["md"]]: {
       paddingLeft: 28,
     },
+    [breakpoints["xl"]]: {
+      paddingLeft: 56,
+    },
   },
 });
 export const mainVisual = style({
   width: "100%",
   height: "100%",
   borderRadius: "0 0 0 28px",
+  "@media": {
+    [breakpoints["xl"]]: {
+      maxWidth: 1080,
+    },
+  },
 });
 
 export const pickUpSection = style({
