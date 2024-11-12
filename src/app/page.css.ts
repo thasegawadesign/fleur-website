@@ -241,7 +241,7 @@ export const heroDescription = style({
     },
     [breakpoints["xl"]]: {
       maxWidth: 840,
-      margin: "0 0 56px 60px",
+      margin: "0 0 40px 60px",
     },
   },
 });
@@ -263,6 +263,7 @@ export const mainVisual = style({
   "@media": {
     [breakpoints["xl"]]: {
       maxWidth: 1080,
+      borderRadius: "0 0 0 60px",
     },
   },
 });
