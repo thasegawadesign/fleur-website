@@ -668,6 +668,9 @@ export const footer = style({
     [breakpoints["md"]]: {
       padding: "0 40px",
     },
+    [breakpoints["lg"]]: {
+      padding: "0 60px",
+    },
   },
 });
 export const footerLogo = style({
