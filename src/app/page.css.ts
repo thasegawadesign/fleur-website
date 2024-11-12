@@ -176,7 +176,7 @@ export const catchCopy = style({
       margin: "32px 28px 0",
     },
     [breakpoints["lg"]]: {
-      fontSize: "2.0rem",
+      fontSize: "2.4rem",
       margin: "0 0 0 28px",
     },
   },
@@ -196,7 +196,7 @@ export const macaronsBox = style({
       margin: "28px 0 48px",
     },
     [breakpoints["lg"]]: {
-      margin: "180px 0 20px",
+      margin: "160px 0 20px",
     },
   },
 });
@@ -291,12 +291,22 @@ export const recommendedProductBox = style({
   flexDirection: "column-reverse",
   gap: 28,
   marginBottom: 40,
+  "@media": {
+    [breakpoints["lg"]]: {
+      gap: 32,
+    },
+  },
 });
 export const recommendedProductNameBox = style({
   display: "flex",
   flexDirection: "column",
   gap: 16,
   alignItems: "center",
+  "@media": {
+    [breakpoints["lg"]]: {
+      gap: 20,
+    },
+  },
 });
 export const recommendedProductName = style({
   fontSize: "1.6rem",
@@ -321,6 +331,9 @@ export const recommendedProductDescription = style({
     [breakpoints["md"]]: {
       fontSize: "1.6rem",
     },
+    [breakpoints["lg"]]: {
+      width: 480,
+    },
   },
 });
 export const recommendedProductImageBox = style({
@@ -330,6 +343,11 @@ export const recommendedProductImageBox = style({
 export const recommendedProductImage = style({
   width: "72%",
   height: "100%",
+  "@media": {
+    [breakpoints["lg"]]: {
+      width: 480,
+    },
+  },
 });
 export const pickupDecoration = style({
   width: 60,
