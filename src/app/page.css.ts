@@ -16,6 +16,12 @@ export const mobileHeader = style({
     [breakpoints["md"]]: {
       padding: "20px 32px",
     },
+    [breakpoints["2xl"]]: {
+      padding: "24px 80px",
+    },
+    [breakpoints["3xl"]]: {
+      padding: "36px 140px",
+    },
   },
 });
 
@@ -42,6 +48,9 @@ export const hamburgerBox = style({
   "@media": {
     [breakpoints["md"]]: {
       gap: 8,
+    },
+    [breakpoints["2xl"]]: {
+      display: "none",
     },
   },
 });
@@ -79,6 +88,38 @@ export const hamburger = style({
       width: 32,
     },
   },
+});
+
+export const desktopNav = style({
+  display: "none",
+  "@media": {
+    [breakpoints["2xl"]]: {
+      display: "block",
+    },
+  },
+});
+export const desktopNavUl = style({
+  display: "flex",
+  gap: 40,
+  "@media": {
+    [breakpoints["3xl"]]: {
+      gap: 56,
+    },
+  },
+});
+export const desktopNavLink = style({
+  fontSize: "1.6rem",
+  color: vars.color.textPrimary,
+  textDecoration: "none",
+});
+export const desktopNavOnlineShop = style({
+  fontSize: "1.6rem",
+  color: vars.color.textPrimary,
+  letterSpacing: "0.12em",
+  textDecoration: "none",
+  padding: "0 18px",
+  borderLeft: `solid 1px ${vars.color.textPrimary}`,
+  borderRight: `solid 1px ${vars.color.textPrimary}`,
 });
 
 export const mobileNavLinksHidden = style({
@@ -144,6 +185,10 @@ export const heroSection = style({
     [breakpoints["lg"]]: {
       flexDirection: "row",
     },
+    [breakpoints["2xl"]]: {
+      marginTop: -240,
+      justifyContent: "flex-end",
+    },
   },
 });
 export const heroSectionInnerLeft = style({
@@ -184,6 +229,9 @@ export const catchCopy = style({
       fontSize: "3.2rem",
       maxWidth: 840,
       margin: "0 0 0 60px",
+    },
+    [breakpoints["2xl"]]: {
+      margin: "0 0 0 80px",
     },
   },
 });
@@ -243,6 +291,19 @@ export const heroDescription = style({
       maxWidth: 840,
       margin: "0 0 40px 60px",
     },
+    [breakpoints["2xl"]]: {
+      fontSize: "1.8rem",
+      margin: "0 0 56px 80px",
+      letterSpacing: "0.42em",
+    },
+  },
+});
+export const heroDescriptionDesktopBr = style({
+  display: "none",
+  "@media": {
+    [breakpoints["2xl"]]: {
+      display: "block",
+    },
   },
 });
 export const mainVisualBox = style({
@@ -253,6 +314,9 @@ export const mainVisualBox = style({
     },
     [breakpoints["xl"]]: {
       paddingLeft: 56,
+    },
+    [breakpoints["2xl"]]: {
+      paddingLeft: 80,
     },
   },
 });
