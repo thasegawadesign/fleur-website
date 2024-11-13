@@ -601,7 +601,7 @@ export const topicImage = style({
 export const newsSection = style({
   backgroundColor: vars.color.bgPrimary,
   marginBottom: 60,
-  padding: "28px 0 60px",
+  padding: "40px 0 60px",
   "@media": {
     [breakpoints["md"]]: {
       marginBottom: 100,
@@ -709,6 +709,7 @@ export const accessSection = style({
   },
 });
 export const accessItemBox = style({
+  position: "relative",
   margin: "-120px 20px 0",
   padding: "40px 40px 60px",
   backgroundColor: vars.color.bgPrimary,
