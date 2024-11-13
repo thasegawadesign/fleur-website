@@ -24,6 +24,9 @@ export const sectionTitleBox = style({
     [breakpoints["md"]]: {
       marginBottom: 8,
     },
+    [breakpoints["xl"]]: {
+      marginBottom: 12,
+    },
   },
 });
 export const sectionTitle = style({
@@ -38,6 +41,7 @@ export const sectionTitle = style({
     },
     [breakpoints["xl"]]: {
       fontSize: "5.2rem",
+      letterSpacing: "0.08em",
     },
   },
 });
@@ -53,8 +57,10 @@ export const subTitle = style({
   ":before": {
     content: "",
     position: "absolute",
-    top: 3,
+    top: 0,
+    bottom: 0,
     left: -12,
+    margin: "auto 0",
     width: 6,
     height: 6,
     backgroundColor: vars.color.accent,
@@ -66,6 +72,10 @@ export const subTitle = style({
     },
     [breakpoints["xl"]]: {
       fontSize: "1.6rem",
+      letterSpacing: "0.12em",
+      ":before": {
+        left: -16,
+      },
     },
   },
 });
