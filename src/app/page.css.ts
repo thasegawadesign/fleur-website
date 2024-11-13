@@ -413,6 +413,10 @@ export const recommendedProductBox = style({
     [breakpoints["lg"]]: {
       gap: 32,
     },
+    [breakpoints["xl"]]: {
+      gap: 40,
+      marginBottom: 48,
+    },
   },
 });
 export const recommendedProductNameBox = style({
@@ -423,6 +427,9 @@ export const recommendedProductNameBox = style({
   "@media": {
     [breakpoints["lg"]]: {
       gap: 20,
+    },
+    [breakpoints["xl"]]: {
+      gap: 28,
     },
   },
 });
@@ -497,6 +504,9 @@ export const topicSection = style({
     [breakpoints["lg"]]: {
       marginBottom: 160,
     },
+    [breakpoints["xl"]]: {
+      marginBottom: 180,
+    },
   },
 });
 export const topicSectionItemBox = style({
@@ -510,10 +520,14 @@ export const topicSectionItemBox = style({
       marginTop: 60,
     },
     [breakpoints["lg"]]: {
-      maxWidth: 1100,
+      maxWidth: 1200,
       gap: 60,
       marginTop: 80,
       padding: "0 40px",
+    },
+    [breakpoints["xl"]]: {
+      marginTop: 100,
+      gap: 64,
     },
   },
 });
@@ -528,6 +542,9 @@ export const topicSectionItem = style({
       flexDirection: "row-reverse",
       alignItems: "flex-end",
       width: "auto",
+    },
+    [breakpoints["xl"]]: {
+      gap: 40,
     },
   },
 });
@@ -544,6 +561,9 @@ export const topicTitle = style({
     },
     [breakpoints["lg"]]: {
       marginBottom: 20,
+    },
+    [breakpoints["xl"]]: {
+      marginBottom: 24,
     },
   },
 });
@@ -562,6 +582,9 @@ export const topicDescription = style({
     [breakpoints["lg"]]: {
       marginBottom: 20,
     },
+    [breakpoints["xl"]]: {
+      marginBottom: 92,
+    },
   },
 });
 export const topicImage = style({
@@ -570,7 +593,7 @@ export const topicImage = style({
   "@media": {
     [breakpoints["lg"]]: {
       width: "48%",
-      maxWidth: 560,
+      maxWidth: 670,
     },
   },
 });
