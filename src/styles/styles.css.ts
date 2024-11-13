@@ -36,6 +36,9 @@ export const sectionTitle = style({
     [breakpoints["md"]]: {
       fontSize: "4.0rem",
     },
+    [breakpoints["xl"]]: {
+      fontSize: "5.2rem",
+    },
   },
 });
 export const subTitleBox = style({
@@ -60,6 +63,9 @@ export const subTitle = style({
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.4rem",
+    },
+    [breakpoints["xl"]]: {
+      fontSize: "1.6rem",
     },
   },
 });
