@@ -701,6 +701,11 @@ export const accessSection = style({
     [breakpoints["lg"]]: {
       marginBottom: 120,
     },
+    [breakpoints["xl"]]: {
+      flexDirection: "row-reverse",
+      justifyContent: "center",
+      marginBottom: 160,
+    },
   },
 });
 export const accessItemBox = style({
@@ -715,7 +720,29 @@ export const accessItemBox = style({
     [breakpoints["lg"]]: {
       margin: "-360px 40px 0",
     },
+    [breakpoints["xl"]]: {
+      margin: 0,
+      padding: "40px 60px",
+      backgroundColor: "transparent",
+    },
+    [breakpoints["2xl"]]: {
+      paddingRight: 280,
+    },
+    [breakpoints["3xl"]]: {
+      paddingRight: 480,
+      paddingLeft: 80,
+    },
   },
+});
+export const accessTitleLeft = style({
+  "@media": {
+    [breakpoints["xl"]]: {
+      textAlign: "left",
+    },
+  },
+});
+export const accessSubTitle = style({
+  paddingLeft: 20,
 });
 export const shopName = style({
   fontSize: "1.6rem",
@@ -728,6 +755,9 @@ export const shopName = style({
     [breakpoints["md"]]: {
       fontSize: "2.2rem",
       marginBottom: 40,
+    },
+    [breakpoints["xl"]]: {
+      fontSize: "1.6rem",
     },
   },
 });
@@ -742,6 +772,9 @@ export const accessDt = style({
       fontSize: "2.0rem",
       marginBottom: 12,
     },
+    [breakpoints["xl"]]: {
+      fontSize: "1.8rem",
+    },
   },
 });
 export const accessDd = style({
@@ -751,6 +784,9 @@ export const accessDd = style({
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.6rem",
+    },
+    [breakpoints["xl"]]: {
+      fontSize: "1.4rem",
     },
   },
 });
@@ -765,6 +801,11 @@ export const accessGap = style({
 export const shopImage = style({
   width: "100%",
   height: "100%",
+  "@media": {
+    [breakpoints["xl"]]: {
+      maxWidth: 600,
+    },
+  },
 });
 
 export const onlineShopSection = style({
@@ -774,12 +815,21 @@ export const onlineShopSection = style({
       ":before": {
         content: "",
         position: "absolute",
-        top: 20,
-        left: 20,
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
+        margin: "auto",
         width: "calc(100% - 40px)",
         height: "calc(100% - 40px)",
         border: `solid 1px ${vars.color.bgPrimary}`,
         zIndex: -20,
+      },
+    },
+    [breakpoints["xl"]]: {
+      ":before": {
+        width: "calc(100% - 80px)",
+        height: "calc(100% - 80px)",
       },
     },
   },
@@ -789,6 +839,9 @@ export const onlineShopItemBox = style({
   "@media": {
     [breakpoints["md"]]: {
       padding: "80px 0 100px",
+    },
+    [breakpoints["xl"]]: {
+      padding: "100px 0 120px",
     },
   },
 });
@@ -805,6 +858,9 @@ export const onlineShop = style({
     },
     [breakpoints["lg"]]: {
       fontSize: "4.8rem",
+    },
+    [breakpoints["xl"]]: {
+      fontSize: "5.2rem",
     },
   },
 });
