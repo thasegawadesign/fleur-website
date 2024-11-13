@@ -908,6 +908,25 @@ export const footer = style({
     },
   },
 });
+export const footerItemBox = style({
+  "@media": {
+    [breakpoints["xl"]]: {
+      display: "flex",
+      justifyContent: "space-between",
+      gap: 120,
+      maxWidth: 1440,
+      margin: "0 auto",
+      padding: "120px 8px 80px",
+      borderBottom: `solid 1px ${vars.color.linePrimary}`,
+    },
+    [breakpoints["2xl"]]: {
+      padding: "140px 52px 100px",
+    },
+    [breakpoints["3xl"]]: {
+      padding: "160px 80px 120px",
+    },
+  },
+});
 export const footerLogo = style({
   display: "inline-block",
   fontSize: "4.0rem",
@@ -921,6 +940,13 @@ export const footerLogo = style({
       marginTop: 80,
       marginBottom: 28,
     },
+    [breakpoints["xl"]]: {
+      fontSize: "5.6rem",
+      margin: 0,
+    },
+    [breakpoints["2xl"]]: {
+      fontSize: "6.4rem",
+    },
   },
 });
 export const footerUl = style({
@@ -933,6 +959,16 @@ export const footerUl = style({
     [breakpoints["md"]]: {
       gap: 16,
       paddingBottom: 60,
+    },
+    [breakpoints["xl"]]: {
+      display: "grid",
+      gridTemplateColumns: "repeat(3, 1fr)",
+      gap: 24,
+      borderBottom: "none",
+      paddingBottom: 0,
+    },
+    [breakpoints["2xl"]]: {
+      gap: 40,
     },
   },
 });
@@ -949,9 +985,19 @@ export const footerLink = style({
 export const copyRightBox = style({
   padding: "12px 0 20px",
   textAlign: "center",
+  "@media": {
+    [breakpoints["xl"]]: {
+      padding: "20px 0 40px",
+    },
+  },
 });
 export const copyRight = style({
   fontSize: "1.0rem",
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
+  "@media": {
+    [breakpoints["xl"]]: {
+      fontSize: "1.2rem",
+    },
+  },
 });

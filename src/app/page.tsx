@@ -21,6 +21,7 @@ import {
   desktopNavOnlineShop,
   desktopNavUl,
   footer,
+  footerItemBox,
   footerLink,
   footerLogo,
   footerUl,
@@ -427,38 +428,40 @@ export default function Home() {
         </section>
       </main>
       <footer className={clsx(footer)}>
-        <Link href={"#"} className={clsx(sacramento.className, footerLogo)}>
-          Fleur
-        </Link>
-        <nav>
-          <ul className={clsx(footerUl)}>
-            <li>
-              <Link href={"#"} className={clsx(footerLink)}>
-                よくある質問
-              </Link>
-            </li>
-            <li>
-              <Link href={"#"} className={clsx(footerLink)}>
-                お問い合わせ
-              </Link>
-            </li>
-            <li>
-              <Link href={"#"} className={clsx(footerLink)}>
-                利用規約
-              </Link>
-            </li>
-            <li>
-              <Link href={"#"} className={clsx(footerLink)}>
-                プライバシーポリシー
-              </Link>
-            </li>
-            <li>
-              <Link href={"#"} className={clsx(footerLink)}>
-                特定商取引法に基づく表記
-              </Link>
-            </li>
-          </ul>
-        </nav>
+        <div className={clsx(footerItemBox)}>
+          <Link href={"#"} className={clsx(sacramento.className, footerLogo)}>
+            Fleur
+          </Link>
+          <nav>
+            <ul className={clsx(footerUl)}>
+              <li>
+                <Link href={"#"} className={clsx(footerLink)}>
+                  よくある質問
+                </Link>
+              </li>
+              <li>
+                <Link href={"#"} className={clsx(footerLink)}>
+                  お問い合わせ
+                </Link>
+              </li>
+              <li>
+                <Link href={"#"} className={clsx(footerLink)}>
+                  利用規約
+                </Link>
+              </li>
+              <li>
+                <Link href={"#"} className={clsx(footerLink)}>
+                  プライバシーポリシー
+                </Link>
+              </li>
+              <li>
+                <Link href={"#"} className={clsx(footerLink)}>
+                  特定商取引法に基づく表記
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
         <p className={clsx(copyRightBox)}>
           <small className={clsx(copyRight)}>©2024 Fleur</small>
         </p>
