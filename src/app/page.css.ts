@@ -610,13 +610,34 @@ export const newsSection = style({
     [breakpoints["lg"]]: {
       marginBottom: 120,
     },
+    [breakpoints["xl"]]: {
+      display: "flex",
+      justifyContent: "center",
+      gap: 80,
+      marginBottom: 160,
+    },
+    [breakpoints["2xl"]]: {
+      gap: 140,
+      padding: "120px 0 140px",
+    },
+    [breakpoints["3xl"]]: {
+      gap: 180,
+    },
   },
 });
+export const newsTitleGroupBox = style({});
 export const newsItemBox = style({
   marginTop: 20,
   "@media": {
     [breakpoints["md"]]: {
       marginTop: 28,
+    },
+    [breakpoints["xl"]]: {
+      width: 600,
+      marginTop: 16,
+    },
+    [breakpoints["2xl"]]: {
+      width: 760,
     },
   },
 });
@@ -624,6 +645,11 @@ export const newsItem = style({
   width: "85%",
   margin: "0 auto",
   borderBottom: `solid 1px ${vars.color.textPrimary}`,
+  "@media": {
+    [breakpoints["xl"]]: {
+      width: "100%",
+    },
+  },
 });
 export const newsLink = style({
   display: "flex",
@@ -634,6 +660,9 @@ export const newsLink = style({
   "@media": {
     [breakpoints["md"]]: {
       padding: "32px 28px",
+    },
+    [breakpoints["2xl"]]: {
+      gap: 48,
     },
   },
 });
@@ -654,6 +683,9 @@ export const newsText = style({
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.6rem",
+    },
+    [breakpoints["2xl"]]: {
+      fontSize: "1.8rem",
     },
   },
 });
