@@ -15,6 +15,8 @@ const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
 });
 
+const isProduction = process.env.NODE_ENV === "production";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -24,8 +26,8 @@ export default function RootLayout({
     <html lang="ja">
       <body className={clsx(notoSansJP.className)}>
         <Providers>{children}</Providers>
-        <GoogleAnalytics gaId="G-PMVHWFRLX8" />
-        <VercelAnalytics />
+        {isProduction && <GoogleAnalytics gaId="G-PMVHWFRLX8" />}
+        {isProduction && <VercelAnalytics />}
       </body>
     </html>
   );
