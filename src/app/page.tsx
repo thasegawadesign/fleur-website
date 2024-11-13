@@ -44,6 +44,7 @@ import {
   newsLink,
   newsSection,
   newsText,
+  newsTitleGroupBox,
   onlineShop,
   onlineShopDescription,
   onlineShopImage,
@@ -336,11 +337,13 @@ export default function Home() {
           </div>
         </section>
         <section className={clsx(newsSection)}>
-          <div className={clsx(sectionTitleBox)}>
-            <h2 className={clsx(marcellus.className, sectionTitle)}>News</h2>
-          </div>
-          <div className={clsx(subTitleBox)}>
-            <p className={clsx(subTitle)}>お知らせ</p>
+          <div className={clsx(newsTitleGroupBox)}>
+            <div className={clsx(sectionTitleBox)}>
+              <h2 className={clsx(marcellus.className, sectionTitle)}>News</h2>
+            </div>
+            <div className={clsx(subTitleBox)}>
+              <p className={clsx(subTitle)}>お知らせ</p>
+            </div>
           </div>
           <ul className={clsx(newsItemBox)}>
             <li className={clsx(newsItem)}>
