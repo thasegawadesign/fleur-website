@@ -1,5 +1,6 @@
 import Providers from "@/components/providers/providers";
 import "@/styles/reset.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import clsx from "clsx";
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="ja">
       <body className={clsx(notoSansJP.className)}>
         <Providers>{children}</Providers>
+        <GoogleAnalytics gaId="G-PMVHWFRLX8" />
       </body>
     </html>
   );
