@@ -187,6 +187,7 @@ export const heroSection = style({
     },
     [breakpoints["2xl"]]: {
       marginTop: -240,
+      marginBottom: 160,
       justifyContent: "flex-end",
     },
   },
@@ -198,6 +199,12 @@ export const heroSectionInnerLeft = style({
       flexDirection: "column",
       gap: 12,
       justifyContent: "flex-end",
+    },
+    [breakpoints["2xl"]]: {
+      gap: 20,
+    },
+    [breakpoints["3xl"]]: {
+      gap: 24,
     },
   },
 });
@@ -232,6 +239,9 @@ export const catchCopy = style({
     },
     [breakpoints["2xl"]]: {
       margin: "0 0 0 80px",
+    },
+    [breakpoints["3xl"]]: {
+      fontSize: "3.6rem",
     },
   },
 });
@@ -343,6 +353,9 @@ export const pickUpSection = style({
     [breakpoints["lg"]]: {
       marginBottom: 160,
     },
+    [breakpoints["xl"]]: {
+      marginBottom: 180,
+    },
   },
 });
 export const pickUpSectionBg = style({
@@ -377,6 +390,18 @@ export const pickUpSectionBg = style({
     [breakpoints["md"]]: {
       padding: "80px 0 60px",
     },
+    [breakpoints["xl"]]: {
+      marginTop: -4,
+      padding: "100px 0 80px",
+      ":before": {
+        top: -52,
+        height: 52,
+      },
+      ":after": {
+        bottom: -52,
+        height: 52,
+      },
+    },
   },
 });
 export const recommendedProductBox = style({
@@ -410,6 +435,9 @@ export const recommendedProductName = style({
     [breakpoints["md"]]: {
       fontSize: "2.4rem",
     },
+    [breakpoints["xl"]]: {
+      fontSize: "2.6rem",
+    },
   },
 });
 export const recommendedProductDescription = style({
@@ -427,6 +455,9 @@ export const recommendedProductDescription = style({
     [breakpoints["lg"]]: {
       width: 480,
     },
+    [breakpoints["xl"]]: {
+      width: 540,
+    },
   },
 });
 export const recommendedProductImageBox = style({
@@ -439,6 +470,9 @@ export const recommendedProductImage = style({
   "@media": {
     [breakpoints["lg"]]: {
       width: 480,
+    },
+    [breakpoints["xl"]]: {
+      width: 540,
     },
   },
 });
