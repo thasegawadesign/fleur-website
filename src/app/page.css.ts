@@ -465,6 +465,9 @@ export const recommendedProductDescription = style({
     [breakpoints["xl"]]: {
       width: 540,
     },
+    [breakpoints["2xl"]]: {
+      width: 580,
+    },
   },
 });
 export const recommendedProductImageBox = style({
@@ -480,6 +483,9 @@ export const recommendedProductImage = style({
     },
     [breakpoints["xl"]]: {
       width: 540,
+    },
+    [breakpoints["2xl"]]: {
+      width: 800,
     },
   },
 });
