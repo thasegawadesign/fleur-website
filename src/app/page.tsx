@@ -7,6 +7,8 @@ import {
   accessGap,
   accessItemBox,
   accessSection,
+  accessSubTitle,
+  accessTitleLeft,
   catchCopy,
   catchCopyBr,
   catchMacaronsBox,
@@ -371,11 +373,17 @@ export default function Home() {
         <section className={clsx(accessSection)}>
           <div className={clsx(accessItemBox)}>
             <div className={clsx(sectionTitleBox)}>
-              <h2 className={clsx(marcellus.className, sectionTitle)}>
+              <h2
+                className={clsx(
+                  marcellus.className,
+                  sectionTitle,
+                  accessTitleLeft
+                )}
+              >
                 Access
               </h2>
             </div>
-            <div className={clsx(subTitleBox)}>
+            <div className={clsx(subTitleBox, accessTitleLeft, accessSubTitle)}>
               <p className={clsx(subTitle)}>店舗情報</p>
             </div>
             <h3 className={clsx(shopName)}>フルール大阪店</h3>
