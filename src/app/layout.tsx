@@ -1,6 +1,7 @@
 import Providers from "@/components/providers/providers";
 import "@/styles/reset.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import clsx from "clsx";
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={clsx(notoSansJP.className)}>
         <Providers>{children}</Providers>
         <GoogleAnalytics gaId="G-PMVHWFRLX8" />
+        <VercelAnalytics />
       </body>
     </html>
   );
