@@ -199,6 +199,12 @@ export const heroSectionInnerLeft = style({
       gap: 12,
       justifyContent: "flex-end",
     },
+    [breakpoints["2xl"]]: {
+      gap: 20,
+    },
+    [breakpoints["3xl"]]: {
+      gap: 24,
+    },
   },
 });
 export const catchMacaronsBox = style({
