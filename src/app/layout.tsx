@@ -1,5 +1,7 @@
 import Providers from "@/components/providers/providers";
 import "@/styles/reset.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import clsx from "clsx";
 import type { Metadata } from "next";
 import { Noto_Sans_JP } from "next/font/google";
@@ -13,6 +15,8 @@ const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
 });
 
+const isProduction = process.env.NODE_ENV === "production";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,6 +26,8 @@ export default function RootLayout({
     <html lang="ja">
       <body className={clsx(notoSansJP.className)}>
         <Providers>{children}</Providers>
+        {isProduction && <GoogleAnalytics gaId="G-PMVHWFRLX8" />}
+        {isProduction && <VercelAnalytics />}
       </body>
     </html>
   );
