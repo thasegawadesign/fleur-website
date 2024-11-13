@@ -815,12 +815,21 @@ export const onlineShopSection = style({
       ":before": {
         content: "",
         position: "absolute",
-        top: 20,
-        left: 20,
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
+        margin: "auto",
         width: "calc(100% - 40px)",
         height: "calc(100% - 40px)",
         border: `solid 1px ${vars.color.bgPrimary}`,
         zIndex: -20,
+      },
+    },
+    [breakpoints["xl"]]: {
+      ":before": {
+        width: "calc(100% - 80px)",
+        height: "calc(100% - 80px)",
       },
     },
   },
@@ -830,6 +839,9 @@ export const onlineShopItemBox = style({
   "@media": {
     [breakpoints["md"]]: {
       padding: "80px 0 100px",
+    },
+    [breakpoints["xl"]]: {
+      padding: "100px 0 120px",
     },
   },
 });
@@ -846,6 +858,9 @@ export const onlineShop = style({
     },
     [breakpoints["lg"]]: {
       fontSize: "4.8rem",
+    },
+    [breakpoints["xl"]]: {
+      fontSize: "5.2rem",
     },
   },
 });
