@@ -445,6 +445,9 @@ export const recommendedProductName = style({
     [breakpoints["xl"]]: {
       fontSize: "2.6rem",
     },
+    [breakpoints["2xl"]]: {
+      fontSize: "2.8rem",
+    },
   },
 });
 export const recommendedProductDescription = style({
@@ -466,7 +469,8 @@ export const recommendedProductDescription = style({
       width: 540,
     },
     [breakpoints["2xl"]]: {
-      width: 580,
+      fontSize: "1.8rem",
+      width: 660,
     },
   },
 });
@@ -590,6 +594,9 @@ export const topicDescription = style({
     },
     [breakpoints["xl"]]: {
       marginBottom: 92,
+    },
+    [breakpoints["2xl"]]: {
+      fontSize: "1.7rem",
     },
   },
 });
@@ -994,7 +1001,7 @@ export const copyRightBox = style({
   textAlign: "center",
   "@media": {
     [breakpoints["xl"]]: {
-      padding: "20px 0 40px",
+      padding: "40px 0 60px",
     },
   },
 });
