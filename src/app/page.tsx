@@ -36,6 +36,7 @@ import {
   logoBox,
   macarons,
   macaronsBox,
+  main,
   mainVisual,
   mainVisualBox,
   mobileHeader,
@@ -201,7 +202,7 @@ export default function Home() {
           </ul>
         </nav>
       </header>
-      <main>
+      <main className={clsx(main)}>
         <section className={clsx(heroSection)}>
           <div className={clsx(heroSectionInnerLeft)}>
             <div className={clsx(catchMacaronsBox)}>

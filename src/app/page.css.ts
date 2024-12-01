@@ -174,6 +174,12 @@ export const cvButtonBox = style({
   },
 });
 
+export const main = style({
+  position: "relative",
+  backgroundColor: "#fff",
+  zIndex: -100,
+});
+
 export const heroSection = style({
   display: "flex",
   flexDirection: "column-reverse",
