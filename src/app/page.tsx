@@ -36,6 +36,7 @@ import {
   logoBox,
   macarons,
   macaronsBox,
+  main,
   mainVisual,
   mainVisualBox,
   mobileHeader,
@@ -83,12 +84,13 @@ import {
   subTitle,
   subTitleBox,
 } from "@/styles/styles.css";
+import { useWindowWidth } from "@react-hook/window-size";
 import clsx from "clsx";
 import { useAtom } from "jotai";
 import { Marcellus, Sacramento } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 
 const sacramento = Sacramento({
   weight: "400",
@@ -103,9 +105,17 @@ const marcellus = Marcellus({
 export default function Home() {
   const [isOpen, setIsOpen] = useAtom(hamburgerMenuAtom);
 
+  const onlyWidth = useWindowWidth();
+
   const handleClick = useCallback(() => {
     setIsOpen((prev) => !prev);
   }, [setIsOpen]);
+
+  useEffect(() => {
+    if (onlyWidth >= 1280) {
+      setIsOpen(false);
+    }
+  }, [onlyWidth, setIsOpen]);
 
   return (
     <>
@@ -201,7 +211,7 @@ export default function Home() {
           </ul>
         </nav>
       </header>
-      <main>
+      <main className={clsx(main)}>
         <section className={clsx(heroSection)}>
           <div className={clsx(heroSectionInnerLeft)}>
             <div className={clsx(catchMacaronsBox)}>

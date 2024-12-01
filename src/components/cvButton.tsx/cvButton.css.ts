@@ -15,6 +15,9 @@ export const cvButton = style({
     [breakpoints["md"]]: {
       padding: "12px 20px",
     },
+    [breakpoints["2xl"]]: {
+      padding: "20px 40px",
+    },
   },
 });
 export const cvLabel = style({
@@ -23,6 +26,9 @@ export const cvLabel = style({
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.6rem",
+    },
+    [breakpoints["2xl"]]: {
+      fontSize: "1.8rem",
     },
   },
 });

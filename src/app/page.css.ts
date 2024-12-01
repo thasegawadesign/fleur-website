@@ -161,7 +161,7 @@ export const cvButtonWrap = style({
   margin: "0 auto",
   "@media": {
     [breakpoints["md"]]: {
-      maxWidth: 360,
+      maxWidth: 480,
     },
   },
 });
@@ -172,6 +172,10 @@ export const cvButtonBox = style({
       margin: "12px 72px",
     },
   },
+});
+
+export const main = style({
+  backgroundColor: "#fff",
 });
 
 export const heroSection = style({
@@ -204,7 +208,7 @@ export const heroSectionInnerLeft = style({
       gap: 20,
     },
     [breakpoints["3xl"]]: {
-      gap: 24,
+      gap: 40,
     },
   },
 });
@@ -213,6 +217,9 @@ export const catchMacaronsBox = style({
     [breakpoints["lg"]]: {
       display: "flex",
       flexDirection: "column-reverse",
+    },
+    [breakpoints["3xl"]]: {
+      gap: 40,
     },
   },
 });
@@ -233,7 +240,7 @@ export const catchCopy = style({
       margin: "0 0 0 28px",
     },
     [breakpoints["xl"]]: {
-      fontSize: "3.2rem",
+      fontSize: "3.0rem",
       maxWidth: 840,
       margin: "0 0 0 60px",
     },
@@ -302,9 +309,12 @@ export const heroDescription = style({
       margin: "0 0 40px 60px",
     },
     [breakpoints["2xl"]]: {
-      fontSize: "1.8rem",
-      margin: "0 0 56px 80px",
+      margin: "0 0 40px 80px",
       letterSpacing: "0.42em",
+    },
+    [breakpoints["3xl"]]: {
+      fontSize: "1.8rem",
+      margin: "0 0 80px 80px",
     },
   },
 });
@@ -323,9 +333,12 @@ export const mainVisualBox = style({
       paddingLeft: 28,
     },
     [breakpoints["xl"]]: {
-      paddingLeft: 56,
+      paddingLeft: 40,
     },
     [breakpoints["2xl"]]: {
+      paddingLeft: 60,
+    },
+    [breakpoints["3xl"]]: {
       paddingLeft: 80,
     },
   },
@@ -824,6 +837,7 @@ export const shopImage = style({
 
 export const onlineShopSection = style({
   position: "relative",
+  zIndex: 0,
   "@media": {
     [breakpoints["md"]]: {
       ":before": {
