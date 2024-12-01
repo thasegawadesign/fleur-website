@@ -161,7 +161,7 @@ export const cvButtonWrap = style({
   margin: "0 auto",
   "@media": {
     [breakpoints["md"]]: {
-      maxWidth: 360,
+      maxWidth: 480,
     },
   },
 });
