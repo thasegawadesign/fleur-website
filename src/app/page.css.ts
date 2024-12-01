@@ -175,9 +175,7 @@ export const cvButtonBox = style({
 });
 
 export const main = style({
-  position: "relative",
   backgroundColor: "#fff",
-  zIndex: -100,
 });
 
 export const heroSection = style({
@@ -839,6 +837,7 @@ export const shopImage = style({
 
 export const onlineShopSection = style({
   position: "relative",
+  zIndex: 0,
   "@media": {
     [breakpoints["md"]]: {
       ":before": {
