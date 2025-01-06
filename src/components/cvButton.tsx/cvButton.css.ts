@@ -43,6 +43,7 @@ export const arrowBox = style({
   color: vars.color.bgPrimary,
   background: vars.color.textPrimary,
   borderRadius: "100%",
+  overflowX: "hidden",
   "@media": {
     [breakpoints["md"]]: {
       right: 24,
