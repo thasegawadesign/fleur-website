@@ -494,7 +494,7 @@ export const recommendedProductDescription = style({
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
-  lineHeight: "1.28em",
+  lineHeight: "1.6em",
   width: "69%",
   textAlign: "center",
   "@media": {
@@ -621,7 +621,7 @@ export const topicDescription = style({
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
-  lineHeight: "1.28em",
+  lineHeight: "1.5em",
   marginBottom: 8,
   "@media": {
     [breakpoints["md"]]: {
