@@ -1006,18 +1006,17 @@ export const footerLogo = style({
 export const footerUl = style({
   display: "flex",
   flexDirection: "column",
-  gap: 8,
+  gap: 24,
   paddingBottom: 40,
   borderBottom: `solid 1px ${vars.color.textPrimary}`,
   "@media": {
     [breakpoints["md"]]: {
-      gap: 16,
+      gap: 28,
       paddingBottom: 60,
     },
     [breakpoints["xl"]]: {
       display: "grid",
       gridTemplateColumns: "repeat(3, 1fr)",
-      gap: 24,
       borderBottom: "none",
       paddingBottom: 0,
     },
@@ -1033,6 +1032,11 @@ export const footerLink = style({
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.6rem",
+    },
+    [breakpoints["xl"]]: {
+      ":hover": {
+        textDecoration: "underline",
+      },
     },
   },
 });
