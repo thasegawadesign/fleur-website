@@ -47,9 +47,13 @@ export const arrowBox = style({
   "@media": {
     [breakpoints["md"]]: {
       right: 24,
+      width: 36,
+      height: 36,
     },
     [breakpoints["2xl"]]: {
       right: 32,
+      width: 40,
+      height: 40,
     },
   },
 });
