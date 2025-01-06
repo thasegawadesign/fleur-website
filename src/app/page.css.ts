@@ -709,9 +709,17 @@ export const newsLink = style({
   gap: 28,
   padding: "20px 24px 20px 16px",
   textDecoration: "none",
+  transition: "gap 0.2s ease",
   "@media": {
     [breakpoints["md"]]: {
       padding: "32px 28px",
+    },
+    [breakpoints["xl"]]: {
+      selectors: {
+        [`${newsItem}:hover &`]: {
+          gap: 32,
+        },
+      },
     },
     [breakpoints["2xl"]]: {
       gap: 48,
@@ -1006,18 +1014,17 @@ export const footerLogo = style({
 export const footerUl = style({
   display: "flex",
   flexDirection: "column",
-  gap: 8,
+  gap: 24,
   paddingBottom: 40,
   borderBottom: `solid 1px ${vars.color.textPrimary}`,
   "@media": {
     [breakpoints["md"]]: {
-      gap: 16,
+      gap: 28,
       paddingBottom: 60,
     },
     [breakpoints["xl"]]: {
       display: "grid",
       gridTemplateColumns: "repeat(3, 1fr)",
-      gap: 24,
       borderBottom: "none",
       paddingBottom: 0,
     },
@@ -1033,6 +1040,11 @@ export const footerLink = style({
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.6rem",
+    },
+    [breakpoints["xl"]]: {
+      ":hover": {
+        textDecoration: "underline",
+      },
     },
   },
 });
