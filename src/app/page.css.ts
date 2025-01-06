@@ -709,7 +709,7 @@ export const newsLink = style({
   gap: 28,
   padding: "20px 24px 20px 16px",
   textDecoration: "none",
-  transition: "gap 0.2s ease",
+  transition: "gap 0.3s ease",
   "@media": {
     [breakpoints["md"]]: {
       padding: "32px 28px",
@@ -723,6 +723,11 @@ export const newsLink = style({
     },
     [breakpoints["2xl"]]: {
       gap: 48,
+      selectors: {
+        [`${newsItem}:hover &`]: {
+          gap: 56,
+        },
+      },
     },
   },
 });
