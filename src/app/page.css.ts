@@ -111,15 +111,21 @@ export const desktopNavLink = style({
   fontSize: "1.6rem",
   color: vars.color.textPrimary,
   textDecoration: "none",
+  ":hover": {
+    textDecoration: "underline",
+  },
 });
 export const desktopNavOnlineShop = style({
   fontSize: "1.6rem",
   color: vars.color.textPrimary,
-  letterSpacing: "0.12em",
+  letterSpacing: "0.06em",
   textDecoration: "none",
   padding: "0 18px",
   borderLeft: `solid 1px ${vars.color.textPrimary}`,
   borderRight: `solid 1px ${vars.color.textPrimary}`,
+  ":hover": {
+    textDecoration: "underline",
+  },
 });
 
 export const mobileNavLinksHidden = style({
@@ -144,14 +150,34 @@ export const mobileNavLinksVisible = style({
   },
 });
 export const mobileNavLink = style({
+  position: "relative",
   textDecoration: "none",
   margin: "0 60px",
   fontSize: "1.6rem",
   color: vars.color.textPrimary,
+  transition: "margin 0.3s ease",
+  ":hover": {
+    marginLeft: 72,
+  },
+  selectors: {
+    "&:hover::before": {
+      content: '""',
+      position: "absolute",
+      margin: "auto 0",
+      inset: "0 0 0 -12px",
+      width: 8,
+      height: 8,
+      background: vars.color.accent,
+      borderRadius: "50%",
+    },
+  },
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.8rem",
       margin: "0 80px",
+      ":hover": {
+        marginLeft: 92,
+      },
     },
   },
 });
@@ -468,7 +494,7 @@ export const recommendedProductDescription = style({
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
-  lineHeight: "1.28em",
+  lineHeight: "1.6em",
   width: "69%",
   textAlign: "center",
   "@media": {
@@ -595,7 +621,7 @@ export const topicDescription = style({
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
-  lineHeight: "1.28em",
+  lineHeight: "1.5em",
   marginBottom: 8,
   "@media": {
     [breakpoints["md"]]: {
@@ -705,7 +731,7 @@ export const time = style({
 export const newsText = style({
   fontSize: "1.2rem",
   color: vars.color.textPrimary,
-  lineHeight: "1.28em",
+  lineHeight: "1.6em",
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.6rem",
