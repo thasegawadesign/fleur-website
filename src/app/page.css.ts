@@ -150,14 +150,34 @@ export const mobileNavLinksVisible = style({
   },
 });
 export const mobileNavLink = style({
+  position: "relative",
   textDecoration: "none",
   margin: "0 60px",
   fontSize: "1.6rem",
   color: vars.color.textPrimary,
+  transition: "margin 0.3s ease",
+  ":hover": {
+    marginLeft: 72,
+  },
+  selectors: {
+    "&:hover::before": {
+      content: '""',
+      position: "absolute",
+      margin: "auto 0",
+      inset: "0 0 0 -12px",
+      width: 8,
+      height: 8,
+      background: vars.color.accent,
+      borderRadius: "50%",
+    },
+  },
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.8rem",
       margin: "0 80px",
+      ":hover": {
+        marginLeft: 92,
+      },
     },
   },
 });
