@@ -111,15 +111,21 @@ export const desktopNavLink = style({
   fontSize: "1.6rem",
   color: vars.color.textPrimary,
   textDecoration: "none",
+  ":hover": {
+    textDecoration: "underline",
+  },
 });
 export const desktopNavOnlineShop = style({
   fontSize: "1.6rem",
   color: vars.color.textPrimary,
-  letterSpacing: "0.12em",
+  letterSpacing: "0.06em",
   textDecoration: "none",
   padding: "0 18px",
   borderLeft: `solid 1px ${vars.color.textPrimary}`,
   borderRight: `solid 1px ${vars.color.textPrimary}`,
+  ":hover": {
+    textDecoration: "underline",
+  },
 });
 
 export const mobileNavLinksHidden = style({
