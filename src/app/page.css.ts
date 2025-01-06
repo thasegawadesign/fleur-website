@@ -731,7 +731,7 @@ export const time = style({
 export const newsText = style({
   fontSize: "1.2rem",
   color: vars.color.textPrimary,
-  lineHeight: "1.28em",
+  lineHeight: "1.6em",
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.6rem",
