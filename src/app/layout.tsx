@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="ja">
       <body className={clsx(notoSansJP.className)}>
         <Providers>{children}</Providers>
-        {isProduction && <GoogleAnalytics gaId="G-PMVHWFRLX8" />}
+        {isProduction && <GoogleAnalytics gaId="G-3QXY2E6YXG" />}
         {isProduction && <VercelAnalytics />}
       </body>
     </html>
