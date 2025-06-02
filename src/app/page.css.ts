@@ -519,17 +519,20 @@ export const recommendedProductImageBox = style({
   justifyContent: "center",
 });
 export const recommendedProductImage = style({
-  width: "72%",
+  width: "80vw",
   height: "100%",
   "@media": {
     [breakpoints["lg"]]: {
       width: 480,
     },
     [breakpoints["xl"]]: {
-      width: 540,
+      width: 520,
     },
     [breakpoints["2xl"]]: {
-      width: 800,
+      width: 640,
+    },
+    [breakpoints["3xl"]]: {
+      width: 720,
     },
   },
 });
