@@ -1067,7 +1067,7 @@ export const copyRightBox = style({
     [breakpoints["xl"]]: {
       padding: "28px 0 240px",
     },
-    [breakpoints["2xl"]]: {
+    [breakpoints["3xl"]]: {
       padding: "28px 0 280px",
     },
   },
