@@ -9,6 +9,10 @@ const slideIn = keyframes({
     transform: "translateX(0)",
   },
 });
+export const moreButtonBox = style({
+  width: "fit-content",
+  marginLeft: "auto",
+});
 export const moreButton = style({
   position: "relative",
   display: "grid",
@@ -25,6 +29,7 @@ export const moreButton = style({
     scale: 1.1,
   },
 });
+
 export const arrow = style({
   position: "absolute",
   margin: "auto",

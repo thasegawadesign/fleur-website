@@ -32,6 +32,7 @@ import {
   heroDescriptionDesktopBr,
   heroSection,
   heroSectionInnerLeft,
+  imageHovered,
   logo,
   logoBox,
   macarons,
@@ -70,6 +71,7 @@ import {
   toggle,
   topicDescription,
   topicImage,
+  topicLink,
   topicSection,
   topicSectionItem,
   topicSectionItemBox,
@@ -78,6 +80,7 @@ import {
 import { hamburgerMenuAtom } from "@/atoms/hamburgerMenuAtom";
 import CvButton from "@/components/cvButton.tsx/cvButton";
 import MoreButton from "@/components/moreButton/moreButton";
+import { moreButtonBox } from "@/components/moreButton/moreButton.css";
 import {
   sectionTitle,
   sectionTitleBox,
@@ -90,7 +93,7 @@ import { useAtom } from "jotai";
 import { Marcellus, Sacramento } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const sacramento = Sacramento({
   weight: "400",
@@ -104,6 +107,7 @@ const marcellus = Marcellus({
 
 export default function Home() {
   const [isOpen, setIsOpen] = useAtom(hamburgerMenuAtom);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const onlyWidth = useWindowWidth();
 
@@ -302,15 +306,26 @@ export default function Home() {
                   安心してお召し上がりいただけるよう、素材選びから製造過程まで細心の注意を払っています。
                   自然由来の色素で美しく仕上げた、からだに優しい逸品です。
                 </p>
-                <MoreButton />
+                <div
+                  className={clsx(moreButtonBox)}
+                  onMouseEnter={() => setHoveredIndex(0)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <MoreButton />
+                </div>
               </div>
-              <Image
-                src={"/ingredient.webp"}
-                width={560}
-                height={346}
-                alt="素材へのこだわり"
-                className={clsx(topicImage)}
-              />
+              <Link href={"/"} className={clsx(topicLink)}>
+                <Image
+                  src={"/ingredient.webp"}
+                  width={560}
+                  height={346}
+                  alt="素材へのこだわり"
+                  className={clsx(
+                    topicImage,
+                    hoveredIndex === 0 && imageHovered
+                  )}
+                />
+              </Link>
             </section>
             <section className={clsx(topicSectionItem)}>
               <div>
@@ -319,15 +334,26 @@ export default function Home() {
                   創業以来、最高品質の素材を用い、職人の技術と情熱を注ぎ込んだマカロンをお届けしています。
                   美味しさと美しさを追求し続けることで、これからも皆様の特別なひとときを彩り続けます。
                 </p>
-                <MoreButton />
+                <div
+                  className={clsx(moreButtonBox)}
+                  onMouseEnter={() => setHoveredIndex(1)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <MoreButton />
+                </div>
               </div>
-              <Image
-                src={"/brand.webp"}
-                width={560}
-                height={346}
-                alt="ブランドストーリー"
-                className={clsx(topicImage)}
-              />
+              <Link href={"/"} className={clsx(topicLink)}>
+                <Image
+                  src={"/brand.webp"}
+                  width={560}
+                  height={346}
+                  alt="ブランドストーリー"
+                  className={clsx(
+                    topicImage,
+                    hoveredIndex === 1 && imageHovered
+                  )}
+                />
+              </Link>
             </section>
             <section className={clsx(topicSectionItem)}>
               <div>
@@ -337,15 +363,26 @@ export default function Home() {
                 <p className={clsx(topicDescription)}>
                   バレンタインやホワイトデー、季節の贈り物やプチギフトまで様々なシーンにぴったりなギフト。
                 </p>
-                <MoreButton />
+                <div
+                  className={clsx(moreButtonBox)}
+                  onMouseEnter={() => setHoveredIndex(2)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <MoreButton />
+                </div>
               </div>
-              <Image
-                src={"/gift.webp"}
-                width={560}
-                height={346}
-                alt="さまざまなギフトシーンにぴったり"
-                className={clsx(topicImage)}
-              />
+              <div className={clsx(topicLink)}>
+                <Image
+                  src={"/gift.webp"}
+                  width={560}
+                  height={346}
+                  alt="さまざまなギフトシーンにぴったり"
+                  className={clsx(
+                    topicImage,
+                    hoveredIndex === 2 && imageHovered
+                  )}
+                />
+              </div>
             </section>
           </div>
         </section>
