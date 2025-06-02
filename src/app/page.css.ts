@@ -152,12 +152,12 @@ export const mobileNavLinksVisible = style({
 export const mobileNavLink = style({
   position: "relative",
   textDecoration: "none",
-  margin: "0 60px",
+  margin: "0 6vw",
   fontSize: "1.6rem",
   color: vars.color.textPrimary,
   transition: "margin 0.3s ease",
   ":hover": {
-    marginLeft: 72,
+    margin: "0 9vw",
   },
   selectors: {
     "&:hover::before": {
@@ -174,9 +174,9 @@ export const mobileNavLink = style({
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.8rem",
-      margin: "0 80px",
+      margin: "0 8vw",
       ":hover": {
-        marginLeft: 92,
+        margin: "0 10vw",
       },
     },
   },
@@ -192,10 +192,10 @@ export const cvButtonWrap = style({
   },
 });
 export const cvButtonBox = style({
-  margin: "12px 48px",
+  margin: "12px 6vw",
   "@media": {
     [breakpoints["md"]]: {
-      margin: "12px 72px",
+      margin: "12px 8vw",
     },
   },
 });
@@ -644,7 +644,7 @@ export const topicImage = style({
   height: "100%",
   "@media": {
     [breakpoints["lg"]]: {
-      width: "48%",
+      width: "40vw",
       maxWidth: 670,
     },
   },
