@@ -371,7 +371,7 @@ export default function Home() {
                   <MoreButton />
                 </div>
               </div>
-              <div className={clsx(topicLink)}>
+              <Link href={"/"} className={clsx(topicLink)}>
                 <Image
                   src={"/gift.webp"}
                   width={560}
@@ -382,7 +382,7 @@ export default function Home() {
                     hoveredIndex === 2 && imageHovered
                   )}
                 />
-              </div>
+              </Link>
             </section>
           </div>
         </section>
