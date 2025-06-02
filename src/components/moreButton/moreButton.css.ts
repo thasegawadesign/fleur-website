@@ -20,6 +20,10 @@ export const moreButton = style({
   borderRadius: "50%",
   overflowX: "hidden",
   cursor: "pointer",
+  transition: "scale 0.3s ease",
+  ":hover": {
+    scale: 1.1,
+  },
 });
 export const arrow = style({
   position: "absolute",

@@ -44,6 +44,7 @@ export const arrowBox = style({
   background: vars.color.textPrimary,
   borderRadius: "100%",
   overflowX: "hidden",
+  transition: "scale 0.3s ease",
   "@media": {
     [breakpoints["md"]]: {
       right: 24,
@@ -54,6 +55,11 @@ export const arrowBox = style({
       right: 32,
       width: 40,
       height: 40,
+    },
+  },
+  selectors: {
+    [`${cvButton}:hover &`]: {
+      scale: 1.1,
     },
   },
 });
