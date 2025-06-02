@@ -983,14 +983,14 @@ export const footerItemBox = style({
       gap: 120,
       maxWidth: 1440,
       margin: "0 auto",
-      padding: "120px 8px 80px",
+      padding: "128px 0px",
       borderBottom: `solid 1px ${vars.color.linePrimary}`,
     },
     [breakpoints["2xl"]]: {
-      padding: "140px 52px 100px",
+      padding: "144px 0px",
     },
     [breakpoints["3xl"]]: {
-      padding: "160px 80px 120px",
+      padding: "160px 0px",
     },
   },
 });
@@ -1020,12 +1020,12 @@ export const footerUl = style({
   display: "flex",
   flexDirection: "column",
   gap: 24,
-  paddingBottom: 40,
+  paddingBottom: 60,
   borderBottom: `solid 1px ${vars.color.textPrimary}`,
   "@media": {
     [breakpoints["md"]]: {
       gap: 28,
-      paddingBottom: 60,
+      paddingBottom: 80,
     },
     [breakpoints["xl"]]: {
       display: "grid",
@@ -1054,11 +1054,11 @@ export const footerLink = style({
   },
 });
 export const copyRightBox = style({
-  padding: "12px 0 20px",
+  padding: "20px 0 120px",
   textAlign: "center",
   "@media": {
     [breakpoints["xl"]]: {
-      padding: "40px 0 60px",
+      padding: "28px 0 240px",
     },
   },
 });
