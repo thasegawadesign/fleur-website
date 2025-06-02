@@ -1,6 +1,9 @@
 import { breakpoints, vars } from "@/styles/styles.css";
 import { style } from "@vanilla-extract/css";
 
+export const body = style({
+  fontFamily: "YakuHanJP, Noto Sans JP, sans-serif",
+});
 export const header = style({
   position: "sticky",
   top: 0,
@@ -217,13 +220,17 @@ export const heroSection = style({
       flexDirection: "row",
     },
     [breakpoints["2xl"]]: {
-      marginTop: -240,
+      marginTop: -120,
       marginBottom: 160,
       justifyContent: "flex-end",
+    },
+    [breakpoints["3xl"]]: {
+      marginTop: -240,
     },
   },
 });
 export const heroSectionInnerLeft = style({
+  width: "100%",
   "@media": {
     [breakpoints["lg"]]: {
       display: "flex",
@@ -231,10 +238,15 @@ export const heroSectionInnerLeft = style({
       gap: 12,
       justifyContent: "flex-end",
     },
+    [breakpoints["xl"]]: {
+      width: "60vw",
+    },
     [breakpoints["2xl"]]: {
+      width: "48vw",
       gap: 20,
     },
     [breakpoints["3xl"]]: {
+      width: "36vw",
       gap: 40,
     },
   },
@@ -246,7 +258,7 @@ export const catchMacaronsBox = style({
       flexDirection: "column-reverse",
     },
     [breakpoints["3xl"]]: {
-      gap: 40,
+      gap: 20,
     },
   },
 });
@@ -360,10 +372,10 @@ export const mainVisualBox = style({
       paddingLeft: 28,
     },
     [breakpoints["xl"]]: {
-      paddingLeft: 40,
+      paddingLeft: 36,
     },
     [breakpoints["2xl"]]: {
-      paddingLeft: 60,
+      paddingLeft: 40,
     },
     [breakpoints["3xl"]]: {
       paddingLeft: 80,
