@@ -792,15 +792,16 @@ export const accessItemBox = style({
     },
     [breakpoints["xl"]]: {
       margin: 0,
-      padding: "40px 60px",
+      padding: "40px 72px",
       backgroundColor: "transparent",
     },
     [breakpoints["2xl"]]: {
-      paddingRight: 280,
+      paddingRight: 200,
+      paddingLeft: 80,
     },
     [breakpoints["3xl"]]: {
-      paddingRight: 480,
-      paddingLeft: 80,
+      paddingRight: 320,
+      paddingLeft: 100,
     },
   },
 });
@@ -827,7 +828,7 @@ export const shopName = style({
       marginBottom: 40,
     },
     [breakpoints["xl"]]: {
-      fontSize: "1.6rem",
+      fontSize: "1.8rem",
     },
   },
 });
