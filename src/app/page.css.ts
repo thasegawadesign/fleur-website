@@ -577,11 +577,11 @@ export const topicSection = style({
 export const topicSectionItemBox = style({
   display: "flex",
   flexDirection: "column",
-  gap: 28,
+  gap: 40,
   margin: "40px auto 0",
   "@media": {
     [breakpoints["md"]]: {
-      gap: 48,
+      gap: 60,
       marginTop: 60,
     },
     [breakpoints["lg"]]: {
@@ -603,6 +603,9 @@ export const topicSectionItem = style({
   width: "85%",
   margin: "0 auto",
   "@media": {
+    [breakpoints["md"]]: {
+      gap: 28,
+    },
     [breakpoints["lg"]]: {
       flexDirection: "row-reverse",
       alignItems: "flex-end",
@@ -611,6 +614,9 @@ export const topicSectionItem = style({
     [breakpoints["xl"]]: {
       gap: 40,
     },
+    [breakpoints["2xl"]]: {
+      gap: 64,
+    },
   },
 });
 export const topicTitle = style({
@@ -618,17 +624,20 @@ export const topicTitle = style({
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
-  marginBottom: 12,
+  marginBottom: 24,
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "2.4rem",
-      marginBottom: 16,
-    },
-    [breakpoints["lg"]]: {
-      marginBottom: 20,
+      marginBottom: 28,
     },
     [breakpoints["xl"]]: {
-      marginBottom: 24,
+      marginBottom: 32,
+    },
+    [breakpoints["2xl"]]: {
+      marginBottom: 40,
+    },
+    [breakpoints["3xl"]]: {
+      marginBottom: 48,
     },
   },
 });
@@ -638,32 +647,48 @@ export const topicDescription = style({
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
   lineHeight: "1.5em",
-  marginBottom: 8,
+  marginBottom: 24,
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.6rem",
-      marginBottom: 16,
+      marginBottom: 28,
     },
     [breakpoints["lg"]]: {
       marginBottom: 20,
     },
     [breakpoints["xl"]]: {
-      marginBottom: 92,
+      marginBottom: 80,
     },
     [breakpoints["2xl"]]: {
       fontSize: "1.7rem",
+      marginBottom: 96,
+    },
+  },
+});
+export const topicLink = style({
+  display: "block",
+  width: "100%",
+  height: "auto",
+  flexShrink: 0,
+  overflow: "hidden",
+  "@media": {
+    [breakpoints["lg"]]: {
+      width: "48vw",
+      maxWidth: 560,
     },
   },
 });
 export const topicImage = style({
   width: "100%",
-  height: "100%",
-  "@media": {
-    [breakpoints["lg"]]: {
-      width: "40vw",
-      maxWidth: 670,
-    },
+  height: "auto",
+  objectFit: "cover",
+  transition: "scale 0.3s ease",
+  ":hover": {
+    scale: 1.05,
   },
+});
+export const imageHovered = style({
+  scale: 1.05,
 });
 
 export const newsSection = style({
