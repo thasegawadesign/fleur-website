@@ -137,27 +137,28 @@ export const mobileNavLinksVisible = style({
   top: 60,
   display: "flex",
   flexDirection: "column",
-  gap: 24,
-  padding: "48px 0px 0px",
+  gap: 32,
+  padding: "10vw 0px 0px",
   width: "100%",
   height: "calc(100vh - 48px)",
   background: vars.color.bgPrimary,
   "@media": {
     [breakpoints["md"]]: {
       top: 88,
-      gap: 28,
+      gap: 40,
+      padding: "6vw 0px 0px",
     },
   },
 });
 export const mobileNavLink = style({
   position: "relative",
   textDecoration: "none",
-  margin: "0 6vw",
+  margin: "0 10vw",
   fontSize: "1.6rem",
   color: vars.color.textPrimary,
   transition: "margin 0.3s ease",
   ":hover": {
-    margin: "0 9vw",
+    margin: "0 13vw",
   },
   selectors: {
     "&:hover::before": {
@@ -174,9 +175,9 @@ export const mobileNavLink = style({
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.8rem",
-      margin: "0 8vw",
+      margin: "0 9vw",
       ":hover": {
-        margin: "0 10vw",
+        margin: "0 11vw",
       },
     },
   },
@@ -1057,8 +1058,14 @@ export const copyRightBox = style({
   padding: "20px 0 120px",
   textAlign: "center",
   "@media": {
+    [breakpoints["md"]]: {
+      padding: "28px 0 200px",
+    },
     [breakpoints["xl"]]: {
       padding: "28px 0 240px",
+    },
+    [breakpoints["2xl"]]: {
+      padding: "28px 0 280px",
     },
   },
 });
