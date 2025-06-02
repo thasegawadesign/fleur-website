@@ -532,7 +532,7 @@ export const recommendedProductImage = style({
       width: 640,
     },
     [breakpoints["3xl"]]: {
-      width: 720,
+      width: 672,
     },
   },
 });
