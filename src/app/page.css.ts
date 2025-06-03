@@ -356,7 +356,7 @@ export const heroDescription = style({
       letterSpacing: "0.42em",
     },
     [breakpoints["3xl"]]: {
-      lineHeight: "2.0em",
+      lineHeight: "2.4em",
       margin: "0 0 80px 80px",
     },
   },
