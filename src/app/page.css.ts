@@ -317,6 +317,8 @@ export const macaronsBox = style({
 export const macarons = style({
   width: "75%",
   height: "100%",
+  pointerEvents: "none",
+  userSelect: "none",
   "@media": {
     [breakpoints["lg"]]: {
       width: "100%",
@@ -386,6 +388,8 @@ export const mainVisual = style({
   width: "100%",
   height: "100%",
   borderRadius: "0 0 0 28px",
+  pointerEvents: "none",
+  userSelect: "none",
   "@media": {
     [breakpoints["xl"]]: {
       maxWidth: 1080,
