@@ -15,6 +15,7 @@ import {
   copyRight,
   copyRightBox,
   cvButtonBox,
+  cvButtonInnerWrap,
   cvButtonWrap,
   desktopNav,
   desktopNavLink,
@@ -63,6 +64,8 @@ import {
   recommendedProductDescription,
   recommendedProductImage,
   recommendedProductImageBox,
+  recommendedProductImageHovered,
+  recommendedProductImageLink,
   recommendedProductName,
   recommendedProductNameBox,
   shopImage,
@@ -107,6 +110,7 @@ const marcellus = Marcellus({
 
 export default function Home() {
   const [isOpen, setIsOpen] = useAtom(hamburgerMenuAtom);
+  const [hoveredProductImage, setHoveredProductImage] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const onlyWidth = useWindowWidth();
@@ -270,13 +274,18 @@ export default function Home() {
                 </p>
               </div>
               <div className={clsx(recommendedProductImageBox)}>
-                <Image
-                  src={"/recommended-product.webp"}
-                  width={540}
-                  height={300}
-                  alt="低糖質・グルテンフリーマカロン"
-                  className={clsx(recommendedProductImage)}
-                />
+                <Link href={"/"} className={clsx(recommendedProductImageLink)}>
+                  <Image
+                    src={"/recommended-product.webp"}
+                    width={540}
+                    height={300}
+                    alt="低糖質・グルテンフリーマカロン"
+                    className={clsx(
+                      recommendedProductImage,
+                      hoveredProductImage && recommendedProductImageHovered
+                    )}
+                  />
+                </Link>
                 <Image
                   src={"/pickup-decoration.png"}
                   width={100}
@@ -287,7 +296,13 @@ export default function Home() {
               </div>
             </div>
             <div className={clsx(cvButtonWrap)}>
-              <CvButton />
+              <div
+                className={clsx(cvButtonInnerWrap)}
+                onMouseEnter={() => setHoveredProductImage(true)}
+                onMouseLeave={() => setHoveredProductImage(false)}
+              >
+                <CvButton />
+              </div>
             </div>
           </div>
         </section>

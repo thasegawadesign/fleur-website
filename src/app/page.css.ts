@@ -195,6 +195,9 @@ export const cvButtonWrap = style({
     },
   },
 });
+export const cvButtonInnerWrap = style({
+  borderRadius: "50%",
+});
 export const cvButtonBox = style({
   margin: "12px 6vw",
   "@media": {
@@ -534,10 +537,17 @@ export const recommendedProductImageBox = style({
   display: "flex",
   justifyContent: "center",
 });
+export const recommendedProductImageLink = style({
+  border: `solid 1px ${vars.color.textPrimary}`,
+  overflow: "hidden",
+});
 export const recommendedProductImage = style({
   width: "80vw",
   height: "100%",
-  border: `solid 1px ${vars.color.textPrimary}`,
+  transition: "scale 0.3s ease",
+  ":hover": {
+    scale: 1.05,
+  },
   "@media": {
     [breakpoints["lg"]]: {
       width: 480,
@@ -552,6 +562,10 @@ export const recommendedProductImage = style({
       width: 672,
     },
   },
+});
+export const recommendedProductImageHovered = style({
+  scale: 1.05,
+  transition: "scale 0.3s ease",
 });
 export const pickupDecoration = style({
   width: 60,
