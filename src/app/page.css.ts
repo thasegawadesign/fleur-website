@@ -537,6 +537,7 @@ export const recommendedProductImageBox = style({
 export const recommendedProductImage = style({
   width: "80vw",
   height: "100%",
+  border: `solid 1px ${vars.color.textPrimary}`,
   "@media": {
     [breakpoints["lg"]]: {
       width: 480,
@@ -557,6 +558,8 @@ export const pickupDecoration = style({
   height: 90,
   marginTop: -20,
   marginLeft: -30,
+  borderRadius: "20%",
+  backdropFilter: "blur(18px)",
   "@media": {
     [breakpoints["md"]]: {
       width: 90,
