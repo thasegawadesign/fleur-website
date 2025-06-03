@@ -12,6 +12,7 @@ const slideIn = keyframes({
 export const moreButtonBox = style({
   width: "fit-content",
   marginLeft: "auto",
+  borderRadius: "50%",
 });
 export const moreButton = style({
   position: "relative",
