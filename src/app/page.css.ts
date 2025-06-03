@@ -238,7 +238,7 @@ export const heroSectionInnerLeft = style({
     [breakpoints["lg"]]: {
       display: "flex",
       flexDirection: "column",
-      gap: 12,
+      gap: 20,
       justifyContent: "flex-end",
     },
     [breakpoints["xl"]]: {
@@ -266,7 +266,7 @@ export const catchMacaronsBox = style({
   },
 });
 export const catchCopy = style({
-  fontSize: "2.0rem",
+  fontSize: "2.4rem",
   fontWeight: 400,
   letterSpacing: "0.2em",
   lineHeight: "1.28em",
@@ -278,7 +278,6 @@ export const catchCopy = style({
       margin: "32px 28px 0",
     },
     [breakpoints["lg"]]: {
-      fontSize: "2.4rem",
       margin: "0 0 0 28px",
     },
     [breakpoints["xl"]]: {
@@ -334,17 +333,17 @@ export const macarons = style({
 export const heroDescription = style({
   width: "75%",
   margin: "0 20px 0 auto",
-  fontSize: "1.4rem",
+  fontSize: "1.8rem",
   color: vars.color.textPrimary,
   letterSpacing: "0.2em",
-  lineHeight: "1.28em",
+  lineHeight: "1.5em",
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "2.2rem",
       margin: "0 28px 0 auto",
     },
     [breakpoints["lg"]]: {
-      fontSize: "1.6rem",
+      fontSize: "1.8rem",
       margin: "0 0 0 28px",
       width: "auto",
     },
@@ -357,7 +356,7 @@ export const heroDescription = style({
       letterSpacing: "0.42em",
     },
     [breakpoints["3xl"]]: {
-      fontSize: "1.8rem",
+      lineHeight: "2.0em",
       margin: "0 0 80px 80px",
     },
   },
@@ -467,10 +466,11 @@ export const recommendedProductBox = style({
   display: "flex",
   flexDirection: "column-reverse",
   gap: 28,
-  marginBottom: 40,
+  marginBottom: 28,
   "@media": {
     [breakpoints["lg"]]: {
       gap: 32,
+      marginBottom: 32,
     },
     [breakpoints["xl"]]: {
       gap: 40,
@@ -481,11 +481,11 @@ export const recommendedProductBox = style({
 export const recommendedProductNameBox = style({
   display: "flex",
   flexDirection: "column",
-  gap: 16,
+  gap: 28,
   alignItems: "center",
   "@media": {
     [breakpoints["lg"]]: {
-      gap: 20,
+      gap: 32,
     },
     [breakpoints["xl"]]: {
       gap: 28,
@@ -493,15 +493,12 @@ export const recommendedProductNameBox = style({
   },
 });
 export const recommendedProductName = style({
-  fontSize: "1.6rem",
+  fontSize: "2.0rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
   "@media": {
     [breakpoints["md"]]: {
-      fontSize: "2.4rem",
-    },
-    [breakpoints["xl"]]: {
       fontSize: "2.6rem",
     },
     [breakpoints["2xl"]]: {
@@ -510,16 +507,18 @@ export const recommendedProductName = style({
   },
 });
 export const recommendedProductDescription = style({
-  fontSize: "1.2rem",
+  fontSize: "1.6rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
   lineHeight: "1.6em",
-  width: "69%",
+  width: "calc(100% - 40px)",
   textAlign: "center",
   "@media": {
     [breakpoints["md"]]: {
-      fontSize: "1.6rem",
+      width: "80vw",
+      fontSize: "1.8rem",
+      lineHeight: "1.8em",
     },
     [breakpoints["lg"]]: {
       width: 480,
@@ -537,7 +536,7 @@ export const recommendedProductImageBox = style({
   display: "flex",
   justifyContent: "center",
 });
-export const recommendedProductImageLink = style({
+export const recommendedProductImageInner = style({
   border: `solid 1px ${vars.color.textPrimary}`,
   overflow: "hidden",
 });
@@ -545,9 +544,6 @@ export const recommendedProductImage = style({
   width: "80vw",
   height: "100%",
   transition: "scale 0.3s ease",
-  ":hover": {
-    scale: 1.05,
-  },
   "@media": {
     [breakpoints["lg"]]: {
       width: 480,
@@ -621,11 +617,12 @@ export const topicSectionItem = style({
   display: "flex",
   flexDirection: "column-reverse",
   gap: 24,
-  width: "85%",
+  width: "calc(100% - 40px)",
   margin: "0 auto",
   "@media": {
     [breakpoints["md"]]: {
       gap: 28,
+      width: "80vw",
     },
     [breakpoints["lg"]]: {
       flexDirection: "row-reverse",
@@ -641,14 +638,15 @@ export const topicSectionItem = style({
   },
 });
 export const topicTitle = style({
-  fontSize: "1.6rem",
+  fontSize: "2.0rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
+  lineHeight: "1.4em",
   marginBottom: 24,
   "@media": {
     [breakpoints["md"]]: {
-      fontSize: "2.4rem",
+      fontSize: "2.6rem",
       marginBottom: 28,
     },
     [breakpoints["xl"]]: {
@@ -657,13 +655,10 @@ export const topicTitle = style({
     [breakpoints["2xl"]]: {
       marginBottom: 40,
     },
-    [breakpoints["3xl"]]: {
-      marginBottom: 48,
-    },
   },
 });
 export const topicDescription = style({
-  fontSize: "1.2rem",
+  fontSize: "1.6rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
@@ -671,7 +666,7 @@ export const topicDescription = style({
   marginBottom: 24,
   "@media": {
     [breakpoints["md"]]: {
-      fontSize: "1.6rem",
+      fontSize: "1.8rem",
       marginBottom: 28,
     },
     [breakpoints["lg"]]: {
@@ -681,12 +676,11 @@ export const topicDescription = style({
       marginBottom: 80,
     },
     [breakpoints["2xl"]]: {
-      fontSize: "1.7rem",
       marginBottom: 96,
     },
   },
 });
-export const topicLink = style({
+export const topicImageBox = style({
   display: "block",
   width: "100%",
   height: "auto",
@@ -704,9 +698,6 @@ export const topicImage = style({
   height: "auto",
   objectFit: "cover",
   transition: "scale 0.3s ease",
-  ":hover": {
-    scale: 1.05,
-  },
 });
 export const imageHovered = style({
   scale: 1.05,
@@ -756,10 +747,13 @@ export const newsItemBox = style({
   },
 });
 export const newsItem = style({
-  width: "85%",
+  width: "calc(100% - 40px)",
   margin: "0 auto",
   borderBottom: `solid 1px ${vars.color.textPrimary}`,
   "@media": {
+    [breakpoints["md"]]: {
+      width: "80vw",
+    },
     [breakpoints["xl"]]: {
       width: "100%",
     },
@@ -776,10 +770,13 @@ export const newsLink = style({
     [breakpoints["md"]]: {
       padding: "32px 28px",
     },
+    [breakpoints["lg"]]: {
+      gap: 80,
+    },
     [breakpoints["xl"]]: {
       selectors: {
         [`${newsItem}:hover &`]: {
-          gap: 32,
+          gap: 88,
         },
       },
     },
@@ -794,7 +791,7 @@ export const newsLink = style({
   },
 });
 export const time = style({
-  fontSize: "1.0rem",
+  fontSize: "1.2rem",
   color: vars.color.textPrimary,
   marginTop: 4,
   "@media": {
@@ -804,12 +801,12 @@ export const time = style({
   },
 });
 export const newsText = style({
-  fontSize: "1.2rem",
+  fontSize: "1.6rem",
   color: vars.color.textPrimary,
   lineHeight: "1.6em",
   "@media": {
     [breakpoints["md"]]: {
-      fontSize: "1.6rem",
+      fontSize: "1.8rem",
     },
     [breakpoints["2xl"]]: {
       fontSize: "1.8rem",
@@ -842,11 +839,11 @@ export const accessItemBox = style({
   backgroundColor: vars.color.bgPrimary,
   "@media": {
     [breakpoints["md"]]: {
-      margin: "-160px 28px 0",
+      margin: "-160px 10vw 0",
       padding: "80px 100px 100px",
     },
     [breakpoints["lg"]]: {
-      margin: "-360px 40px 0",
+      margin: "-360px 10vw 0",
     },
     [breakpoints["xl"]]: {
       margin: 0,
@@ -874,7 +871,7 @@ export const accessSubTitle = style({
   paddingLeft: 20,
 });
 export const shopName = style({
-  fontSize: "1.6rem",
+  fontSize: "1.8rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
@@ -886,16 +883,16 @@ export const shopName = style({
       marginBottom: 40,
     },
     [breakpoints["xl"]]: {
-      fontSize: "1.8rem",
+      fontSize: "2.0rem",
     },
   },
 });
 export const accessDl = style({});
 export const accessDt = style({
-  fontSize: "1.4rem",
+  fontSize: "1.6rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
-  marginBottom: 8,
+  marginBottom: 12,
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "2.0rem",
@@ -995,16 +992,20 @@ export const onlineShop = style({
   },
 });
 export const onlineShopDescription = style({
-  fontSize: "1.4rem",
+  fontSize: "1.6rem",
   fontWeight: 400,
   color: vars.color.bgPrimary,
   letterSpacing: "0.06em",
   textAlign: "center",
-  marginBottom: 12,
+  marginBottom: 16,
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.8rem",
-      marginBottom: 20,
+      marginBottom: 24,
+    },
+    [breakpoints["lg"]]: {
+      fontSize: "2.0rem",
+      marginBottom: 32,
     },
   },
 });
@@ -1063,12 +1064,12 @@ export const footerLogo = style({
   color: vars.color.textPrimary,
   textDecoration: "none",
   marginTop: 60,
-  marginBottom: 20,
+  marginBottom: 40,
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "5.2rem",
       marginTop: 80,
-      marginBottom: 28,
+      marginBottom: 48,
     },
     [breakpoints["xl"]]: {
       fontSize: "5.6rem",
@@ -1102,12 +1103,12 @@ export const footerUl = style({
   },
 });
 export const footerLink = style({
-  fontSize: "1.2rem",
+  fontSize: "1.4rem",
   color: vars.color.textPrimary,
   textDecoration: "none",
   "@media": {
     [breakpoints["md"]]: {
-      fontSize: "1.6rem",
+      fontSize: "1.8rem",
     },
     [breakpoints["xl"]]: {
       ":hover": {

@@ -65,7 +65,7 @@ import {
   recommendedProductImage,
   recommendedProductImageBox,
   recommendedProductImageHovered,
-  recommendedProductImageLink,
+  recommendedProductImageInner,
   recommendedProductName,
   recommendedProductNameBox,
   shopImage,
@@ -74,7 +74,7 @@ import {
   toggle,
   topicDescription,
   topicImage,
-  topicLink,
+  topicImageBox,
   topicSection,
   topicSectionItem,
   topicSectionItemBox,
@@ -274,7 +274,7 @@ export default function Home() {
                 </p>
               </div>
               <div className={clsx(recommendedProductImageBox)}>
-                <Link href={"/"} className={clsx(recommendedProductImageLink)}>
+                <div className={clsx(recommendedProductImageInner)}>
                   <Image
                     src={"/recommended-product.webp"}
                     width={540}
@@ -285,7 +285,7 @@ export default function Home() {
                       hoveredProductImage && recommendedProductImageHovered
                     )}
                   />
-                </Link>
+                </div>
                 <Image
                   src={"/pickup-decoration.png"}
                   width={100}
@@ -329,7 +329,7 @@ export default function Home() {
                   <MoreButton />
                 </div>
               </div>
-              <Link href={"/"} className={clsx(topicLink)}>
+              <div className={clsx(topicImageBox)}>
                 <Image
                   src={"/ingredient.webp"}
                   width={560}
@@ -340,7 +340,7 @@ export default function Home() {
                     hoveredIndex === 0 && imageHovered
                   )}
                 />
-              </Link>
+              </div>
             </section>
             <section className={clsx(topicSectionItem)}>
               <div>
@@ -357,7 +357,7 @@ export default function Home() {
                   <MoreButton />
                 </div>
               </div>
-              <Link href={"/"} className={clsx(topicLink)}>
+              <div className={clsx(topicImageBox)}>
                 <Image
                   src={"/brand.webp"}
                   width={560}
@@ -368,7 +368,7 @@ export default function Home() {
                     hoveredIndex === 1 && imageHovered
                   )}
                 />
-              </Link>
+              </div>
             </section>
             <section className={clsx(topicSectionItem)}>
               <div>
@@ -386,7 +386,7 @@ export default function Home() {
                   <MoreButton />
                 </div>
               </div>
-              <Link href={"/"} className={clsx(topicLink)}>
+              <div className={clsx(topicImageBox)}>
                 <Image
                   src={"/gift.webp"}
                   width={560}
@@ -397,7 +397,7 @@ export default function Home() {
                     hoveredIndex === 2 && imageHovered
                   )}
                 />
-              </Link>
+              </div>
             </section>
           </div>
         </section>
