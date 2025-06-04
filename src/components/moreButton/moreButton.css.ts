@@ -1,4 +1,4 @@
-import { vars } from "@/styles/styles.css";
+import { breakpoints, vars } from "@/styles/styles.css";
 import { keyframes, style } from "@vanilla-extract/css";
 
 const slideIn = keyframes({
@@ -17,8 +17,8 @@ export const moreButtonBox = style({
 export const moreButton = style({
   position: "relative",
   display: "grid",
-  width: 40,
-  height: 40,
+  width: 44,
+  height: 44,
   backgroundColor: "transparent",
   marginLeft: "auto",
   border: `solid 1px ${vars.color.textPrimary}`,
@@ -28,6 +28,12 @@ export const moreButton = style({
   transition: "scale 0.3s ease",
   ":hover": {
     scale: 1.1,
+  },
+  "@media": {
+    [breakpoints["md"]]: {
+      width: 52,
+      height: 52,
+    },
   },
 });
 
