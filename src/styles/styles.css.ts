@@ -52,7 +52,7 @@ export const subTitle = style({
   position: "relative",
   display: "inline-block",
   fontSize: "1.2rem",
-  letterSpacing: "0.06em",
+  letterSpacing: "0.08em",
   color: vars.color.textPrimary,
   ":before": {
     content: "",
