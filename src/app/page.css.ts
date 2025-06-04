@@ -480,6 +480,10 @@ export const recommendedProductBox = style({
   gap: 32,
   marginBottom: 32,
   "@media": {
+    [breakpoints["md"]]: {
+      gap: 40,
+      marginBottom: 40,
+    },
     [breakpoints["lg"]]: {
       gap: 40,
       marginBottom: 40,
@@ -493,7 +497,7 @@ export const recommendedProductBox = style({
 export const recommendedProductNameBox = style({
   display: "flex",
   flexDirection: "column",
-  gap: 24,
+  gap: 20,
   alignItems: "center",
   "@media": {
     [breakpoints["lg"]]: {
@@ -559,7 +563,7 @@ export const recommendedProductImageInner = style({
   overflow: "hidden",
 });
 export const recommendedProductImage = style({
-  width: "80vw",
+  width: "86vw",
   height: "100%",
   transition: "scale 0.3s ease",
   "@media": {
@@ -634,7 +638,7 @@ export const topicSectionItemBox = style({
 export const topicSectionItem = style({
   display: "flex",
   flexDirection: "column-reverse",
-  gap: 24,
+  gap: 28,
   width: "calc(100% - 40px)",
   margin: "0 auto",
   "@media": {
@@ -668,7 +672,7 @@ export const topicTitle = style({
       marginBottom: 20,
     },
     [breakpoints["2xl"]]: {
-      marginBottom: 28,
+      marginBottom: 24,
     },
     [breakpoints["3xl"]]: {
       fontSize: "2.7rem",
@@ -681,7 +685,7 @@ export const topicDescription = style({
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
   lineHeight: "2.0em",
-  marginBottom: 24,
+  marginBottom: 28,
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "2.0rem",
