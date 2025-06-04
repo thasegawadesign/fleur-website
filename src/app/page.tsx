@@ -475,7 +475,7 @@ export default function Home() {
               Online Shop
             </h2>
             <p className={clsx(onlineShopDescription)}>
-              豊富なギフトをご用意しております。
+              豊富なギフトをご用意しております
             </p>
             <div className={clsx(cvButtonWrap)}>
               <div
