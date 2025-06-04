@@ -32,7 +32,7 @@ export const logoBox = style({
   textDecoration: "none",
 });
 export const logo = style({
-  fontSize: "3.6rem",
+  fontSize: "4.2rem",
   color: vars.color.textPrimary,
   marginTop: "0.2em",
   "@media": {
@@ -154,7 +154,7 @@ export const mobileNavLinksHidden = style({
 export const mobileNavLinksVisible = style({
   position: "absolute",
   left: 0,
-  top: 60,
+  top: 74,
   display: "flex",
   flexDirection: "column",
   gap: 32,
@@ -164,7 +164,7 @@ export const mobileNavLinksVisible = style({
   background: vars.color.bgPrimary,
   "@media": {
     [breakpoints["md"]]: {
-      top: 88,
+      top: 98,
       gap: 40,
       padding: "6vw 0px 0px",
     },
@@ -1086,15 +1086,14 @@ export const onlineShopDescription = style({
   color: vars.color.bgPrimary,
   letterSpacing: "0.04em",
   textAlign: "center",
-  marginBottom: 16,
+  marginBottom: 28,
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "2.0rem",
-      marginBottom: 24,
+      marginBottom: 40,
     },
     [breakpoints["lg"]]: {
       fontSize: "2.0rem",
-      marginBottom: 32,
     },
     [breakpoints["2xl"]]: {
       fontSize: "2.2rem",
