@@ -812,17 +812,18 @@ export const newsLink = style({
   display: "flex",
   alignItems: "flex-start",
   gap: 28,
-  padding: "20px 12px 20px 12px",
+  padding: "24px 2vw 24px 2vw",
   textDecoration: "none",
   transition: "gap 0.3s ease",
   "@media": {
     [breakpoints["md"]]: {
-      padding: "32px 28px",
+      padding: "36px 3vw",
     },
     [breakpoints["lg"]]: {
       gap: 80,
     },
     [breakpoints["xl"]]: {
+      padding: "48px 2vw",
       selectors: {
         [`${newsItem}:hover &`]: {
           gap: 88,
@@ -856,12 +857,6 @@ export const newsText = style({
   lineHeight: "1.8em",
   "@media": {
     [breakpoints["md"]]: {
-      fontSize: "2.0rem",
-    },
-    [breakpoints["lg"]]: {
-      fontSize: "1.8rem",
-    },
-    [breakpoints["2xl"]]: {
       fontSize: "1.9rem",
     },
     [breakpoints["3xl"]]: {
@@ -891,7 +886,7 @@ export const accessSection = style({
 export const accessItemBox = style({
   position: "relative",
   margin: "-160px 20px 0",
-  padding: "40px 40px 60px",
+  padding: "40px 64px 60px",
   backgroundColor: vars.color.bgPrimary,
   "@media": {
     [breakpoints["md"]]: {
@@ -910,7 +905,7 @@ export const accessItemBox = style({
       padding: "20px 200px 20px 80px",
     },
     [breakpoints["3xl"]]: {
-      paddingRight: 320,
+      paddingRight: 288,
       paddingLeft: 100,
     },
   },
@@ -939,7 +934,7 @@ export const shopName = style({
       marginBottom: 48,
     },
     [breakpoints["lg"]]: {
-      fontSize: "2.4rem",
+      fontSize: "2.6rem",
     },
     [breakpoints["xl"]]: {
       fontSize: "2.0rem",
@@ -964,7 +959,7 @@ export const accessDt = style({
       marginBottom: 16,
     },
     [breakpoints["lg"]]: {
-      fontSize: "2.0rem",
+      fontSize: "2.2rem",
     },
     [breakpoints["xl"]]: {
       fontSize: "1.8rem",
@@ -984,7 +979,7 @@ export const accessDd = style({
       fontSize: "1.8rem",
     },
     [breakpoints["lg"]]: {
-      fontSize: "1.6rem",
+      fontSize: "1.7rem",
     },
     [breakpoints["xl"]]: {
       fontSize: "1.4rem",
@@ -1016,7 +1011,7 @@ export const shopImage = style({
   height: "100%",
   "@media": {
     [breakpoints["xl"]]: {
-      maxWidth: 600,
+      maxWidth: 640,
     },
   },
 });
@@ -1190,7 +1185,7 @@ export const footerLogo = style({
 export const footerUl = style({
   display: "flex",
   flexDirection: "column",
-  gap: 32,
+  gap: 20,
   paddingBottom: 60,
   borderBottom: `solid 1px ${vars.color.textPrimary}`,
   "@media": {
