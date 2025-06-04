@@ -40,10 +40,10 @@ export const logo = style({
       fontSize: "4.8rem",
     },
     [breakpoints["2xl"]]: {
-      fontSize: "5.0rem",
+      fontSize: "5.6rem",
     },
     [breakpoints["3xl"]]: {
-      fontSize: "5.6rem",
+      fontSize: "6.0rem",
     },
   },
 });
@@ -1136,6 +1136,9 @@ export const footer = style({
     [breakpoints["lg"]]: {
       padding: "0 60px",
     },
+    [breakpoints["xl"]]: {
+      padding: "0 6vw",
+    },
   },
 });
 export const footerItemBox = style({
@@ -1178,7 +1181,7 @@ export const footerLogo = style({
       margin: 0,
     },
     [breakpoints["2xl"]]: {
-      fontSize: "9.6rem",
+      fontSize: "8.6rem",
     },
     [breakpoints["3xl"]]: {
       fontSize: "10rem",
@@ -1240,7 +1243,7 @@ export const copyRightBox = style({
       padding: "28px 0 240px",
     },
     [breakpoints["3xl"]]: {
-      padding: "28px 0 280px",
+      padding: "32px 0 280px",
     },
   },
 });
