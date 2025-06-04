@@ -295,6 +295,7 @@ export const catchCopy = style({
       margin: "0 0 0 60px",
     },
     [breakpoints["2xl"]]: {
+      fontSize: "3.4rem",
       margin: "0 0 0 80px",
     },
     [breakpoints["3xl"]]: {
@@ -362,7 +363,7 @@ export const heroDescription = style({
     },
     [breakpoints["2xl"]]: {
       margin: "0 0 40px 80px",
-      letterSpacing: "0.408em",
+      letterSpacing: "0.33em",
     },
     [breakpoints["3xl"]]: {
       fontSize: "2.0rem",
@@ -476,12 +477,12 @@ export const pickUpSectionBg = style({
 export const recommendedProductBox = style({
   display: "flex",
   flexDirection: "column-reverse",
-  gap: 28,
-  marginBottom: 28,
+  gap: 32,
+  marginBottom: 32,
   "@media": {
     [breakpoints["lg"]]: {
-      gap: 32,
-      marginBottom: 32,
+      gap: 40,
+      marginBottom: 40,
     },
     [breakpoints["xl"]]: {
       gap: 48,
@@ -492,25 +493,22 @@ export const recommendedProductBox = style({
 export const recommendedProductNameBox = style({
   display: "flex",
   flexDirection: "column",
-  gap: 28,
+  gap: 24,
   alignItems: "center",
   "@media": {
     [breakpoints["lg"]]: {
-      gap: 32,
+      gap: 24,
     },
     [breakpoints["xl"]]: {
       gap: 28,
     },
-    [breakpoints["2xl"]]: {
-      gap: 32,
-    },
   },
 });
 export const recommendedProductName = style({
-  fontSize: "2.0rem",
+  fontSize: "2.1rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
-  letterSpacing: "0.06em",
+  letterSpacing: "0.08em",
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "2.6rem",
@@ -528,7 +526,7 @@ export const recommendedProductDescription = style({
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
-  lineHeight: "1.8em",
+  lineHeight: "2.0em",
   width: "calc(100% - 40px)",
   textAlign: "center",
   "@media": {
@@ -658,19 +656,19 @@ export const topicSectionItem = style({
   },
 });
 export const topicTitle = style({
-  fontSize: "2.0rem",
+  fontSize: "2.1rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
-  letterSpacing: "0.06em",
+  letterSpacing: "0.08em",
   lineHeight: "1.4em",
-  marginBottom: 24,
+  marginBottom: 16,
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "2.6rem",
-      marginBottom: 28,
+      marginBottom: 20,
     },
     [breakpoints["2xl"]]: {
-      marginBottom: 36,
+      marginBottom: 28,
     },
     [breakpoints["3xl"]]: {
       fontSize: "2.7rem",
@@ -682,7 +680,7 @@ export const topicDescription = style({
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
-  lineHeight: "1.8em",
+  lineHeight: "2.0em",
   marginBottom: 24,
   "@media": {
     [breakpoints["md"]]: {
@@ -823,8 +821,9 @@ export const time = style({
   },
 });
 export const newsText = style({
-  fontSize: "1.6rem",
+  fontSize: "1.7rem",
   color: vars.color.textPrimary,
+  letterSpacing: "0.08em",
   lineHeight: "1.8em",
   "@media": {
     [breakpoints["md"]]: {
@@ -901,7 +900,7 @@ export const shopName = style({
   fontSize: "2.0rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
-  letterSpacing: "0.06em",
+  letterSpacing: "0.08em",
   marginTop: 40,
   marginBottom: 24,
   "@media": {
@@ -925,9 +924,10 @@ export const shopName = style({
 });
 export const accessDl = style({});
 export const accessDt = style({
-  fontSize: "1.8rem",
+  fontSize: "1.7rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
+  letterSpacing: "0.06em",
   marginBottom: 12,
   "@media": {
     [breakpoints["md"]]: {
@@ -949,6 +949,7 @@ export const accessDd = style({
   fontSize: "1.4rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
+  letterSpacing: "0.06em",
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.8rem",
@@ -1053,7 +1054,7 @@ export const onlineShopDescription = style({
   fontSize: "1.8rem",
   fontWeight: 400,
   color: vars.color.bgPrimary,
-  letterSpacing: "0.06em",
+  letterSpacing: "0.04em",
   textAlign: "center",
   marginBottom: 16,
   "@media": {
