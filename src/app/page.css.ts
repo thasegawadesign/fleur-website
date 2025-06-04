@@ -157,7 +157,7 @@ export const mobileNavLink = style({
   position: "relative",
   textDecoration: "none",
   margin: "0 10vw",
-  fontSize: "1.6rem",
+  fontSize: "1.8rem",
   color: vars.color.textPrimary,
   transition: "margin 0.3s ease",
   ":hover": {
@@ -168,7 +168,7 @@ export const mobileNavLink = style({
       content: '""',
       position: "absolute",
       margin: "auto 0",
-      inset: "0 0 0 -12px",
+      inset: "0 0 0 -20px",
       width: 8,
       height: 8,
       background: vars.color.accent,
@@ -177,7 +177,7 @@ export const mobileNavLink = style({
   },
   "@media": {
     [breakpoints["md"]]: {
-      fontSize: "1.8rem",
+      fontSize: "2.0rem",
       margin: "0 9vw",
       ":hover": {
         margin: "0 11vw",
@@ -477,8 +477,8 @@ export const pickUpSectionBg = style({
 export const recommendedProductBox = style({
   display: "flex",
   flexDirection: "column-reverse",
-  gap: 32,
-  marginBottom: 32,
+  gap: 20,
+  marginBottom: 20,
   "@media": {
     [breakpoints["md"]]: {
       gap: 40,
@@ -497,9 +497,12 @@ export const recommendedProductBox = style({
 export const recommendedProductNameBox = style({
   display: "flex",
   flexDirection: "column",
-  gap: 20,
+  gap: 12,
   alignItems: "center",
   "@media": {
+    [breakpoints["md"]]: {
+      gap: 16,
+    },
     [breakpoints["lg"]]: {
       gap: 24,
     },
@@ -639,7 +642,7 @@ export const topicSectionItemBox = style({
 export const topicSectionItem = style({
   display: "flex",
   flexDirection: "column-reverse",
-  gap: 28,
+  gap: 20,
   width: "calc(100% - 40px)",
   margin: "0 auto",
   "@media": {
@@ -666,7 +669,7 @@ export const topicTitle = style({
   color: vars.color.textPrimary,
   letterSpacing: "0.08em",
   lineHeight: "2.0em",
-  marginBottom: 16,
+  marginBottom: 12,
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "2.6rem",
@@ -1153,7 +1156,7 @@ export const footerLogo = style({
 export const footerUl = style({
   display: "flex",
   flexDirection: "column",
-  gap: 28,
+  gap: 32,
   paddingBottom: 60,
   borderBottom: `solid 1px ${vars.color.textPrimary}`,
   "@media": {
@@ -1190,7 +1193,7 @@ export const footerLink = style({
   },
 });
 export const copyRightBox = style({
-  padding: "20px 0 120px",
+  padding: "20px 0 112px",
   textAlign: "center",
   "@media": {
     [breakpoints["md"]]: {
