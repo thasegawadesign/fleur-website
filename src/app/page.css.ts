@@ -1002,6 +1002,7 @@ export const shopImage = style({
 
 export const onlineShopSection = style({
   position: "relative",
+  overflow: "hidden",
   zIndex: 0,
   "@media": {
     [breakpoints["md"]]: {
@@ -1097,7 +1098,11 @@ export const onlineShopImage = style({
   position: "absolute",
   top: 0,
   objectFit: "cover",
+  transition: "scale 0.3s ease",
   zIndex: -100,
+});
+export const hoverdOnlineShopImage = style({
+  scale: 1.05,
 });
 
 export const footer = style({

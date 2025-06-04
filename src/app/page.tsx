@@ -33,6 +33,7 @@ import {
   heroDescriptionDesktopBr,
   heroSection,
   heroSectionInnerLeft,
+  hoverdOnlineShopImage,
   imageHovered,
   logo,
   logoBox,
@@ -112,6 +113,7 @@ export default function Home() {
   const [isOpen, setIsOpen] = useAtom(hamburgerMenuAtom);
   const [hoveredProductImage, setHoveredProductImage] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredCTA, setHoveredCTA] = useState(false);
 
   const onlyWidth = useWindowWidth();
 
@@ -476,7 +478,12 @@ export default function Home() {
               豊富なギフトをご用意しております。
             </p>
             <div className={clsx(cvButtonWrap)}>
-              <CvButton />
+              <div
+                onMouseEnter={() => setHoveredCTA(true)}
+                onMouseLeave={() => setHoveredCTA(false)}
+              >
+                <CvButton />
+              </div>
             </div>
           </div>
           <div className={clsx(onlineShopImageBox)}>
@@ -484,7 +491,10 @@ export default function Home() {
               src={"/online-shop-bg.webp"}
               alt="ギフト用マカロン"
               fill
-              className={clsx(onlineShopImage)}
+              className={clsx(
+                onlineShopImage,
+                hoveredCTA && hoverdOnlineShopImage
+              )}
             />
           </div>
         </section>
