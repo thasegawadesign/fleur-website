@@ -19,10 +19,10 @@ export const vars = createGlobalTheme(":root", {
 });
 
 export const sectionTitleBox = style({
-  marginBottom: 4,
+  marginBottom: 6,
   "@media": {
     [breakpoints["md"]]: {
-      marginBottom: 8,
+      marginBottom: 10,
     },
     [breakpoints["xl"]]: {
       marginBottom: 12,
@@ -30,7 +30,7 @@ export const sectionTitleBox = style({
   },
 });
 export const sectionTitle = style({
-  fontSize: "3.2rem",
+  fontSize: "3.6rem",
   fontWeight: 400,
   letterSpacing: "0.04em",
   color: vars.color.textPrimary,

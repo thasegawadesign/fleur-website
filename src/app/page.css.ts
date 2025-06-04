@@ -865,16 +865,16 @@ export const accessSection = style({
 });
 export const accessItemBox = style({
   position: "relative",
-  margin: "-120px 20px 0",
+  margin: "-160px 20px 0",
   padding: "40px 40px 60px",
   backgroundColor: vars.color.bgPrimary,
   "@media": {
     [breakpoints["md"]]: {
-      margin: "-160px 10vw 0",
+      margin: "-320px 10vw 0",
       padding: "80px 100px 100px",
     },
     [breakpoints["lg"]]: {
-      margin: "-360px 10vw 0",
+      margin: "-400px 10vw 0",
     },
     [breakpoints["xl"]]: {
       margin: 0,
