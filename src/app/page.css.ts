@@ -82,10 +82,10 @@ export const toggle = style({
   },
 });
 export const hamburger = style({
-  width: 24,
+  width: 28,
   height: 2,
   backgroundColor: vars.color.textPrimary,
-  transition: "transform 0.2s ease",
+  transition: "transform 0.1s ease",
   "@media": {
     [breakpoints["md"]]: {
       width: 32,
@@ -208,10 +208,10 @@ export const cvButtonInnerWrap = style({
   borderRadius: "50%",
 });
 export const cvButtonBox = style({
-  margin: "12px 6vw",
+  margin: "0px 6vw",
   "@media": {
     [breakpoints["md"]]: {
-      margin: "12px 8vw",
+      margin: "0px 8vw",
     },
   },
 });
@@ -935,7 +935,7 @@ export const accessDt = style({
   fontSize: "1.7rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
-  letterSpacing: "0.06em",
+  letterSpacing: "0.08em",
   marginBottom: 12,
   "@media": {
     [breakpoints["md"]]: {
@@ -957,7 +957,7 @@ export const accessDd = style({
   fontSize: "1.4rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
-  letterSpacing: "0.06em",
+  letterSpacing: "0.08em",
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.8rem",
@@ -1182,6 +1182,7 @@ export const footerUl = style({
 export const footerLink = style({
   fontSize: "1.6rem",
   color: vars.color.textPrimary,
+  letterSpacing: "0.04em",
   textDecoration: "none",
   "@media": {
     [breakpoints["md"]]: {

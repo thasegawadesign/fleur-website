@@ -20,6 +20,7 @@ export const cvButton = style({
 export const cvLabel = style({
   fontSize: "1.7rem",
   color: vars.color.textPrimary,
+  letterSpacing: "0.04em",
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.8rem",
