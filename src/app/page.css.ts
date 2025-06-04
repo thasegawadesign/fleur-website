@@ -20,7 +20,7 @@ export const mobileHeader = style({
       padding: "20px 32px",
     },
     [breakpoints["2xl"]]: {
-      padding: "24px 80px",
+      padding: "28px 80px",
     },
     [breakpoints["3xl"]]: {
       padding: "36px 140px",
@@ -37,6 +37,12 @@ export const logo = style({
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "4.8rem",
+    },
+    [breakpoints["2xl"]]: {
+      fontSize: "5.0rem",
+    },
+    [breakpoints["3xl"]]: {
+      fontSize: "5.2rem",
     },
   },
 });
@@ -111,15 +117,20 @@ export const desktopNavUl = style({
   },
 });
 export const desktopNavLink = style({
-  fontSize: "1.6rem",
+  fontSize: "1.7rem",
   color: vars.color.textPrimary,
   textDecoration: "none",
   ":hover": {
     textDecoration: "underline",
   },
+  "@media": {
+    [breakpoints["3xl"]]: {
+      fontSize: "1.9rem",
+    },
+  },
 });
 export const desktopNavOnlineShop = style({
-  fontSize: "1.6rem",
+  fontSize: "1.7rem",
   color: vars.color.textPrimary,
   letterSpacing: "0.04em",
   textDecoration: "none",
@@ -128,6 +139,11 @@ export const desktopNavOnlineShop = style({
   borderRight: `solid 1px ${vars.color.textPrimary}`,
   ":hover": {
     textDecoration: "underline",
+  },
+  "@media": {
+    [breakpoints["3xl"]]: {
+      fontSize: "1.9rem",
+    },
   },
 });
 
@@ -150,6 +166,10 @@ export const mobileNavLinksVisible = style({
       top: 88,
       gap: 40,
       padding: "6vw 0px 0px",
+    },
+    [breakpoints["lg"]]: {
+      padding: "4vw 0px 0px",
+      gap: 46,
     },
   },
 });
@@ -1138,23 +1158,29 @@ export const footerItemBox = style({
 });
 export const footerLogo = style({
   display: "inline-block",
-  fontSize: "4.0rem",
+  fontSize: "6.0rem",
   color: vars.color.textPrimary,
   textDecoration: "none",
   marginTop: 60,
   marginBottom: 40,
   "@media": {
     [breakpoints["md"]]: {
-      fontSize: "5.2rem",
+      fontSize: "7.2rem",
       marginTop: 80,
       marginBottom: 48,
     },
+    [breakpoints["lg"]]: {
+      fontSize: "7.6rem",
+    },
     [breakpoints["xl"]]: {
-      fontSize: "5.6rem",
+      fontSize: "8.4rem",
       margin: 0,
     },
     [breakpoints["2xl"]]: {
-      fontSize: "6.4rem",
+      fontSize: "9.6rem",
+    },
+    [breakpoints["3xl"]]: {
+      fontSize: "10rem",
     },
   },
 });
@@ -1183,6 +1209,7 @@ export const footerLink = style({
   fontSize: "1.6rem",
   color: vars.color.textPrimary,
   letterSpacing: "0.04em",
+  lineHeight: "1.7em",
   textDecoration: "none",
   "@media": {
     [breakpoints["md"]]: {
@@ -1195,6 +1222,9 @@ export const footerLink = style({
       ":hover": {
         textDecoration: "underline",
       },
+    },
+    [breakpoints["2xl"]]: {
+      fontSize: "1.9rem",
     },
   },
 });
