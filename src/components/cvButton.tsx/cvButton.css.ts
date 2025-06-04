@@ -18,7 +18,7 @@ export const cvButton = style({
   },
 });
 export const cvLabel = style({
-  fontSize: "1.6rem",
+  fontSize: "1.7rem",
   color: vars.color.textPrimary,
   "@media": {
     [breakpoints["md"]]: {
