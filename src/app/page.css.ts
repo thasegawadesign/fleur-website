@@ -513,6 +513,7 @@ export const recommendedProductName = style({
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.08em",
+  lineHeight: "2.0em",
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "2.6rem",
@@ -664,7 +665,7 @@ export const topicTitle = style({
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.08em",
-  lineHeight: "1.4em",
+  lineHeight: "2.0em",
   marginBottom: 16,
   "@media": {
     [breakpoints["md"]]: {
@@ -787,7 +788,7 @@ export const newsLink = style({
   display: "flex",
   alignItems: "flex-start",
   gap: 28,
-  padding: "20px 24px 20px 16px",
+  padding: "20px 12px 20px 12px",
   textDecoration: "none",
   transition: "gap 0.3s ease",
   "@media": {
