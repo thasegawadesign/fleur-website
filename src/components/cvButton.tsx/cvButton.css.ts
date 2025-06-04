@@ -13,22 +13,22 @@ export const cvButton = style({
   borderRadius: 40,
   "@media": {
     [breakpoints["md"]]: {
-      padding: "20px",
-    },
-    [breakpoints["2xl"]]: {
       padding: "24px",
     },
   },
 });
 export const cvLabel = style({
-  fontSize: "1.4rem",
+  fontSize: "1.6rem",
   color: vars.color.textPrimary,
   "@media": {
     [breakpoints["md"]]: {
-      fontSize: "1.6rem",
+      fontSize: "1.8rem",
     },
     [breakpoints["2xl"]]: {
-      fontSize: "1.8rem",
+      fontSize: "1.9rem",
+    },
+    [breakpoints["3xl"]]: {
+      fontSize: "2.0rem",
     },
   },
 });

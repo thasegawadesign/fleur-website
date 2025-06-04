@@ -121,7 +121,7 @@ export const desktopNavLink = style({
 export const desktopNavOnlineShop = style({
   fontSize: "1.6rem",
   color: vars.color.textPrimary,
-  letterSpacing: "0.06em",
+  letterSpacing: "0.04em",
   textDecoration: "none",
   padding: "0 18px",
   borderLeft: `solid 1px ${vars.color.textPrimary}`,
@@ -187,11 +187,20 @@ export const mobileNavLink = style({
 });
 
 export const cvButtonWrap = style({
-  width: "75%",
+  width: "calc(100% - 40px)",
   margin: "0 auto",
   "@media": {
     [breakpoints["md"]]: {
+      width: "80vw",
+    },
+    [breakpoints["lg"]]: {
       maxWidth: 480,
+    },
+    [breakpoints["xl"]]: {
+      maxWidth: 520,
+    },
+    [breakpoints["2xl"]]: {
+      maxWidth: 640,
     },
   },
 });
@@ -269,7 +278,7 @@ export const catchCopy = style({
   fontSize: "2.4rem",
   fontWeight: 400,
   letterSpacing: "0.2em",
-  lineHeight: "1.28em",
+  lineHeight: "1.7em",
   color: vars.color.textPrimary,
   margin: "24px 20px 0",
   "@media": {
@@ -336,7 +345,7 @@ export const heroDescription = style({
   fontSize: "1.8rem",
   color: vars.color.textPrimary,
   letterSpacing: "0.2em",
-  lineHeight: "1.5em",
+  lineHeight: "1.8em",
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "2.2rem",
@@ -353,10 +362,12 @@ export const heroDescription = style({
     },
     [breakpoints["2xl"]]: {
       margin: "0 0 40px 80px",
-      letterSpacing: "0.42em",
+      letterSpacing: "0.408em",
     },
     [breakpoints["3xl"]]: {
-      lineHeight: "2.4em",
+      fontSize: "2.0rem",
+      letterSpacing: "0.27em",
+      lineHeight: "2.0em",
       margin: "0 0 80px 80px",
     },
   },
@@ -473,7 +484,7 @@ export const recommendedProductBox = style({
       marginBottom: 32,
     },
     [breakpoints["xl"]]: {
-      gap: 40,
+      gap: 48,
       marginBottom: 48,
     },
   },
@@ -490,6 +501,9 @@ export const recommendedProductNameBox = style({
     [breakpoints["xl"]]: {
       gap: 28,
     },
+    [breakpoints["2xl"]]: {
+      gap: 32,
+    },
   },
 });
 export const recommendedProductName = style({
@@ -504,6 +518,9 @@ export const recommendedProductName = style({
     [breakpoints["2xl"]]: {
       fontSize: "2.8rem",
     },
+    [breakpoints["3xl"]]: {
+      fontSize: "3.0rem",
+    },
   },
 });
 export const recommendedProductDescription = style({
@@ -511,24 +528,27 @@ export const recommendedProductDescription = style({
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
-  lineHeight: "1.6em",
+  lineHeight: "1.8em",
   width: "calc(100% - 40px)",
   textAlign: "center",
   "@media": {
     [breakpoints["md"]]: {
       width: "80vw",
-      fontSize: "1.8rem",
-      lineHeight: "1.8em",
+      fontSize: "2.0rem",
     },
     [breakpoints["lg"]]: {
+      fontSize: "1.8rem",
       width: 480,
     },
     [breakpoints["xl"]]: {
       width: 540,
     },
     [breakpoints["2xl"]]: {
-      fontSize: "1.8rem",
+      fontSize: "1.9rem",
       width: 660,
+    },
+    [breakpoints["3xl"]]: {
+      fontSize: "2.0rem",
     },
   },
 });
@@ -649,11 +669,11 @@ export const topicTitle = style({
       fontSize: "2.6rem",
       marginBottom: 28,
     },
-    [breakpoints["xl"]]: {
-      marginBottom: 32,
-    },
     [breakpoints["2xl"]]: {
-      marginBottom: 40,
+      marginBottom: 36,
+    },
+    [breakpoints["3xl"]]: {
+      fontSize: "2.7rem",
     },
   },
 });
@@ -662,20 +682,22 @@ export const topicDescription = style({
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
-  lineHeight: "1.5em",
+  lineHeight: "1.8em",
   marginBottom: 24,
   "@media": {
     [breakpoints["md"]]: {
-      fontSize: "1.8rem",
+      fontSize: "2.0rem",
       marginBottom: 28,
     },
     [breakpoints["lg"]]: {
+      fontSize: "1.8rem",
       marginBottom: 20,
     },
     [breakpoints["xl"]]: {
       marginBottom: 80,
     },
     [breakpoints["2xl"]]: {
+      fontSize: "1.9rem",
       marginBottom: 96,
     },
   },
@@ -803,13 +825,19 @@ export const time = style({
 export const newsText = style({
   fontSize: "1.6rem",
   color: vars.color.textPrimary,
-  lineHeight: "1.6em",
+  lineHeight: "1.8em",
   "@media": {
     [breakpoints["md"]]: {
+      fontSize: "2.0rem",
+    },
+    [breakpoints["lg"]]: {
       fontSize: "1.8rem",
     },
     [breakpoints["2xl"]]: {
-      fontSize: "1.8rem",
+      fontSize: "1.9rem",
+    },
+    [breakpoints["3xl"]]: {
+      fontSize: "2.0rem",
     },
   },
 });
@@ -851,8 +879,7 @@ export const accessItemBox = style({
       backgroundColor: "transparent",
     },
     [breakpoints["2xl"]]: {
-      paddingRight: 200,
-      paddingLeft: 80,
+      padding: "20px 200px 20px 80px",
     },
     [breakpoints["3xl"]]: {
       paddingRight: 320,
@@ -871,7 +898,7 @@ export const accessSubTitle = style({
   paddingLeft: 20,
 });
 export const shopName = style({
-  fontSize: "1.8rem",
+  fontSize: "2.0rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
   letterSpacing: "0.06em",
@@ -879,48 +906,78 @@ export const shopName = style({
   marginBottom: 24,
   "@media": {
     [breakpoints["md"]]: {
-      fontSize: "2.2rem",
-      marginBottom: 40,
+      fontSize: "2.6rem",
+      marginTop: 64,
+      marginBottom: 48,
+    },
+    [breakpoints["lg"]]: {
+      fontSize: "2.4rem",
     },
     [breakpoints["xl"]]: {
       fontSize: "2.0rem",
+      marginTop: 40,
+      marginBottom: 40,
+    },
+    [breakpoints["2xl"]]: {
+      fontSize: "2.2rem",
     },
   },
 });
 export const accessDl = style({});
 export const accessDt = style({
-  fontSize: "1.6rem",
+  fontSize: "1.8rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
   marginBottom: 12,
   "@media": {
     [breakpoints["md"]]: {
+      fontSize: "2.2rem",
+      marginBottom: 16,
+    },
+    [breakpoints["lg"]]: {
       fontSize: "2.0rem",
-      marginBottom: 12,
     },
     [breakpoints["xl"]]: {
       fontSize: "1.8rem",
     },
+    [breakpoints["2xl"]]: {
+      fontSize: "2.0rem",
+    },
   },
 });
 export const accessDd = style({
-  fontSize: "1.2rem",
+  fontSize: "1.4rem",
   fontWeight: 400,
   color: vars.color.textPrimary,
   "@media": {
     [breakpoints["md"]]: {
+      fontSize: "1.8rem",
+    },
+    [breakpoints["lg"]]: {
       fontSize: "1.6rem",
     },
     [breakpoints["xl"]]: {
       fontSize: "1.4rem",
     },
+    [breakpoints["2xl"]]: {
+      fontSize: "1.7rem",
+    },
   },
 });
 export const accessGap = style({
-  marginBottom: 20,
+  marginBottom: 24,
   "@media": {
     [breakpoints["md"]]: {
+      marginBottom: 32,
+    },
+    [breakpoints["lg"]]: {
+      marginBottom: 40,
+    },
+    [breakpoints["xl"]]: {
       marginBottom: 28,
+    },
+    [breakpoints["2xl"]]: {
+      marginBottom: 32,
     },
   },
 });
@@ -982,6 +1039,7 @@ export const onlineShop = style({
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "4.0rem",
+      marginBottom: 40,
     },
     [breakpoints["lg"]]: {
       fontSize: "4.8rem",
@@ -992,7 +1050,7 @@ export const onlineShop = style({
   },
 });
 export const onlineShopDescription = style({
-  fontSize: "1.6rem",
+  fontSize: "1.8rem",
   fontWeight: 400,
   color: vars.color.bgPrimary,
   letterSpacing: "0.06em",
@@ -1000,12 +1058,15 @@ export const onlineShopDescription = style({
   marginBottom: 16,
   "@media": {
     [breakpoints["md"]]: {
-      fontSize: "1.8rem",
+      fontSize: "2.0rem",
       marginBottom: 24,
     },
     [breakpoints["lg"]]: {
       fontSize: "2.0rem",
       marginBottom: 32,
+    },
+    [breakpoints["2xl"]]: {
+      fontSize: "2.4rem",
     },
   },
 });
@@ -1083,12 +1144,11 @@ export const footerLogo = style({
 export const footerUl = style({
   display: "flex",
   flexDirection: "column",
-  gap: 24,
+  gap: 28,
   paddingBottom: 60,
   borderBottom: `solid 1px ${vars.color.textPrimary}`,
   "@media": {
     [breakpoints["md"]]: {
-      gap: 28,
       paddingBottom: 80,
     },
     [breakpoints["xl"]]: {
@@ -1103,11 +1163,14 @@ export const footerUl = style({
   },
 });
 export const footerLink = style({
-  fontSize: "1.4rem",
+  fontSize: "1.6rem",
   color: vars.color.textPrimary,
   textDecoration: "none",
   "@media": {
     [breakpoints["md"]]: {
+      fontSize: "2.0rem",
+    },
+    [breakpoints["lg"]]: {
       fontSize: "1.8rem",
     },
     [breakpoints["xl"]]: {
