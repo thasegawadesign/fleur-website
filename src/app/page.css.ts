@@ -1066,7 +1066,10 @@ export const onlineShopDescription = style({
       marginBottom: 32,
     },
     [breakpoints["2xl"]]: {
-      fontSize: "2.4rem",
+      fontSize: "2.2rem",
+    },
+    [breakpoints["3xl"]]: {
+      fontSize: "2.3rem",
     },
   },
 });
