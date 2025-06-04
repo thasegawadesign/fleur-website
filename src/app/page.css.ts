@@ -34,6 +34,7 @@ export const logoBox = style({
 export const logo = style({
   fontSize: "3.6rem",
   color: vars.color.textPrimary,
+  marginTop: "0.2em",
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "4.8rem",
@@ -42,7 +43,7 @@ export const logo = style({
       fontSize: "5.0rem",
     },
     [breakpoints["3xl"]]: {
-      fontSize: "5.2rem",
+      fontSize: "5.6rem",
     },
   },
 });
