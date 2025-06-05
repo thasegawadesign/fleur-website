@@ -163,11 +163,6 @@ export default function Home() {
               </li>
               <li>
                 <Link href={"#"} className={clsx(desktopNavLink)}>
-                  ラインナップ
-                </Link>
-              </li>
-              <li>
-                <Link href={"#"} className={clsx(desktopNavLink)}>
                   店舗情報
                 </Link>
               </li>
@@ -203,11 +198,6 @@ export default function Home() {
             <li>
               <Link href={"#"} className={clsx(mobileNavLink)}>
                 ニュース
-              </Link>
-            </li>
-            <li>
-              <Link href={"#"} className={clsx(mobileNavLink)}>
-                ラインナップ
               </Link>
             </li>
             <li>
