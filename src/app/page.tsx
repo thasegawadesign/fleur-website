@@ -445,7 +445,7 @@ export default function Home() {
             <dl className={clsx(accessDl)}>
               <dt className={clsx(accessDt)}>営業時間</dt>
               <dd className={clsx(accessDd, accessGap)}>
-                月~日（水曜除く） 11:00~17:00
+                月-日（水曜除く） 11:00-17:00
               </dd>
               <dt className={clsx(accessDt)}>店舗所在地</dt>
               <dd className={clsx(accessDd)}>大阪府〇〇市△△区□□丁目</dd>
