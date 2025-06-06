@@ -737,7 +737,7 @@ export const topicImageBox = style({
   width: "100%",
   height: "auto",
   flexShrink: 0,
-  borderRadius: 6,
+  borderRadius: 4,
   overflow: "hidden",
   "@media": {
     [breakpoints["lg"]]: {
@@ -892,7 +892,7 @@ export const accessItemBox = style({
   margin: "-160px 20px 0",
   padding: "40px 64px 60px",
   backgroundColor: vars.color.bgPrimary,
-  borderRadius: 20,
+  borderRadius: 48,
   "@media": {
     [breakpoints["md"]]: {
       margin: "-320px 10vw 0",
@@ -1039,7 +1039,7 @@ export const onlineShopSection = style({
         width: "calc(100% - 40px)",
         height: "calc(100% - 40px)",
         border: `solid 1px ${vars.color.bgPrimary}`,
-        borderRadius: 80,
+        borderRadius: 48,
         zIndex: -20,
       },
     },
@@ -1047,6 +1047,7 @@ export const onlineShopSection = style({
       ":before": {
         width: "calc(100% - 80px)",
         height: "calc(100% - 80px)",
+        borderRadius: 80,
       },
     },
   },
