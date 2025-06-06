@@ -737,6 +737,7 @@ export const topicImageBox = style({
   width: "100%",
   height: "auto",
   flexShrink: 0,
+  borderRadius: 6,
   overflow: "hidden",
   "@media": {
     [breakpoints["lg"]]: {
@@ -749,7 +750,6 @@ export const topicImage = style({
   width: "100%",
   height: "auto",
   objectFit: "cover",
-  borderRadius: 12,
   transition: "scale 0.3s ease",
 });
 export const imageHovered = style({
@@ -1017,7 +1017,7 @@ export const shopImage = style({
   "@media": {
     [breakpoints["xl"]]: {
       maxWidth: 640,
-      borderRadius: 12,
+      borderRadius: 8,
     },
   },
 });
@@ -1039,7 +1039,7 @@ export const onlineShopSection = style({
         width: "calc(100% - 40px)",
         height: "calc(100% - 40px)",
         border: `solid 1px ${vars.color.bgPrimary}`,
-        borderRadius: 60,
+        borderRadius: 80,
         zIndex: -20,
       },
     },
