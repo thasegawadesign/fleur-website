@@ -8,8 +8,8 @@ import type { Metadata } from "next";
 import "yakuhanjp";
 
 export const metadata: Metadata = {
-  title: "架空マカロン専門店 Fleur(フルール)",
-  description: "架空マカロン専門店 Fleur(フルール)",
+  title: "架空マカロン専門店『フルール』",
+  description: "架空マカロン専門店『フルール』の公式サイトです。",
 };
 
 const isProduction = process.env.NODE_ENV === "production";
