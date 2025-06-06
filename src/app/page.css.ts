@@ -51,14 +51,11 @@ export const logo = style({
 export const hamburgerBox = style({
   display: "flex",
   flexDirection: "column",
-  gap: 6,
+  gap: 8,
   backgroundColor: "transparent",
   border: "transparent",
   cursor: "pointer",
   "@media": {
-    [breakpoints["md"]]: {
-      gap: 8,
-    },
     [breakpoints["2xl"]]: {
       display: "none",
     },
@@ -67,11 +64,11 @@ export const hamburgerBox = style({
 export const toggle = style({
   selectors: {
     [`${hamburgerBox} > &:nth-child(1)`]: {
-      transform: "rotate(45deg) translate(6px, 6px)",
+      transform: "rotate(45deg) translate(8px, 8px)",
     },
     [`${hamburgerBox} > &:nth-child(2)`]: { opacity: 0 },
     [`${hamburgerBox} > &:nth-child(3)`]: {
-      transform: "rotate(-45deg) translate(5px, -5px)",
+      transform: "rotate(-45deg) translate(6px, -6px)",
     },
   },
   "@media": {
@@ -89,7 +86,7 @@ export const toggle = style({
   },
 });
 export const hamburger = style({
-  width: 28,
+  width: 30,
   height: 2,
   backgroundColor: vars.color.textPrimary,
   transition: "transform 0.1s ease",
@@ -585,6 +582,7 @@ export const recommendedProductImageBox = style({
 });
 export const recommendedProductImageInner = style({
   border: `solid 1px ${vars.color.textPrimary}`,
+  borderRadius: 12,
   overflow: "hidden",
 });
 export const recommendedProductImage = style({
@@ -746,6 +744,7 @@ export const topicImage = style({
   width: "100%",
   height: "auto",
   objectFit: "cover",
+  borderRadius: 12,
   transition: "scale 0.3s ease",
 });
 export const imageHovered = style({
@@ -888,6 +887,7 @@ export const accessItemBox = style({
   margin: "-160px 20px 0",
   padding: "40px 64px 60px",
   backgroundColor: vars.color.bgPrimary,
+  borderRadius: 20,
   "@media": {
     [breakpoints["md"]]: {
       margin: "-320px 10vw 0",
@@ -1012,6 +1012,7 @@ export const shopImage = style({
   "@media": {
     [breakpoints["xl"]]: {
       maxWidth: 640,
+      borderRadius: 12,
     },
   },
 });
@@ -1033,6 +1034,7 @@ export const onlineShopSection = style({
         width: "calc(100% - 40px)",
         height: "calc(100% - 40px)",
         border: `solid 1px ${vars.color.bgPrimary}`,
+        borderRadius: 20,
         zIndex: -20,
       },
     },
