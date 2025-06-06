@@ -582,8 +582,13 @@ export const recommendedProductImageBox = style({
 });
 export const recommendedProductImageInner = style({
   border: `solid 1px ${vars.color.textPrimary}`,
-  borderRadius: 12,
+  borderRadius: 60,
   overflow: "hidden",
+  "@media": {
+    [breakpoints["sm"]]: {
+      borderRadius: 20,
+    },
+  },
 });
 export const recommendedProductImage = style({
   width: "86vw",
