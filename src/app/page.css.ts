@@ -582,7 +582,7 @@ export const recommendedProductImageBox = style({
 });
 export const recommendedProductImageInner = style({
   border: `solid 1px ${vars.color.textPrimary}`,
-  borderRadius: 60,
+  borderRadius: 48,
   overflow: "hidden",
   "@media": {
     [breakpoints["sm"]]: {
@@ -1039,7 +1039,7 @@ export const onlineShopSection = style({
         width: "calc(100% - 40px)",
         height: "calc(100% - 40px)",
         border: `solid 1px ${vars.color.bgPrimary}`,
-        borderRadius: 20,
+        borderRadius: 60,
         zIndex: -20,
       },
     },
