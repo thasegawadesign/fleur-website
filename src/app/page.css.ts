@@ -737,7 +737,7 @@ export const topicImageBox = style({
   width: "100%",
   height: "auto",
   flexShrink: 0,
-  borderRadius: 4,
+  borderRadius: 16,
   overflow: "hidden",
   "@media": {
     [breakpoints["lg"]]: {
@@ -1017,7 +1017,7 @@ export const shopImage = style({
   "@media": {
     [breakpoints["xl"]]: {
       maxWidth: 640,
-      borderRadius: 8,
+      borderRadius: 16,
     },
   },
 });
