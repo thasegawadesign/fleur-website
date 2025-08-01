@@ -130,15 +130,17 @@ export const desktopNavLink = style({
 export const desktopNavOnlineShop = style({
   fontSize: "1.7rem",
   color: vars.color.textPrimary,
-  letterSpacing: "0.04em",
   textDecoration: "none",
-  padding: "0 18px",
+  padding: "0 16px",
   borderLeft: `solid 1px ${vars.color.textPrimary}`,
   borderRight: `solid 1px ${vars.color.textPrimary}`,
   ":hover": {
     textDecoration: "underline",
   },
   "@media": {
+    [breakpoints["2xl"]]: {
+      padding: "0 24px",
+    },
     [breakpoints["3xl"]]: {
       fontSize: "1.9rem",
     },
@@ -847,10 +849,13 @@ export const newsLink = style({
 export const time = style({
   fontSize: "1.2rem",
   color: vars.color.textPrimary,
-  marginTop: 4,
+  marginTop: 10,
   "@media": {
     [breakpoints["md"]]: {
       fontSize: "1.4rem",
+    },
+    [breakpoints["xl"]]: {
+      marginTop: 12,
     },
   },
 });
