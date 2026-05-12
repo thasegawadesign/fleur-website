@@ -13,19 +13,23 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "24"
+          cache: "pnpm"
 
       - name: Install dependencies
-        run: npm install
+        run: pnpm install --frozen-lockfile
 
       - name: StyleLint
-        run: npm run lint:css
+        run: pnpm run lint:css
 
       - name: ESLint
-        run: npm run lint
+        run: pnpm run lint
 
       - name: Prettier
-        run: npm run format
+        run: pnpm run format
