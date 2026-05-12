@@ -1,2 +1,8 @@
+packages:
+  - "."
+
 allowBuilds:
-  lefthook: set this to true or false
+  "@swc/core": true
+  esbuild: true
+  lefthook: true
+  sharp: true
