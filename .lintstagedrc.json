@@ -1,5 +1,4 @@
 {
-  "!(*.ts)": "prettier --write .",
-  "*.{ts, tsx}": ["eslint --fix .", "prettier --write ."],
-  "*.{css,scss,sass}": ["stylelint --fix"]
+  "*.{js,jsx,mjs,cjs,ts,tsx,json,jsonc,md,yml,yaml}": "oxfmt",
+  "*.{css,scss,sass}": "stylelint --fix"
 }

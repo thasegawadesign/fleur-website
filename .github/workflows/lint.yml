@@ -25,11 +25,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: StyleLint
+      - name: Oxfmt
+        run: pnpm run format:check
+
+      - name: Stylelint
         run: pnpm run lint:css
 
-      - name: ESLint
+      - name: Oxlint
         run: pnpm run lint
-
-      - name: Prettier
-        run: pnpm run format
