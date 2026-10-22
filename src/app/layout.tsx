@@ -5,7 +5,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
 import clsx from "clsx";
 import type { Metadata } from "next";
-import "yakuhanjp";
+import "yakuhanjp/dist/css/yakuhanjp.css";
 
 export const metadata: Metadata = {
   title: "架空マカロン専門店『フルール』",
